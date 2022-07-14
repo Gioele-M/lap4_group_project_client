@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { HomePage, UserPage, PlaylistPage } from './Pages'
+import { DebugComponent } from './Components'
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Route path="/user" element={<UserPage />} />
         <Route path="/playlist" element={<PlaylistPage />} />
       </Routes>
+      {/* Debug Component
+      check browser console or Redux DevTools to chec the State */}
+      <DebugComponent />
       <p>Footer</p>
     </div>
   )
