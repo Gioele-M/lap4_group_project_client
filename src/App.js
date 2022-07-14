@@ -1,12 +1,22 @@
+import { Routes, Route } from 'react-router-dom'
+import { HomePage, UserPage, PlaylistPage } from './Pages'
+import { DebugComponent } from './Components'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>This is to check we're deployed!</h1>
-      </header>
+      <p>Header</p>
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/playlist" element={<PlaylistPage />} />
+      </Routes>
+      {/* Debug Component
+      check browser console or Redux DevTools to chec the State */}
+      <DebugComponent />
+      <p>Footer</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
