@@ -9,8 +9,7 @@
 ### Install
 
 - Clone the repo
-- In the terminal:
-  - npm install
+- npm install
 
 ### Run
 
