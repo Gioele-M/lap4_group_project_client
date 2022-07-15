@@ -5,12 +5,11 @@ const Header = () => {
     return (
 
     <nav>
-        {/* NAVBAR */}
+        Navbar
     </nav>
-       
-    
-    )
-    
+    ) 
 }
+
+
 
 export default Header;
