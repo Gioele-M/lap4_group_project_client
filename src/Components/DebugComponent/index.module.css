@@ -1,0 +1,12 @@
+.debugElement {
+  height: 80px;
+  width: 200px;
+  background-color: teal;
+  color: snow;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+}

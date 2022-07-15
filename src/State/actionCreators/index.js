@@ -31,3 +31,16 @@ export const fetchMediaData = (mediaData) => ({
   type: 'FETCH_MEDIA_DATA',
   payload: mediaData,
 })
+
+export const fetchDebug = (username) => {
+  return async (dispatch) => {
+    try {
+      // dispatch({ type: "STARTING_FETCH" })
+      const data = await axios(`https://api.github.com/users/${username}`)
+      dispatch({ type: 'FETCH_GITHUB', payload: data })
+    } catch (err) {
+      // dispatch({ type: "SET_ERROR", payload: err })
+      console.log('Error: ', err)
+    }
+  }
+}

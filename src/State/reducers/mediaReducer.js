@@ -50,6 +50,9 @@ export const mediaReducer = (state = initState, action) => {
         },
       }
 
+    case 'FETCH_GITHUB':
+      return action.payload
+
     default:
       return state
   }
