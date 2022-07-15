@@ -1,10 +1,27 @@
 // hardcoded data
 
 const user = {
-  id: 123,
-  name: 'John Smith',
-  email: 'john@email.com',
-  password: 'johnpw',
+  achievement: ['badgeOne', 'badgeTwo'],
+  favourites: ['playlistNameOne', 'playlistNameTwo'],
+  hashedPassword: 'rememberNotToSendPwBack',
+  lastSelection: {
+    selectedNote: 'chapter1',
+    selectedPlaylist: 'playlistNameWOWOW',
+  },
+  previousTokens: ['tokenOne', 'tokenTwo'],
+  recentNotes: [
+    {
+      selectedNote: 'chapter2',
+      selectedPlaylist: 'playlistNameYAYAYY',
+    },
+    {
+      selectedNote: 'chapter3',
+      selectedPlaylist: 'playlistNameWhoohoo',
+    },
+  ],
+  token: 'just_token_string',
+  userEmail: 'john@gmail.com',
+  username: 'John Smith',
 }
 
 // initialState
