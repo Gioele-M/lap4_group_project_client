@@ -53,8 +53,14 @@ export const mediaReducer = (state = initState, action) => {
     case 'FETCH_GITHUB':
       return action.payload
 
+    case 'FETCHING_MEDIA':
+      return { ...state, loading: true, error: false }
+
+    case 'SET_ERROR':
+      return { ...state, loading: false, error: action.payload }
+
     case 'FETCH_MEDIA':
-      return action.payload
+      return { data: action.payload, loading: false, error: false }
 
     default:
       return state

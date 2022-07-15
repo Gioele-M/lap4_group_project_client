@@ -1,14 +1,14 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchMedia, loginUser } from '../../State/actionCreators'
+import { fetchDebug, fetchMedia, loginUser } from '../../State/actionCreators'
 
 import styles from './index.module.css'
 
 function DebugComponent() {
-  const myUserState = useSelector((state) => state.user.data)
-  const myDataState = useSelector((state) => state.media.data)
-  console.log('*** ', myUserState)
-  console.log('=== ', myDataState)
+  const myUserState = useSelector((state) => state.user)
+  const myMediaState = useSelector((state) => state.media)
+  console.log(`\nUSER\n `, myUserState)
+  console.log(`\nMEDIA\n`, myMediaState)
 
   const dispatch = useDispatch()
 
