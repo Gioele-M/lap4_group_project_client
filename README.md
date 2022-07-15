@@ -8,7 +8,13 @@
 
 ### Install
 
+- Clone the repo
+- In the terminal:
+  - npm install
+
 ### Run
+
+  - npm start
 
 ### Test
 
