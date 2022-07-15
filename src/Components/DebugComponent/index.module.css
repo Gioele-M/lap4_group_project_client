@@ -1,4 +1,4 @@
-.debugElement {
+.debugElement, .debugElement2 {
   height: 80px;
   width: 200px;
   background-color: teal;
@@ -9,4 +9,17 @@
   align-items: center;
   border: none;
   border-radius: 10px;
+  margin: 10px;
+}
+
+.debugElement2 {
+  background-color: lightslategray;
+}
+
+.iframe {
+  width: 500px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
 }

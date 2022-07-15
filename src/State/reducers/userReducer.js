@@ -21,10 +21,16 @@ export const userReducer = (state = initState, action) => {
       return state
 
     case 'LOGIN_USER':
-      return state
+      return { user: action.payload, loading: false, error: false }
 
     case 'LOGOUT_USER':
       return state
+
+    case 'FETCHING_USER':
+      return { ...state, loading: true, error: false }
+
+    case 'SET_ERROR':
+      return { ...state, loading: false, error: action.payload }
 
     default:
       return state

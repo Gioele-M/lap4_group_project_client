@@ -8,11 +8,24 @@ import axios from 'axios'
 // signup the user
 export const signupUser = (data) => ({ type: 'SIGNUP_USER', payload: data })
 
-// login the user using for example a jwt
-export const loginUser = (data) => ({ type: 'LOGIN_USER', payload: data })
-
 // logout the user
 export const logoutUser = (data) => ({ type: 'LOGOUT_USER', payload: data })
+
+// login the user using for example a jwt
+export const loginUser = (creds) => {
+  return async (dispatch) => {
+    try {
+      console.log('* Fetching User')
+      dispatch({ type: 'FETCHING_USER' })
+      const data = await axios(`https://wewacademy.herokuapp.com/userSample`)
+      console.log('* got user data -> ', data)
+      dispatch({ type: 'LOGIN_USER', payload: data })
+    } catch (err) {
+      dispatch({ type: 'SET_ERROR', payload: err })
+      console.log('Error fetching User: ', err)
+    }
+  }
+}
 
 // // //
 // User Playlists
@@ -37,6 +50,21 @@ export const fetchDebug = (username) => {
     try {
       // dispatch({ type: "STARTING_FETCH" })
       const data = await axios(`https://api.github.com/users/${username}`)
+      dispatch({ type: 'FETCH_GITHUB', payload: data })
+    } catch (err) {
+      // dispatch({ type: "SET_ERROR", payload: err })
+      console.log('Error: ', err)
+    }
+  }
+}
+
+export const fetchMedia = () => {
+  return async (dispatch) => {
+    try {
+      // dispatch({ type: "STARTING_FETCH" })
+      const data = await axios(
+        `https://wewacademy.herokuapp.com/playlistSample`
+      )
       dispatch({ type: 'FETCH_GITHUB', payload: data })
     } catch (err) {
       // dispatch({ type: "SET_ERROR", payload: err })
