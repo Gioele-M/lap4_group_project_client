@@ -2,8 +2,11 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchDebug, fetchMedia, loginUser } from '../../State/actionCreators'
 
-
+import { scrollElement } from '../../utils/utils'
 import styles from './index.module.css'
+
+
+
 
 function DebugComponent() {
   const myUserState = useSelector((state) => state.user)
@@ -12,25 +15,15 @@ function DebugComponent() {
   console.log(`\nMEDIA\n`, myMediaState)
 
   const dispatch = useDispatch()
-
-  
+  let scrollNote
 
   useEffect(() => {
-    const scrollNote = document.querySelector('#scrollNote')
-    console.log('* * * ', scrollNote.scrollTop)
-    let prevState = 0
-    const intervalRef = setInterval(() => {
-      
-      let currState = scrollNote.scrollTop += 1
-      scrollNote.scrollTop = currState
+    scrollNote = document.querySelector('#scrollNote')
+  })
+  
+  
 
-      if (currState === prevState) clearInterval(intervalRef)
-
-      prevState = currState
-      console.log(`currState is ${currState} and prevState is ${prevState}`)
-      
-    }, 100) 
-  }, [])
+  
   
   
   return (
@@ -51,6 +44,7 @@ function DebugComponent() {
       {/* append to the address: ?mute=1&autoplay=1&loop=1&controls=0 */}
 
       <div 
+      onClick={() => {scrollElement(scrollNote, 100, 2, () => {console.log('Hi')})}}
         id="scrollNote"
         className={styles.textBox}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi eum veritatis voluptatem amet quos vel nam dolores quo. Odio ducimus cumque sequi assumenda ipsum, qui nemo nisi voluptatem. Quisquam.
