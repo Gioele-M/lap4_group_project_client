@@ -3,7 +3,6 @@ import "./styles.css";
 
 function HomePage() {
   return (
-    // navbar comp
     <div>HomePage</div>
   )
 }

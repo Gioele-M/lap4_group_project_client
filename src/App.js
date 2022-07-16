@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
-import { HomePage, UserPage, PlaylistPage } from './Pages'
+import { HomePage, UserPage, PlaylistPage, AboutPage } from './Pages'
 import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
-import AboutPage from './Pages/AboutPage'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
     <div className="App">
-      <p>Header</p>.
       <NavBar/>
       <Routes>
         <Route path="/" exact element={<HomePage />} />
