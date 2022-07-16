@@ -1,0 +1,36 @@
+.debugElement, .debugElement2 {
+  height: 80px;
+  width: 200px;
+  background-color: teal;
+  color: snow;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.debugElement2 {
+  background-color: lightslategray;
+}
+
+.iframe {
+  width: 500px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.textBox {
+  width: 600px;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 1.4rem;
+}
