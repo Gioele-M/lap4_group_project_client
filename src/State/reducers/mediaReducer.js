@@ -1,5 +1,4 @@
-import { Note } from '../../models/note'
-
+// hardcoded data
 const data = {
   averageStars: {
     currentRating: 4.0,
@@ -57,6 +56,8 @@ const data = {
     },
   ],
 }
+
+//  end hardcoded data
 
 const initState = {
   data,

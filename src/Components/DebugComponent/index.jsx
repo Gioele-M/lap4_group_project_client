@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchDebug, fetchMedia, loginUser } from '../../State/actionCreators'
-
+import { fetchVideos } from '../../State/actionCreators/utube'
 import { scrollElement } from '../../utils/utils'
 import utube from '../../utils/utube'
 import styles from './index.module.css'
@@ -21,15 +21,6 @@ function DebugComponent() {
     
   })
 
-  const fetchVideos = () => {
-    let term = 'fullstack'
-
-    utube.get('/search', {
-      params: {
-        q: term
-      }
-    }).then(x => console.log('***** ', x.data.items))
-  }
 
   return (
     <>
@@ -61,7 +52,7 @@ function DebugComponent() {
       </div>
 
     <div
-    onClick={() => {fetchVideos()}} 
+    onClick={() => {dispatch(fetchVideos())}} 
     id="#searchBtn" className={styles.debugElement}>Fetch</div>
   </>
   )
