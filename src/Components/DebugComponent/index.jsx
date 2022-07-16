@@ -3,9 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchDebug, fetchMedia, loginUser } from '../../State/actionCreators'
 
 import { scrollElement } from '../../utils/utils'
+import utube from '../../utils/utube'
 import styles from './index.module.css'
-
-
 
 
 function DebugComponent() {
@@ -19,13 +18,19 @@ function DebugComponent() {
 
   useEffect(() => {
     scrollNote = document.querySelector('#scrollNote')
+    
   })
-  
-  
 
-  
-  
-  
+  const fetchVideos = () => {
+    let term = 'fullstack'
+
+    utube.get('/search', {
+      params: {
+        q: term
+      }
+    }).then(x => console.log('***** ', x.data.items))
+  }
+
   return (
     <>
       <div
@@ -44,7 +49,7 @@ function DebugComponent() {
       {/* append to the address: ?mute=1&autoplay=1&loop=1&controls=0 */}
 
       <div 
-      onClick={() => {scrollElement(scrollNote, 100, 2, () => {console.log('Hi')})}}
+      onClick={() => {scrollElement(scrollNote, 50, 1, () => {console.log('Hi')})}}
         id="scrollNote"
         className={styles.textBox}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi eum veritatis voluptatem amet quos vel nam dolores quo. Odio ducimus cumque sequi assumenda ipsum, qui nemo nisi voluptatem. Quisquam.
@@ -54,6 +59,10 @@ function DebugComponent() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi eum veritatis voluptatem amet quos vel nam dolores quo. Odio ducimus cumque sequi assumenda ipsum, qui nemo nisi voluptatem. Quisquam.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta quisquam eveniet accusamus id vel, assumenda iusto explicabo quos similique ipsam tenetur neque qui, adipisci sequi totam nesciunt? Rem, nemo!
       </div>
+
+    <div
+    onClick={() => {fetchVideos()}} 
+    id="#searchBtn" className={styles.debugElement}>Fetch</div>
   </>
   )
 }
