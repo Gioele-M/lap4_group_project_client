@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchDebug, fetchMedia, loginUser } from '../../State/actionCreators'
+
+import { loginUser } from '../../State/actionCreators/user'
+import { fetchMedia } from '../../State/actionCreators/media'
 import { fetchVideos } from '../../State/actionCreators/utube'
 import { scrollElement } from '../../utils/utils'
-import utube from '../../utils/utube'
 import styles from './index.module.css'
 
 
