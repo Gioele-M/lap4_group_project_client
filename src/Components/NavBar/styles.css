@@ -1,0 +1,11 @@
+.navbar-logo{
+    width: 50px;
+    margin-left: 5px;
+}
+
+.mine{
+    align-self: flex-end;
+    justify-content: end;
+    justify-self: end;
+    margin-right: 0%;
+}
