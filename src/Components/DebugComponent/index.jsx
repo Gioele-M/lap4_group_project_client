@@ -36,10 +36,6 @@ function DebugComponent() {
       className={styles.debugElement2} >Click Me
       </div>
 
-      <iframe className={styles.iframe} title="debug title" width="420" height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY?start=60&end=70">
-      </iframe>
-      {/* append to the address: ?mute=1&autoplay=1&loop=1&controls=0 */}
 
       <div 
       onClick={() => {scrollElement(scrollNote, 50, 1, () => {console.log('Hi')})}}

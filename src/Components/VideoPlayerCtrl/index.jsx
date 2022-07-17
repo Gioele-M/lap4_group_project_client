@@ -15,13 +15,15 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390,
     height: height,
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: autoplay,
+      autoplay: 0,
+      modestbranding: 1
     },
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div data-testid={'videoWrapper'} className={styles.wrapper}>
       <YouTube
+      data-testid='videoplayer'
       videoId={videoId}
       title={title}
       start={startAt}
@@ -37,22 +39,22 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390,
       }
       />
     <div className={styles.buttonWrapper}>
-      <div
+      <button
     className={styles.button}
       onClick={() => {
         setStart(now)
       }}
        >Start
-    </div>
-    <div
+    </button>
+    <button
     className={styles.button}
       onClick={() => setEnd(now)}
       >End
-    </div>
+    </button>
     </div>
     
-    <p>Start: {String(start)}</p>
-    <p>End: {String(end)}</p>
+    <p data-testid='startLabel'>Start: {String(start)}</p>
+    <p data-testid='endLabel'>End: {String(end)}</p>
     </div>
   )
 }
