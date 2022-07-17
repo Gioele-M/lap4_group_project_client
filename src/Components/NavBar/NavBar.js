@@ -51,7 +51,7 @@ export default function NavBar() {
 {/* SEARCH  /////////////////// */}
     </ul>
     <form class="form-row px-2 ms-auto align-middle ">
-      <input class="form-row me-1 align-middle" type="search" placeholder="Enter key words" />
+      <input class="form-row me-1 align-middle" type="search" placeholder="Look for something:" />
       <button class="btn btn-sm  btn-outline-success me-1 align-middle " type="submit">Search</button>
       <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-login'>Log in/ Sign up</button>
       {/* <button class="btn btn-sm  btn-outline-success me-1 align-middle btn-light">Sign up</button> */}
