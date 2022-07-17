@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import YouTube from 'react-youtube'
 
 import { loginUser } from '../../State/actionCreators/user'
 import { fetchMedia } from '../../State/actionCreators/media'
@@ -11,17 +12,46 @@ import styles from './index.module.css'
 function DebugComponent() {
   const myUserState = useSelector((state) => state.user)
   const myMediaState = useSelector((state) => state.media)
-  console.log(`\nUSER\n `, myUserState)
-  console.log(`\nMEDIA\n`, myMediaState)
+  // console.log(`\nUSER\n `, myUserState)
+  // console.log(`\nMEDIA\n`, myMediaState)
 
   const dispatch = useDispatch()
+  
+  const [now, setNow] = useState()
+  const [start, setStart] = useState('0')
+  const [end, setEnd] = useState('0')
+  
   let scrollNote
 
   useEffect(() => {
     scrollNote = document.querySelector('#scrollNote')
     
   })
+  let videos = useSelector(state => state.utube.videos)
+  
 
+  // x.target.getCurrentTime() returns the time passed from the start of the video
+  const loadVideo = (index) => {
+    // console.log('OOO', videos[index])
+    
+    return (
+      videos.length > 0 ? 
+      <YouTube 
+      className={styles.player}
+        title={videos[index].title}
+        videoId={videos[index].id.videoId}
+        onEnd={() => loadVideo(++index)}
+        onStateChange={(x) => {
+          // console.log(x)
+          let currTime = x.target.getCurrentTime()
+          console.log('WWWWWWW', currTime)
+          
+          setNow(currTime)
+        }}
+        onMouseIn={() => console.log('clicked')}
+      /> : 'Fetch the videos to display them...'
+    )
+  }
 
   return (
     <>
@@ -55,7 +85,25 @@ function DebugComponent() {
     <div
     onClick={() => {dispatch(fetchVideos())}} 
     id="#searchBtn" className={styles.debugElement}>Fetch</div>
+
+    
+    {loadVideo(0)}
+    <p>Start: {String(start)}</p>
+    <p>End: {String(end)}</p>
+    <div
+      onClick={() => {
+        console.log('*******************', now)
+        setStart(now)
+      }}
+      className={styles.debugElement2} >Start
+    </div>
+    <div
+      onClick={() => setEnd(now)}
+      className={styles.debugElement2} >End
+    </div>
+
   </>
+
   )
 }
 
