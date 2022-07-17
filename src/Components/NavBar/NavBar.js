@@ -12,7 +12,7 @@ export default function NavBar() {
     <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light">
 
 
-{/* align left */}
+{/* LOGO */}
     <NavLink to="/">
       <img class="navbar-brand navbar-logo" href="#" src={logo} alt="Write and Watch Logo" />
     </NavLink>
@@ -20,9 +20,11 @@ export default function NavBar() {
 
 {/* align right */}
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">is there anything here?    </span>
   </button>
 
+
+{/* TEXT LINKS  /////////////////// */}
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
@@ -46,11 +48,17 @@ export default function NavBar() {
         </NavLink>
       </li>
 
+{/* SEARCH  /////////////////// */}
     </ul>
     <form class="form-row px-2 ms-auto align-middle ">
       <input class="form-row me-1 align-middle" type="search" placeholder="Enter key words" />
       <button class="btn btn-sm  btn-outline-success me-1 align-middle " type="submit">Search</button>
+      <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-login'>Log in/ Sign up</button>
+      {/* <button class="btn btn-sm  btn-outline-success me-1 align-middle btn-light">Sign up</button> */}
     </form>
+
+
+
   </div>
 </nav> 
 

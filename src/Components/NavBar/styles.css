@@ -5,8 +5,19 @@
 
 .navbar-custom {
     height: 50px;
-  }
+}
 
-  #no-decos{
+#no-decos{
     text-decoration: none;
-  }
+}
+
+#btn-login{
+    background-color: crimson;
+    color: white;
+}
+
+
+#btn-login:hover{
+    background-color: rgb(177, 17, 49);
+    color: white;
+}
