@@ -1,19 +1,47 @@
+
 .navbar-logo{
-    width: 50px;
+    width: 55px;
     margin-left: 5px;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .navbar-custom {
-    height: 50px;
+    height: 60x;
+    /* padding-top: 0px;
+    padding-bottom: 0px; */
+    /* margin-top: 0ch; */
 }
 
 #no-decos{
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-style: italic; */
+    font-weight: 600;
+    text-decoration: none;
+    color: #E92D2D ;
+}
+
+#btn-search{
+    background-color: rgb(255, 255, 255);
+    color: #E92D2D;
+    border-style: solid;
+    border-radius: 10px ;
+    border-color: #E92D2D;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 800;
     text-decoration: none;
 }
 
 #btn-login{
-    background-color: crimson;
+    background-color: #E92D2D;
     color: white;
+    border-style: none;
+    border-radius: 10px ;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: none;
 }
 
 
@@ -21,3 +49,15 @@
     background-color: rgb(177, 17, 49);
     color: white;
 }
+    
+#placeholder{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: smaller;
+    border-radius: 10px ;
+    border-color: #E92D2D;
+    font-style: italic;
+    /* font-weight: 600; */
+    /* text-decoration: none; */
+}
+
