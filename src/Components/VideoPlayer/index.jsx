@@ -37,7 +37,16 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
       window.onYouTubeIframeAPIReady = loadVideo;
 
       const firstScriptTag = document.getElementsByTagName("script")[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+
+      // const firstScriptTag = document.querySelector("#ytplayer");
+      
+
+      // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      const headElement = document.querySelector('head')
+      headElement.insertBefore(tag, firstScriptTag)
+
+
     } else {
       loadVideo();
     }

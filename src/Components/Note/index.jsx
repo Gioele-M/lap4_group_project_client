@@ -16,6 +16,7 @@ function Note({noteTitle, start, end, url, text}) {
           <button className={styles.saveBtn}>Save</button>
           <button className={styles.deleteBtn}>Delete</button>
           <input 
+          data-testid="linkurl"
           onChange={(e) => setLink(e.target.value)}
             className={styles.link} type="text" placeholder="video link" value={link}/>
         </div>
