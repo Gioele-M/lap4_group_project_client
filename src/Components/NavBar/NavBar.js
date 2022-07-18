@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import "./styles.css";
 import { NavLink } from 'react-router-dom';
@@ -12,6 +11,31 @@ import ModalSignup from '../Signup/ModalSignup';
 
 export default function NavBar() {
     const logo = require('../../images/logo.png');
+    const [modalShow, setModalShow] = React.useState(false);
+
+
+// wherethe modal will be displayed://///////////////////////////////
+    // class Dashboard extends Component {
+    //   constructor() {
+    //     super();
+    //     this.state = {
+    //       show: false
+    //     };
+    //     this.showModal = this.showModal.bind(this);
+    //     this.hideModal = this.hideModal.bind(this);
+    //   }
+    
+    //   showModal = () => {
+    //     this.setState({ show: true });
+    //   };
+    
+    //   hideModal = () => {
+    //     this.setState({ show: false });
+    //   };
+    // }
+
+////////////////////////////////////////////
+
 
     const [signupModalShow, setSignupModalShow] = React.useState(false);
     const [loginModalShow, setLoginModalShow] = React.useState(false);
@@ -131,6 +155,14 @@ onHide={() => setSignupModalShow(false)}
 />
 
 
+
+
+
+
+      <FinalAtempt
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
 
   </div>
 </nav> 
