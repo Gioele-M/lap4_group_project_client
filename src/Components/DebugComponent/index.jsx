@@ -8,6 +8,7 @@ import { scrollElement } from '../../utils/utils'
 import VideoPlayerCtrl from '../VideoPlayerCtrl'
 import styles from './index.module.css'
 
+import { VideoPlayer } from '../VideoPlayer'
 
 function DebugComponent() {
   const myUserState = useSelector((state) => state.user)
@@ -54,7 +55,9 @@ function DebugComponent() {
     id="#searchBtn" className={styles.debugElement}>Fetch</div>
 
 
-    <VideoPlayerCtrl videoId='tgAeF0AcLPY' title='Just a Title' start='100' end='null'/>
+    {/* <VideoPlayerCtrl videoId='tgAeF0AcLPY' title='Just a Title' start='100' end='null'/> */}
+
+    <VideoPlayer videoId='tgAeF0AcLPY' title='Just a Title' start='100' end='null'/>
   </>
 
   )

@@ -7,8 +7,8 @@ import styles from './index.module.css'
 function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390, autoplay=0, endCb=()=> {}}) {
 
   const [now, setNow] = useState()
-  const [start, setStart] = useState('0')
-  const [end, setEnd] = useState('0')
+  const [start, setStart] = useState(startAt || '0')
+  const [end, setEnd] = useState(endAt || '0')
 
   const opts = {
     width: width,
