@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 let player;
 
-export const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, autoplay=0, endCb=()=> {}}) => {
+const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, autoplay=0, endCb=()=> {}}) => {
   // "ZPt9dJw1Dbw"
   const [now, setNow] = useState()
   const [start, setStart] = useState(startAt || '0')
@@ -101,4 +101,4 @@ export const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=3
   );
 };
 
-
+export default VideoPlayer

@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { loginUser } from '../../State/actionCreators/user'
 import { fetchMedia } from '../../State/actionCreators/media'
 import { fetchVideos } from '../../State/actionCreators/utube'
 import { scrollElement } from '../../utils/utils'
-import VideoPlayerCtrl from '../VideoPlayerCtrl'
+import { VideoPlayer } from '../'
 import styles from './index.module.css'
 
-import { VideoPlayer } from '../VideoPlayer'
+const scrollNote = document.querySelector('#scrollNote')
 
 function DebugComponent() {
-  const myUserState = useSelector((state) => state.user)
-  const myMediaState = useSelector((state) => state.media)
+  // const myUserState = useSelector((state) => state.user)
+  // const myMediaState = useSelector((state) => state.media)
   
-
   const dispatch = useDispatch()
-  
-  let scrollNote
-
-  useEffect(() => {
-    scrollNote = document.querySelector('#scrollNote')
-    
-  })
-  let videos = useSelector(state => state.utube.videos)
   
   return (
     <>
