@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import Note from '../Note'
+import PlaylistModal from '../PlaylistModal'
 import styles from './index.module.css'
 
 function PlaylistComponent({title}) {
@@ -10,10 +11,11 @@ function PlaylistComponent({title}) {
   console.log('* * *', notes)
   // console.log('= = =', typeof(notes.chapters) === typeof([1,2,3]))
   
-  
+  const [modalVisible, setModalVisible] = useState(false)
 
   const renderNotes =  
     notes.chapters.map((note, idx) => {
+    console.log('KEY ', note.chapterId)
     console.log(note.chapterTitle)
     console.log(note.start)
     console.log(note.end)
@@ -22,19 +24,17 @@ function PlaylistComponent({title}) {
     
     return (
       <Note
-        key={idx} 
+        key={idx}
+        chapterId={note.chapterId} 
         noteTitle={note.chapterTitle} 
         start={note.start} 
         end={note.end} 
         url={note.video_url} 
-        text={note.text} 
+        text={note.text}
+        onNoteClick={() => setModalVisible(true)}
       />
     )
   }) 
-  
-
- 
-
   
 
   return (
@@ -46,6 +46,19 @@ function PlaylistComponent({title}) {
       
       
       <button className={styles.addNoteBtn}>+</button>
+
+      
+
+      {modalVisible && <PlaylistModal 
+        showModal={setModalVisible}
+         
+         
+         />}
+      
+      <button >Modal</button>
+      <br />
+      <br />
+      <br />
     </div>
   )
 }

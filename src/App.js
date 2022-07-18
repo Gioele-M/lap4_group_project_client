@@ -1,12 +1,23 @@
 import { Routes, Route } from 'react-router-dom'
-import { HomePage, UserPage, PlaylistPage, AboutPage, SearchResultPage } from './Pages'
+import {
+  HomePage,
+  UserPage,
+  PlaylistPage,
+  AboutPage,
+  SearchResultPage,
+} from './Pages'
 // import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
-import { Footer } from './layout';
+import { Footer } from './layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-{/* <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */}
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet"></link>;
+{
+  /* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+}
+;<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap"
+  rel="stylesheet"
+></link>
 
 function App() {
   return (

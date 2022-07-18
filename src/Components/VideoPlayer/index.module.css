@@ -9,6 +9,7 @@
 .videoContainer {
   border-radius: 10px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .btnsWrapper {
