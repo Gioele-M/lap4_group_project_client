@@ -139,6 +139,21 @@ Attaching video clips to written text so the user can watch a video as a referen
 ### Existing Features
 
 1. #### Home Page
+- Trending Topics Carousel
+- Most Recent Playlist (once logged in)
+
+
+2. #### Users Account
+- Topic Boards
+
+3. #### User Playlist
+- Notes
+- Video Modal
+- Favourite Playlists
+- Star Rating
+4. #### Search Result
+- Tags
+
 
 ### Features Left To Implement
 
@@ -147,6 +162,12 @@ Attaching video clips to written text so the user can watch a video as a referen
 
 2. #### XX
    - description 
+- Users can draw images, upload Images and add audio clips
+- Users can talk via instant messenger
+- Users can comment on each others notes/playlists
+- Users have recommended playlists
+- Users can Search notes/video clips and add to their notes
+
 
 
 ## Technologies Used
