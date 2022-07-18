@@ -11,9 +11,11 @@ import styles from './index.module.css'
 const scrollNote = document.querySelector('#scrollNote')
 
 function DebugComponent() {
-  // const myUserState = useSelector((state) => state.user)
-  // const myMediaState = useSelector((state) => state.media)
-  
+  const myUserState = useSelector((state) => state.user)
+  const myMediaState = useSelector((state) => state.media)
+  console.log('***\n', myUserState)
+  console.log('===\n', myMediaState)
+
   const dispatch = useDispatch()
   
   return (
