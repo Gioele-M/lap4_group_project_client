@@ -1,16 +1,63 @@
-import React from 'react'
+import React, { Component } from 'react'
 import "./styles.css";
 import { NavLink } from 'react-router-dom';
+// import Modal from '../Signup/modal';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import FinalAtempt from '../Signup/FinalAtempt';
 
 
 export default function NavBar() {
     const logo = require('../../images/logo.png');
+    const [modalShow, setModalShow] = React.useState(false);
+
+
+// wherethe modal will be displayed://///////////////////////////////
+    // class Dashboard extends Component {
+    //   constructor() {
+    //     super();
+    //     this.state = {
+    //       show: false
+    //     };
+    //     this.showModal = this.showModal.bind(this);
+    //     this.hideModal = this.hideModal.bind(this);
+    //   }
+    
+    //   showModal = () => {
+    //     this.setState({ show: true });
+    //   };
+    
+    //   hideModal = () => {
+    //     this.setState({ show: false });
+    //   };
+    // }
+
+////////////////////////////////////////////
+
 
     return (
     <>
+
+
+
+
+
     {/* <nav class="navbar navbar-expand-lg navbar-light bg-light  align-items-end"> */}
     <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
 
+        {/* /////////////// */}
+        {/* <Modal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+        </Modal> */}
+
+
+        
+{/* 
+      <button type="button" onClick={this.showModal}>
+          Open
+      </button>  */}
+
+        {/* /////////////////// */}
 
 {/* LOGO */}
     <NavLink to="/">
@@ -55,21 +102,30 @@ export default function NavBar() {
       <NavLink to="/search">
         <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
       </NavLink>
-      <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-login'>Log in/ Sign up</button>
+
+
+
+{/* login sign up /////// */}
+
+{/* <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button> */}
+      <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setModalShow(true)} id='btn-login'>Log in/ Sign up</Button>
       {/* <button class="btn btn-sm  btn-outline-success me-1 align-middle btn-light">Sign up</button> */}
     </form>
 
 
 
+
+
+
+      <FinalAtempt
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
   </div>
 </nav> 
-
-
-
-
 </>
-
-
-
   )
 }
