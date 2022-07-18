@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+}
+
+.videoContainer {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btnsWrapper {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.button {
+  width: 60px;
+  height: 40px;
+  padding: 5px;
+  background-color: orange;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
