@@ -6,7 +6,7 @@ export const loginUser = (creds) => {
     try {
       console.log('* Fetching User')
       dispatch({ type: 'FETCHING_USER' })
-      const data = await axios(`https://wewacademy.herokuapp.com/userSample`)
+      const data = await axios(`http://localhost:5000/userSample`)
       console.log('* got user data -> ', data)
       dispatch({ type: 'LOGIN_USER', payload: data })
     } catch (err) {

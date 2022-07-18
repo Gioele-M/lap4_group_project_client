@@ -25,3 +25,9 @@ yarn-error.log*
 # Others
 .vscode
 .env
+
+# testing
+.coverage
+.coverage*
+cover/
+coverage/

@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import "./styles.css";
 import { NavLink } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import ModalLogin from '../Modals_Signup_Login/ModalLogin';
+import ModalSignup from '../Modals_Signup_Login/ModalSignup';
 
 export default function NavBar() {
-
     const logo = require('../../images/logo.png');
+
+////////////////////////////////////////////
+
+    const [signupModalShow, setSignupModalShow] = React.useState(false);
+    const [loginModalShow, setLoginModalShow] = React.useState(false);
+
+////////////////////////////////////////////
+
 
     return (
     <>
-    {/* <nav class="navbar navbar-expand-lg navbar-light bg-light  align-items-end"> */}
-    <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light">
-
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
 
 {/* LOGO */}
     <NavLink to="/">
@@ -25,11 +33,11 @@ export default function NavBar() {
 
 
 {/* TEXT LINKS  /////////////////// */}
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02 ">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 " id=' font1'>
       <li class="nav-item active">
           <NavLink id='no-decos' to="/">
-            <a class="nav-link " href="#">Home</a>
+            <a class="nav-link " href="#" id=' font1'>Home</a>
           </NavLink>
       </li>
       <li class="nav-item ">
@@ -44,30 +52,42 @@ export default function NavBar() {
       </li>
       <li class="Playlists">
         <NavLink id='no-decos' to="/playlist">
-          <a class="nav-link" href="#">My playlists</a>
+          <a class="nav-link" href="#">Playlists</a>
         </NavLink>
       </li>
 
 {/* SEARCH  /////////////////// */}
     </ul>
     <form class="form-row px-2 ms-auto align-middle ">
-      <input class="form-row me-1 align-middle" type="search" placeholder="Enter key words" />
-      <button class="btn btn-sm  btn-outline-success me-1 align-middle " type="submit">Search</button>
-      <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-login'>Log in/ Sign up</button>
-      {/* <button class="btn btn-sm  btn-outline-success me-1 align-middle btn-light">Sign up</button> */}
+      <input class="form-row me-1 align-middle" id='placeholder' type="search" placeholder="Look for something:" />
+      <NavLink to="/search">
+        <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
+      </NavLink>
+
+
+
+{/* login sign up /////// */}
+
+      <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
+      <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>Sign up</Button>
+
     </form>
 
 
+{/* Open the modals /////// */}
+  <ModalLogin  
+  show={loginModalShow}
+  onHide={() => setLoginModalShow(false)}
+  />
+
+  <ModalSignup 
+  show={signupModalShow}
+  onHide={() => setSignupModalShow(false)}
+  />
 
   </div>
 </nav> 
-
-
-
-
 </>
-
-
-
   )
 }
+
