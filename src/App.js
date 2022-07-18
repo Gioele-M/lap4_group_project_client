@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { HomePage, UserPage, PlaylistPage, AboutPage } from './Pages'
+import { HomePage, UserPage, PlaylistPage, AboutPage, SearchResultPage } from './Pages'
 import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -17,6 +17,7 @@ function App() {
         <Route path="/user" element={<UserPage />} />
         <Route path="/playlist" element={<PlaylistPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/search" element={<SearchResultPage />} />
       </Routes>
       {/* Debug Component
       check browser console or Redux DevTools to chec the State */}
