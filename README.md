@@ -1,4 +1,4 @@
-
+<div id="top"></div>
 <h1 align="center">
 <a href="https://wewacademy.netlify.app" target="_blank"><img src="src/images/readmelogo.png" alt="WWA Logo"/></a>
 </h1>
@@ -9,7 +9,7 @@
 
 [Write and Watch Academy](https://wewacademy.netlify.app) is an interactive website, devised for those who want to take revising study notes to the next level. The ability to add a related video would make studying much more effective and efficient
 
-<br>Features include: user can keep playlists of youtube video associated with his own comments and time on the video. By clicking each comment the video starts playing (starting at the right point in the video) and the user can click through the comment for that specific subject and review his notes with the help of the videos.
+<br>Features include: user can keep playlists of youtube video associated with his own comments and time on the video. By clicking each comment the video starts playing starting at the right point in the video and the user can click through the comment for that specific subject and review his notes with the help of the videos.
 <br>
 
 
@@ -64,7 +64,7 @@ The target audience for this website is a user that interacts with multimedia an
 - To start video on particular time to avoid watching unwanted material
 - To reference and collate their notes and videos in one place
 - To store a playlist of videos for particular topic of interests
-- To retrieve,edit or delete saved playlists
+- To retrieve, edit or delete saved playlists
 
 ### Developer Goals
 
@@ -86,6 +86,8 @@ As an registered user I want:
 1. 
 2. 
 
+<p align="right"><a href="#top">back to top</a></p>
+
 ### Design
 
 The goal of the design is to relate to YouTube red colour scheme. Keeping that in mind the design choices have been made to interfere as little as possible with the main subject matter.
@@ -98,14 +100,13 @@ This contrasted well against black and white and added enough interest to the de
 
 #### Font
 
-![XXXX Font](assets/images/read-me/roboto-font.png)
+![TBC Font](assets/images/read-me/roboto-font.png)
 
-The font chosen was XXX because it has a clean, modern type that would go well with the minimalist theme.
+The font chosen was XX TBC because it has a clean, modern type that would go well with the minimalist theme.
 
 #### Icons
 
 #### Styles
-
 ### Wireframes
 
 The following wireframes were created on the skeleton plane as part of the planning process of the project using [Balsamiq](https://balsamiq.com/)
@@ -116,6 +117,7 @@ The following wireframes were created on the skeleton plane as part of the plann
 - [Topic Playlis Page](src/images/topicplaylistpage.png)
 - [General outline](src/images/excalidraw.png)
 
+<p align="right"><a href="#top">back to top</a></p>
 
 ## Product (USP)
 
@@ -129,11 +131,9 @@ Attaching video clips to written text so the user can watch a video as a referen
 ### Must-haves:
 
 - Deployment
+- 
 
-### Could-haves/Stretch Goals:
-- User can add own profile photo
-
-
+<p align="right"><a href="#top">back to top</a></p>
 ## Features
 
 ### Existing Features
@@ -180,7 +180,7 @@ Attaching video clips to written text so the user can watch a video as a referen
 | APIs      |           |
 | Database  |           |
 
-
+<p align="right"><a href="#top">back to top</a></p>
 ## Testing
 
 
@@ -228,7 +228,7 @@ No releases published
 No packages published
 
 
-
+<p align="right"><a href="#top">back to top</a></p>
 
 
 
