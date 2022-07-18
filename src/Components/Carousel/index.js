@@ -9,11 +9,18 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 export default function TrendingTopics() {
+
+    const soonImg = require('../../images/soon.png');
+    const img1 = require('../../images/1.png');
+    const img2 = require('../../images/2.png');
+    const img3 = require('../../images/3.jpg');
+
     return(
+        <div className="container-fluid">
     <div className='container'>
         <div className="title_wrapper">
             <div className="soonimg">
-                <img src="../../images/cs.png" alt="coming soon image" />
+                <img src={soonImg} alt="coming soon image" />
             </div>
             <div className="title_">
                 <span>Coming Soon</span>Swiper Slider
@@ -37,16 +44,17 @@ export default function TrendingTopics() {
             className="mySwiper"
         >
             <SwiperSlide>
-                <img src="images/1.png" alt="" />
+                <img src={img1} alt="" />
             </SwiperSlide>
             <SwiperSlide>
-                <img src="images/2.png" alt="" />
+                <img src={img2} alt="" />
             </SwiperSlide>
             <SwiperSlide>
-                <img src="images/3.jpg" alt="" />
+                <img src={img3} alt="" />
             </SwiperSlide>
 
         </Swiper>
+    </div>
     </div>
     );
 }
