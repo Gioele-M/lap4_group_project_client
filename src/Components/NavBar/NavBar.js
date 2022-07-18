@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import "./styles.css";
 import { NavLink } from 'react-router-dom';
-
+import Button from 'react-bootstrap/Button';
+import ModalLogin from '../Modals_Signup_Login/ModalLogin';
+import ModalSignup from '../Modals_Signup_Login/ModalSignup';
 
 export default function NavBar() {
     const logo = require('../../images/logo.png');
 
+////////////////////////////////////////////
+
+    const [signupModalShow, setSignupModalShow] = React.useState(false);
+    const [loginModalShow, setLoginModalShow] = React.useState(false);
+
+////////////////////////////////////////////
+
+
     return (
     <>
-    {/* <nav class="navbar navbar-expand-lg navbar-light bg-light  align-items-end"> */}
     <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
-
 
 {/* LOGO */}
     <NavLink to="/">
@@ -55,21 +63,31 @@ export default function NavBar() {
       <NavLink to="/search">
         <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
       </NavLink>
-      <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-login'>Log in/ Sign up</button>
-      {/* <button class="btn btn-sm  btn-outline-success me-1 align-middle btn-light">Sign up</button> */}
+
+
+
+{/* login sign up /////// */}
+
+      <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
+      <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>Sign up</Button>
+
     </form>
 
 
+{/* Open the modals /////// */}
+  <ModalLogin  
+  show={loginModalShow}
+  onHide={() => setLoginModalShow(false)}
+  />
+
+  <ModalSignup 
+  show={signupModalShow}
+  onHide={() => setSignupModalShow(false)}
+  />
 
   </div>
 </nav> 
-
-
-
-
 </>
-
-
-
   )
 }
+
