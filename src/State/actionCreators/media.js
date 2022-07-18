@@ -5,9 +5,7 @@ export const fetchMedia = () => {
     try {
       console.log('* Fetching Media')
       dispatch({ type: 'FETCHING_MEDIA' })
-      const data = await axios(
-        `https://wewacademy.herokuapp.com/playlistSample`
-      )
+      const data = await axios(`http://localhost/tempTrending`)
       console.log('Got Media data -> ', data)
       dispatch({ type: 'FETCH_MEDIA', payload: data })
     } catch (err) {

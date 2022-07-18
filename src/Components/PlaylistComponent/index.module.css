@@ -5,80 +5,22 @@
   align-items: center;
   min-height: 400px;
   background-color: bisque;
-}
-
-.noteWrapper {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-rows: 200px;
-  border: none;
-  border-radius: 20px;
-  padding: 5px;
-  gap: 5px;
-}
-
-.noteText {
-  
-  font-size: 1.3rem;;
-  border: none;
-  border-radius: 20px;
-  padding: 5px;
   
 }
 
-.controls {
-  background-color: pink;
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4fr 1fr 1fr;
-  gap: 5px;
-}
-
-.thumbnail {
-  
-  grid-column: 1/3;
-  grid-row: 1/2;
-  background-color: yellow;
-}
-
-.saveBtn, .deleteBtn {
-  color: white;
-  border: none;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.saveBtn {
-  background-color: green;
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-.deleteBtn {
-  background-color: red;
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-
-.link {
-  border: none;
-  border-radius: 10px;
-  grid-column: 1/3;
-  grid-row: 2/3;
-}
 
 .addNoteBtn {
-  align-self: flex-start;
+  
   border: none;
-  border-radius: 10px;
+  border-radius: 100%;
   padding: 5px;
-  height: 40px;
+  height: 70px;
   width: 70px;
-  background-color: red;
+  background-color: green;
   color: white;
-  font-size: 1.2rem;
+  font-size: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 15px
 }
