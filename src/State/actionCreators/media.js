@@ -6,7 +6,8 @@ export const fetchMedia = () => {
       console.log('* Fetching Media')
       dispatch({ type: 'FETCHING_MEDIA' })
       const data = await axios(`http://localhost:5000/temptrending`)
-      console.log('Got Media data -> ', data)
+
+      // console.log('Got Media data -> ', data)
       dispatch({ type: 'FETCH_MEDIA', payload: data })
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })

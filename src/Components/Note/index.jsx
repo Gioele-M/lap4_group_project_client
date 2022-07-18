@@ -8,16 +8,18 @@ function Note({noteTitle, start, end, url, text}) {
 
   return (
     <div className={styles.noteWrapper}>
-        <textarea 
+        <textarea
+        data-testid="textArea" 
           onChange={(e) => setNoteText(e.target.value)}
-          className={styles.noteText} value={noteText}/>
+          className={styles.noteText} value={noteText || ''}/>
         <div className={styles.controls}>
           <div className={styles.thumbnail}></div>
           <button className={styles.saveBtn}>Save</button>
           <button className={styles.deleteBtn}>Delete</button>
           <input 
+          data-testid="linkurl"
           onChange={(e) => setLink(e.target.value)}
-            className={styles.link} type="text" placeholder="video link" value={link}/>
+            className={styles.link} type="text" placeholder="video link" value={link || ''}/>
         </div>
         
       </div>
