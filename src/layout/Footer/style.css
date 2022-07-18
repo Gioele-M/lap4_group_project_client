@@ -2,33 +2,8 @@
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding: 20px;
+    padding: 5px;
     align-items: center;
 }
 
-footer .contact-box {
-    background: var(--secondary-colour);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-/* Icons style */
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
-  
-  .fa:hover {
-    opacity: 0.7;
-}
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
 
