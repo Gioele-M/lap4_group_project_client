@@ -6,7 +6,7 @@ let player;
 
 const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, autoplay=0, endCb=()=> {}}) => {
   // "ZPt9dJw1Dbw"
-  const [now, setNow] = useState()
+  
   const [start, setStart] = useState(startAt || '0')
   const [end, setEnd] = useState(endAt || '0')
 
@@ -15,11 +15,11 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
 
   }
 
-  const handleStateChange = (x) => {
-    let currTime = x.target.getCurrentTime()
-    console.log('time: ', currTime)
+  const handleStateChange = (video) => {
+    
+    console.log('Title: ', video.target.videoTitle)
           
-    setNow(currTime)
+    
   }
 
   const handleError = (err) => {
@@ -48,6 +48,8 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
           videoId: videoId,
           title: {title},
           start: {startAt},
+          width,
+          height,
           end: {endAt},
           onEnd: {endCb},
           events: {
@@ -70,16 +72,22 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
 
   return (
     <div className={StyleSheet.wrapper}>
-      <div 
+      <div className={`${styles.videoContainer}`} style={{width, height}} >
+        <div 
         id={'videoPlayer'}
         data-testid='videoplayer' 
       />
+      </div>
+      
 
       <div className={styles.btnsWrapper}>
        
         <button
           className={styles.button}
-          onClick={() => {setStart(now)}
+          onClick={() => {
+            setStart(player.getCurrentTime())
+            
+          }
         }
         >
           Start
@@ -87,7 +95,7 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
         
         <button
           className={styles.button}
-          onClick={() => setEnd(now)}
+          onClick={() => setEnd(player.getCurrentTime())}
         >
           End
         </button>

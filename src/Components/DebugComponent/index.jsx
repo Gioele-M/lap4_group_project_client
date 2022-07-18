@@ -46,8 +46,6 @@ function DebugComponent() {
     id="#searchBtn" className={styles.debugElement}>Fetch</div>
 
 
-    {/* <VideoPlayerCtrl videoId='tgAeF0AcLPY' title='Just a Title' start='100' end='null'/> */}
-
     <VideoPlayer videoId='tgAeF0AcLPY' title='Just a Title' start='100' end='null'/>
   </>
 
