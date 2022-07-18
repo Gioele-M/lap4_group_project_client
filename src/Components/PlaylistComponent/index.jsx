@@ -1,24 +1,24 @@
-import React, {useState, useEffect} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-import { fetchMedia } from '../../State/actionCreators/media'
 import Note from '../Note'
 import styles from './index.module.css'
 
 function PlaylistComponent({title}) {
-  const notes = useSelector(state => state.media.data[0].chapters[0])
+  let notes = useSelector(state => state.media.data[0])
+  console.log('A A A ', useSelector(state => state.media.data))
   console.log('* * *', notes)
+  // console.log('= = =', typeof(notes.chapters) === typeof([1,2,3]))
   
-  const dispatch = useDispatch('')
-
   
 
-  const renderNotes = notes.map((note, idx) => {
-    // console.log(note.chapterTitle)
-    // console.log(note.start)
-    // console.log(note.end)
-    // console.log(note.video_url)
-    // console.log(note.text)
+  const renderNotes =  
+    notes.chapters.map((note, idx) => {
+    console.log(note.chapterTitle)
+    console.log(note.start)
+    console.log(note.end)
+    console.log(note.text)
+    console.log(note.video_url)
     
     return (
       <Note
@@ -30,17 +30,18 @@ function PlaylistComponent({title}) {
         text={note.text} 
       />
     )
-  })
+  }) 
+  
 
-  useEffect(() => {
-    dispatch(fetchMedia())
-  }, [dispatch])
+ 
+
+  
 
   return (
     <div className={styles.wrapper}>
       <h1>{title || 'Your Playlist'}</h1>
       
-      {renderNotes}
+      {renderNotes }
 
       
       
