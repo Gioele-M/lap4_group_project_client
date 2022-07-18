@@ -133,7 +133,6 @@ Attaching video clips to written text so the user can watch a video as a referen
 - Deployment
 - 
 
-<p align="right"><a href="#top">back to top</a></p>
 ## Features
 
 ### Existing Features
@@ -154,6 +153,7 @@ Attaching video clips to written text so the user can watch a video as a referen
 4. #### Search Result
 - Tags
 
+<p align="right"><a href="#top">back to top</a></p>
 
 ### Features Left To Implement
 
