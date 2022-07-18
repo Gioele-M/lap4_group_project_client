@@ -1,8 +1,10 @@
 import React from 'react'
+import { PlaylistComponent } from '../../Components'
+
 
 function PlaylistPage() {
   return (
-    <div>PlaylistPage</div>
+    <PlaylistComponent title="Learning Flask Basics"/>
   )
 }
 
