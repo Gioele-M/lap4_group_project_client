@@ -5,6 +5,7 @@ import {
   PlaylistPage,
   AboutPage,
   SearchResultPage,
+  NotFound
 } from './Pages'
 // import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
