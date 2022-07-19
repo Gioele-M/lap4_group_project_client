@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 export const fetchMedia = () => {
   return async (dispatch) => {
     try {
@@ -33,6 +34,31 @@ export const patchMedia = (newData) => {
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })
       console.log('Error patching media: ', err)
+    }
+  }
+}
+
+
+
+// user creates a new playlist
+export const createNewPL = ({ playlistName,userEmail, token }) => {
+  return async (dispatch) => {
+    try {
+      console.log('* Create new playlist')
+      dispatch({ type: 'FETCH_MEDIA' }) //MATTERO, we need help BANANAS!
+      const data = await axios.post(`http://localhost:5000/playlist/new`, {
+        playlistName,
+        email: userEmail,
+        token
+      })
+      if (data.error) {
+        throw new Error(data.error)
+      }
+      console.log('* got user data -> ', data)
+      dispatch({ type: 'FETCH_MEDIA', payload: data })
+    } catch (err) {
+      dispatch({ type: 'SET_ERROR', payload: err })
+      console.log('Error posting new playlist: ', err)
     }
   }
 }
