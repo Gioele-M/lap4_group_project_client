@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
+import { patchMedia } from '../../State/actionCreators/media'
 
 import styles from './index.module.css'
 
@@ -9,6 +10,23 @@ function Note(props) {
   const [link, setLink] = useState(props.url)
   console.log('--- ', props.chapterId)
   const dispatch = useDispatch('')
+
+  const userData = useSelector(state => state.user.user)
+  const mediaData = useSelector(state => state.media.data.data)
+
+  console.log('--- USER ---\n', userData)
+  console.log('--- MEDIA --\n', mediaData)
+
+  const handleSaveBtn = () => {
+    const data = {
+      "userRequesting":userData.userEmail,
+      "playlistName": mediaData.playlistName,
+      "chapters": mediaData.chapters,
+      "token": userData.token
+      }
+
+      dispatch(patchMedia(data))
+    }
 
   return (
     <div 
@@ -26,7 +44,10 @@ function Note(props) {
           }
           }
           className={styles.thumbnail}>Pic</div>
-          <button className={styles.saveBtn}>Save</button>
+          <button 
+            className={styles.saveBtn}
+            onClick={() => handleSaveBtn}
+          >Save</button>
           <button className={styles.deleteBtn}>Delete</button>
           <input 
           data-testid="linkurl"
