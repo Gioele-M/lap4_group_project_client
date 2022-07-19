@@ -102,7 +102,7 @@ function PlaylistComponent({title}) {
       
       
       <button 
-        className=""
+        className="btn btn-primary"
         onClick={() => handleAddNoteBtn()}
       >+</button>
 

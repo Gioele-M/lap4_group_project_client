@@ -86,8 +86,9 @@ function Note(props) {
   return (
     <div class="container">
       <div className="row">
+        <h3 className="col-12 mt-3"><kbd>{props.noteTitle}</kbd></h3>
         <textarea
-          className="input col-9"
+          className="input col-10 lead text-justify"
           data-testid="textArea" 
           onChange={(e) => {
             setNoteText(e.target.value)
@@ -97,7 +98,7 @@ function Note(props) {
           }}
           value={noteText || ''}
         />
-        <div className="col-3">
+        <div className="col-2">
           <div className="">
             <img 
               alt="red video player logo"

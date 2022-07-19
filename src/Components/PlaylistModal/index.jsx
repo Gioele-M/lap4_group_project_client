@@ -26,7 +26,7 @@ function PlaylistModal({showModal, text, url}) {
         url={noteData.url} 
         start={noteData.start}
         end={noteData.end}
-        noteTile={noteData.chapterTitle}
+        noteTitle={noteData.noteTitle}
         chapterId={noteData.chapterId}
       />
       <button onClick={() => showModal(false)} class={styles.deleteBtn}>X</button>

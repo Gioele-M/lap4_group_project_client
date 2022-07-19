@@ -1,17 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import YouTube, { YouTubeProps } from 'react-youtube'
 
-import styles from './index.module.css'
+// import styles from './index.module.css'
 
 
-function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390, autoplay=0, endCb=()=> {}}) {
+function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480, autoplay=0, endCb=()=> {}}) {
 
   const [now, setNow] = useState()
   const [start, setStart] = useState(startAt || '0')
   const [end, setEnd] = useState(endAt || '0')
+  const [calcWidth, setCalcWidth] = useState(800)
+  const [calcHeight, setCalcHeight] = useState(500)
 
   const opts = {
-    width: width,
+    width: calcWidth,
     height: height,
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
@@ -20,9 +22,16 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390,
     },
   };
 
+  useEffect(() => {
+    setCalcWidth(window.innerWidth  * 58 / 100)
+    setCalcHeight(window.innerWidth * 16 / 9)
+  }, [])
+
   return (
-    <div data-testid={'videoWrapper'} className={styles.wrapper}>
+    <div data-testid={'videoWrapper'} className="">
       <YouTube
+      id="utube"
+      className=""
       data-testid='videoplayer'
       videoId={videoId}
       title={title}
@@ -38,23 +47,27 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=640, height=390,
         }
       }
       />
-    <div className={styles.buttonWrapper}>
+    <div className="row container">
       <button
-    className={styles.button}
-      onClick={() => {
-        setStart(now)
-      }}
-       >Start
-    </button>
-    <button
-    className={styles.button}
-      onClick={() => setEnd(now)}
-      >End
-    </button>
+        className="col-3 btn btn-primary"
+        onClick={() => {
+         setStart(now)
+        }}
+        >Start
+      </button>
+      <p className="col-3" data-testid='startLabel'>Start: {String(start)}</p>
+
+      <button
+        className="col-3 btn btn-primary"
+        onClick={() => setEnd(now)}
+        >End
+      </button>
+      <p className="col-3" data-testid='endLabel'>End: {String(end)}</p>
+
     </div>
     
-    <p data-testid='startLabel'>Start: {String(start)}</p>
-    <p data-testid='endLabel'>End: {String(end)}</p>
+    
+    
     </div>
   )
 }
