@@ -12,7 +12,7 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
 
 
   const handleOnReady = (event) => {
-
+    
   }
 
   const handleStateChange = (video) => {
@@ -27,6 +27,7 @@ const VideoPlayer = ({videoId, title, startAt, endAt, width=640, height=390, aut
   }
 
   useEffect(() => {
+    
     if (!window.YT) {
       // If not, load the script asynchronously
       const tag = document.createElement("script");

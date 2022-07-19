@@ -566,6 +566,8 @@ const data = [
 
 const initState = {
   data,
+  loading: false,
+  error: false,
 }
 
 export const mediaReducer = (state = initState, action) => {
