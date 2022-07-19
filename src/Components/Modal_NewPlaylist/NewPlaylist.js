@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
 
-export default function NewPlaylist(props) {
+export default function ModalLogin(props) {
   // const handleClose = () => setShow(false);
   const [signupModalShow, setSignupModalShow] = React.useState(false);
 
@@ -12,7 +12,7 @@ export default function NewPlaylist(props) {
 
 
       <Modal.Header closeButton>
-        <Modal.Title id="modalTitle">Log in</Modal.Title>
+        <Modal.Title id="modalTitle">Create A Playlist</Modal.Title>
       </Modal.Header>
 
       
@@ -20,17 +20,18 @@ export default function NewPlaylist(props) {
       <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
       <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
 
-      <p id='modal-intro'>Please enter you details:</p>
+      {/* <p id='modal-intro'>Please enter you details:</p> */}
         <div class="form  p-2 Modal-signuplogin" id="signupSection">
 
-          <input type="text" name="" class="my-1 form-control" placeholder="Playlist Name"/>
-          <input type="text" name="" class="my-3 form-control" placeholder="Password"/>
-          
+          <input type="text" name="" class="my-1 form-control" placeholder="Playlist Name:"/>
+          {/* <input type="checkbox" name="" class="my-3 form-control" placeholder="Public"/> */}
+          {/* <label for="colourPicker"> Pick a background colour:</label><br/> */}
+          <input type="color" name="" class="my-3 form-control " id='colourPicker' placeholder="Colour"/>
+          <input type="checkbox" id="privateCheck" name="privateCheck" value="private"></input>
+          <label for="privateCheck"> Private</label><br/>
 
-          <button class="my-4 btn " id="btn-login">Log In</button>
-            <br/>
-              {/* <a id='already'  onClick={handleClose}  href='#'>Already have an account?</a> */}
-              <a id='already'  href='#'>Don't have an account?</a>
+          <button class="my-4 btn " id="btn-login" >Lets Go!</button>
+
 
 
 
