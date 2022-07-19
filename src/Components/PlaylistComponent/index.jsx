@@ -10,6 +10,9 @@ function PlaylistComponent({title}) {
   console.log('A A A ', useSelector(state => state.media.data))
   console.log('* * *', notes)
   // console.log('= = =', typeof(notes.chapters) === typeof([1,2,3]))
+
+  let loading = useSelector(state => state.media.loading)
+
   
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -41,7 +44,7 @@ function PlaylistComponent({title}) {
     <div className={styles.wrapper}>
       <h1>{title || 'Your Playlist'}</h1>
       
-      {renderNotes }
+      {loading === false && renderNotes }
 
       
       
@@ -55,7 +58,6 @@ function PlaylistComponent({title}) {
          
          />}
       
-      <button >Modal</button>
       <br />
       <br />
       <br />

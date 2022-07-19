@@ -61,3 +61,11 @@
     /* text-decoration: none; */
 }
 
+#already{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: smaller;
+    border-radius: 10px ;
+    /* border-color: #E92D2D; */
+    font-style: italic;
+}
