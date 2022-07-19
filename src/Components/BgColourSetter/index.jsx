@@ -14,7 +14,7 @@ function BgSetter() {
 
     console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
     // const bgColour= useSelector((state) => state.media.data[0].playlistTheme)
-    const bgColour = 'rgb(125, 231, 5)'
+    // const bgColour = 'rgb(125, 231, 5)'
 
     
     // console.log(bgColour)
