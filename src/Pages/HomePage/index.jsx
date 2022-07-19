@@ -10,7 +10,7 @@ function HomePage() {
   return (
 
     <>
-    <div>HomePage</div>
+    <div id='homepagepractice'>HomePage</div>
 
 <NewPlaylistBtn />
 
