@@ -6,7 +6,7 @@ import {
   AboutPage,
   SearchResultPage,
 } from './Pages'
-import { DebugComponent } from './Components'
+// import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
 import TrendingTopics from './Components/Carousel'
 
@@ -32,7 +32,7 @@ function App() {
         <Route path="/playlist" element={<PlaylistPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<SearchResultPage />} />
-        <Route path="/debug" element={<DebugComponent />} />
+        {/* <Route path="/debug" element={<DebugComponent />} /> */}
       </Routes>
       <p>Footer</p>
       <Footer />
