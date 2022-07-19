@@ -11,7 +11,7 @@ export default function NewPlaylistBtn() {
   return (
 
 <>
-    <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>+</Button>
+    <Button class="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>ADD NEW PLAYLIST+</Button>
 
 <NewPlaylist show={signupModalShow}
     onHide={() => setSignupModalShow(false)}/>
