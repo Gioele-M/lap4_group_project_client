@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchMedia, patchMedia } from '../../State/actionCreators/media'
 import Note from '../Note'
 import PlaylistModal from '../PlaylistModal'
-import styles from './index.module.css'
+// import styles from './index.module.css'
 
 function PlaylistComponent({title}) {
   let notes = useSelector(state => state.media.data.data)
@@ -91,17 +91,18 @@ function PlaylistComponent({title}) {
   
   
   return (
-    <div className={styles.wrapper}>
-      <h1>{title || 'Your Playlist'}</h1>
+    <div className="container ">
+      <div className="container">
+        <h1>{title || 'Your Playlist'}</h1>
 
-      <button onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
+      <button className="btn btn-primary" onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
       
       {loading === false && renderNotes }
 
       
       
       <button 
-        className={styles.addNoteBtn}
+        className=""
         onClick={() => handleAddNoteBtn()}
       >+</button>
 
@@ -116,6 +117,8 @@ function PlaylistComponent({title}) {
       <br />
       <br />
       <br />
+      </div>
+      
     </div>
   )
 }

@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
 import { patchMedia, deleteNote } from '../../State/actionCreators/media'
 
-import styles from './index.module.css'
+const playPic = require('../../images/utube.png')
+// import styles from './index.module.css'
 
 function Note(props) {
   const [noteText, setNoteText] = useState(props.text)
@@ -48,6 +49,7 @@ function Note(props) {
       dispatch(patchMedia(data))
     }
 
+    // ASK GIO IF THIS ENDPOINT IS CORRECT: /playlist/delete
     const handleDeleteBtn = () => {
       // find the right chapter
       const chapters = mediaData[0].chapters
@@ -82,43 +84,56 @@ function Note(props) {
     }
 
   return (
-    <div 
-      
-      className={styles.noteWrapper}>
+    <div class="container">
+      <div className="row">
         <textarea
-        data-testid="textArea" 
+          className="input col-9"
+          data-testid="textArea" 
           onChange={(e) => {
             setNoteText(e.target.value)
             setSelected(props.key)
             console.log('ZZZZZ', noteText)
             console.log('selected OoOoOo', selected)
           }}
-          className={styles.noteText} value={noteText || ''}/>
-        <div className={styles.controls}>
-          <div 
-          onClick={() => {
-            dispatch(setSelectedNote(props))
-            props.onNoteClick()
-          }
-          }
-          className={styles.thumbnail}>Pic</div>
-          <button 
-            className={styles.saveBtn}
-            onClick={() => handleSaveBtn()}
-            >Save
-          </button>
-          <button 
-            className={styles.deleteBtn}
-            onClick={() => handleDeleteBtn()}
-            >Delete
-          </button>
-          <input 
-          data-testid="linkurl"
-          onChange={(e) => setLink(e.target.value)}
-            className={styles.link} type="text" placeholder="video link" value={link || ''}/>
+          value={noteText || ''}
+        />
+        <div className="col-3">
+          <div className="">
+            <img 
+              alt="red video player logo"
+              onClick={() => {
+                dispatch(setSelectedNote(props))
+                props.onNoteClick()
+              }}
+              className="img-fluid"
+              src={playPic}
+            />
+            
+            <input 
+              data-testid="linkurl"
+              onChange={(e) => setLink(e.target.value)}
+              className="col-12" 
+              type="text" 
+              placeholder="video link" 
+              value={link || ''}
+            />
+            <div class="row">
+              <button 
+                className="col-6 btn btn-primary"
+                onClick={() => handleSaveBtn()}
+                >Save
+              </button>
+
+              <button 
+                className="col-6 btn btn-danger"
+                onClick={() => handleDeleteBtn()}
+                >Delete
+              </button>
+            </div>
+          </div>
         </div>
-        
-      </div>
+      </div>    
+    </div>
   )
 }
 
