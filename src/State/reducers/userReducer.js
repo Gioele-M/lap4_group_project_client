@@ -28,6 +28,8 @@ const user = {
 
 const initState = {
   user,
+  loading: false,
+  error: false,
 }
 
 // reducers from here
@@ -35,13 +37,20 @@ const initState = {
 export const userReducer = (state = initState, action) => {
   switch (action.type) {
     case 'SIGNUP_USER':
-      return state
+      return { user: action.payload, loading: false, error: false }
+
+    case 'REGISTERING_USER':
+      return { ...state, loading: true, error: false }
 
     case 'LOGIN_USER':
       return { user: action.payload, loading: false, error: false }
 
     case 'LOGOUT_USER':
-      return state
+      return {
+        user: {},
+        loading: false,
+        error: false,
+      }
 
     case 'FETCHING_USER':
       return { ...state, loading: true, error: false }
