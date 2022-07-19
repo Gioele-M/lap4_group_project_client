@@ -16,7 +16,6 @@ export default function ModalLogin(props) {
   ///////////ignore the followingblock///////
   ///////////////////////////////////////////
   // const handleClose = () => setShow(false);
-  const [signupModalShow, setSignupModalShow] = React.useState(false);
   const colourRef = useRef()
   const [colourPicker1, setColourPicker1] = useState('rgb(4,2,4)')
   // function checkValue (){
@@ -28,10 +27,17 @@ export default function ModalLogin(props) {
     });
     // let rgbForm = colourPicker1
     // let rgbForm = document.getElementsByClassName.colourPicker
-  // }
-  ///////////////////////////////////////////
-  ///////////////////////////////////////////
-  
+    // }
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    
+    
+    const [playlistName, setPlaylistName] = useState('Playlist Name:');
+
+    function handleChange(event) {
+      setPlaylistName({value: event.target.value});
+      console.log('new update:',playlistName)
+    }
 
 
   return (
@@ -45,8 +51,7 @@ export default function ModalLogin(props) {
             <div class="form  p-2 Modal-signuplogin" id="signupSection">
 
 
-
-          <input type="text" name="" class="my-1 form-control" placeholder="Playlist Name:"/>
+          <input type="text" name="" class="my-1 form-control" placeholder={playlistName}  onChange={handleChange}  />
 
 
 
@@ -61,7 +66,7 @@ export default function ModalLogin(props) {
           <button class="my-4 btn " id="btn-login"       
           onClick={() => 
           dispatch(createNewPL(
-            {playlistName: 'Toms Baking Pdlaydslist', //banana
+            {playlistName: {playlistName}, //banana
             userEmail:userdata.userEmail,
             token: userdata.token,
             // tags: ['cakes','muffins'],
