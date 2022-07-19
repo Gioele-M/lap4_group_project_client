@@ -38,13 +38,45 @@ function Note(props) {
     console.log('UPDATED CHAPTERS -----------------\n', chapters)
 
     const data = {
-      "userRequesting":userData.userEmail,
+      // "userRequesting":userData.userEmail,
+      userRequesting: 'matteo@gmail.com',
       "playlistName": mediaData[0].playlistName,
-      "chapters": mediaData.chapters,
+      "chapters": chapters,
       "token": userData.token
       }
       console.log('SAVING NOTE: ', noteText)
       dispatch(patchMedia(data))
+    }
+
+    const handleDeleteBtn = () => {
+      // find the right chapter
+      const chapters = mediaData[0].chapters
+      // create the data
+      chapters.forEach(chap => {
+      if (chap.chapterId === props.chapterId) {
+        console.log('chapterId is: ', chap.chapterId)
+        
+        const userRequesting = userData.userEmail 
+        console.log('* userRequesting: ', userRequesting)
+        const playlistName = mediaData
+        console.log('* playlistName: ', playlistName[0].playlistName)
+        const token = userData.token
+        console.log('* token: ', token)
+
+        const data = {
+          userRequesting,
+          playlistName,
+          chapters: props.chapterId,
+          token,
+        }
+        // call the actionCreator for DELETE
+        
+      }
+      
+    })
+      
+
+      // update the page
     }
 
   return (
@@ -71,8 +103,13 @@ function Note(props) {
           <button 
             className={styles.saveBtn}
             onClick={() => handleSaveBtn()}
-          >Save</button>
-          <button className={styles.deleteBtn}>Delete</button>
+            >Save
+          </button>
+          <button 
+            className={styles.deleteBtn}
+            onClick={() => handleDeleteBtn()}
+            >Delete
+          </button>
           <input 
           data-testid="linkurl"
           onChange={(e) => setLink(e.target.value)}

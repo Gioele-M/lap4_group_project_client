@@ -22,6 +22,8 @@ export const patchMedia = (newData) => {
       console.log('* Patching Media')
       dispatch({ type: 'PATCHING_MEDIA' })
 
+      console.log('NewData-> ', newData)
+
       const data = await axios.patch(
         'http://localhost:5000/playlist/patch',
         newData
