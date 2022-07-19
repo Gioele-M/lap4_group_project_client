@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef, useEffect,} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
@@ -9,7 +9,7 @@ import { signupUser } from "../../State/actionCreators/user";
 export default function ModalSignup(props) {
 
 
-  const [loginModalShow, setLoginModalShow] = seState(false); user
+  // const [loginModalShow, setLoginModalShow] = seState(false); user
 
   const dispatch = useDispatch()
 
