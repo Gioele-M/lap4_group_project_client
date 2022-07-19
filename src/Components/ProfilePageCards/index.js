@@ -78,6 +78,7 @@ function ProfilePageCards() {
                 </Card>
 
                 </Col>
+                     {/* CARD 3 */}
 
                 <Col lg={3} className="m-3" >
                 <Card style={{ width: '18rem' }}>
