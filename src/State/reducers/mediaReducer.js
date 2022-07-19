@@ -110,6 +110,12 @@ export const mediaReducer = (state = initState, action) => {
     case 'PATCHING_MEDIA':
       return { ...state, loading: true, error: false }
 
+    case 'DELETING_NOTE':
+      return { ...state, loading: true, error: false }
+
+    case 'DELETE_NOTE':
+      return { data: action.payload, loading: false, error: false }
+
     default:
       return state
   }

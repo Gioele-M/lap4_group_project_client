@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
-import { patchMedia } from '../../State/actionCreators/media'
+import { patchMedia, deleteNote } from '../../State/actionCreators/media'
 
 import styles from './index.module.css'
 
@@ -15,8 +15,8 @@ function Note(props) {
   const mediaData = useSelector(state => state.media.data.data)
   const [selected, setSelected] = useState(0)
 
-  console.log('--- USER ---\n', userData)
-  console.log('--- MEDIA --\n', mediaData)
+  // console.log('--- USER ---\n', userData)
+  // console.log('--- MEDIA --\n', mediaData)
 
   const handleSaveBtn = () => {
     const chapters = mediaData[0].chapters
@@ -56,10 +56,11 @@ function Note(props) {
       if (chap.chapterId === props.chapterId) {
         console.log('chapterId is: ', chap.chapterId)
         
+        // const userRequesting = 'matteo@gmail.com'
         const userRequesting = userData.userEmail 
         console.log('* userRequesting: ', userRequesting)
-        const playlistName = mediaData
-        console.log('* playlistName: ', playlistName[0].playlistName)
+        const playlistName = mediaData[0].playlistName
+        console.log('* playlistName: ', playlistName)
         const token = userData.token
         console.log('* token: ', token)
 
@@ -69,8 +70,9 @@ function Note(props) {
           chapters: props.chapterId,
           token,
         }
+        console.log('Deleting Data: ', data)
         // call the actionCreator for DELETE
-        
+        dispatch(deleteNote(data))
       }
       
     })
