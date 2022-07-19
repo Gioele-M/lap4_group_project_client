@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
 import { createNewPL } from "../../State/actionCreators/media";
-import styles from './index.module.css'
+
 
 export default function ModalLogin(props) {
   
@@ -67,7 +67,7 @@ export default function ModalLogin(props) {
             // tags: ['cakes','muffins'],
             // playlistTheme:'(32,250,100)' 
           }))}
-      className={styles.debugElement} >
+      >
         
         Lets Go!
         
