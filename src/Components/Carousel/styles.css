@@ -41,6 +41,21 @@
     background-color: #000;
     display: block;
   }
+
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15vw;
+  }
+  
+  @media (max-width: 768px) {
+    .container-fluid {
+      margin-bottom: 35vw;
+    }
+  }
   
   .container .swiper-container {
     width: 100%;
