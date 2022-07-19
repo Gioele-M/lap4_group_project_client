@@ -69,13 +69,9 @@ export default function ModalLogin(props) {
             {playlistName: playlistName.value, //banana
             userEmail:userdata.userEmail,
             token: userdata.token,
-            // tags: ['cakes','muffins'],
-            // playlistTheme:'(32,250,100)' 
           }))}
       >
-        
-        Lets Go!
-        
+        Lets Go! 
         </button>
 
 {/* location of playlistName:

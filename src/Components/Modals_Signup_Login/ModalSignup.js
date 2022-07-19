@@ -2,13 +2,23 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
+import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylist
 import ModalLogin from '../Modals_Signup_Login/ModalLogin';
+import { signupUser } from "../../State/actionCreators/user";
 
 export default function ModalSignup(props) {
-  // const [show, setShow] = useState(false);
 
-  // const handleClose = () => setShow(false);
+
   const [loginModalShow, setLoginModalShow] = React.useState(false);
+
+
+  
+  const dispatch = useDispatch()
+
+
+
+
+
 
   return (
     <Modal {...props}  aria-labelledby="contained-modal-title-vcenter" centered id="modalstuff">
@@ -26,7 +36,20 @@ export default function ModalSignup(props) {
             <input type="text" name="" class="my-2   form-control" placeholder="Password"/>
             <input type="text" name="" class=" my-2 form-control" placeholder="Repeat Password"/>
 
-            <button class="my-4 btn " id="btn-login">Sign Up</button>
+
+
+            <button class="my-4 btn" id="btn-login" 
+            onClick={() => 
+            dispatch(signupUser(
+              {username: 'billieJeAN',
+              password: 'PASSword1234',
+              email: 'nunya@business.com', 
+          }))}>
+              Sign Up
+            </button>
+
+
+
             <br/>
               {/* <a id='already'  onClick={handleClose}  href='#'>Already have an account?</a> */}
               <a id='already' href='#'>Already have an account?</a>
