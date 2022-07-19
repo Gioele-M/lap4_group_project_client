@@ -1,12 +1,26 @@
 import React from 'react'
 
+import {useSelector} from 'react-redux'
+
+
 
 
 function BgSetter() {  
+
+    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
+    const bgColour= useSelector((state) => state.media.data[0].playlistTheme)
+
+    
+
+    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
+    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
+    console.log(bgColour)
+
+
 // get the rgb from the colourpicker (api)
-    // const fakecolour = 'rgb(13, 113, 147)' //DARK
+    const fakecolour = 'rgb(13, 113, 147)' //DARK
     // const fakecolour = 'rgb(213, 193, 187)' //LIGHT
-    const fakecolour = 'rgb(250, 250, 250)' //White
+    // const fakecolour = 'rgb(250, 250, 250)' //White
     // const fakecolour = 'rgb(0, 0, 0)' //Black
     // const fakecolour = 'rgb(150, 50, 150)' //play with it
 
