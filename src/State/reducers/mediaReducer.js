@@ -589,6 +589,12 @@ export const mediaReducer = (state = initState, action) => {
       // console.log('ACTION PAYLOAD: ', action.payload)
       return { data: action.payload, loading: false, error: false }
 
+    case 'PATCH_MEDIA':
+      return { data: action.payload, loading: false, error: false }
+
+    case 'PATCHING_MEDIA':
+      return { ...state, loading: true, error: false }
+
     default:
       return state
   }
