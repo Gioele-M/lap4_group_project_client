@@ -7,8 +7,7 @@ import { useSelector } from 'react-redux'
 
 function ProfilePageCards() {
     console.log("********Igor")
-    const pStars= useSelector((state) => state.media.data.data[0].averageStars[0])
-
+    const pStars= useSelector((state) => state.media.data.data[1].averageStars[0])
     const pName= useSelector((state) => state.media.data.data[0].playlistName)
     const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
     const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
@@ -40,7 +39,6 @@ function ProfilePageCards() {
                     <Card.Text>
                 {/* const pName= useSelector((state) => state.media.data[0].playlistTheme) */}
                         <ul>
-                        <li> Number of chapters:</li>
                         <li>Average stars: {pStars}</li>
                         <li>Playlist owner: {pOwner}</li>
                         <li>Background colour: {pTheme}</li>
