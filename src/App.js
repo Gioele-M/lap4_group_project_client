@@ -8,7 +8,6 @@ import {
 } from './Pages'
 // import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
-import TrendingTopics from './Components/Carousel'
 
 import { Footer } from './layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -25,7 +24,6 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <TrendingTopics/>
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />
