@@ -12,4 +12,7 @@ body{
     border-radius: 15px;
     margin: auto;
     margin-top: 1ch;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+
