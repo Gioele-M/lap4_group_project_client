@@ -5,7 +5,7 @@ export const fetchMedia = () => {
     try {
       console.log('* Fetching Media')
       dispatch({ type: 'FETCHING_MEDIA' })
-      const data = await axios(`http://localhost:5000/temptrending`)
+      const data = await axios(`http://localhost:5000/allplaylists`)
 
       // console.log('Got Media data -> ', data)
       dispatch({ type: 'FETCH_MEDIA', payload: data })
@@ -26,6 +26,9 @@ export const patchMedia = (newData) => {
         'http://localhost:5000/playlist/patch',
         newData
       )
+
+      console.log('PATCH MEDIA Data-> ', data)
+      dispatch({ type: 'PATCH_DATA', payload: data })
 
       if (data.error) {
         throw new Error(data.error)
