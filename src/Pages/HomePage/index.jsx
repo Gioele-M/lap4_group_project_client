@@ -1,9 +1,20 @@
 import React from 'react'
+import NewPlaylistBtn from '../../Components/NewPlaylistBtn';
 import "./styles.css";
+import BgSetter from '../../Components/BgColourSetter/index'
+
 
 function HomePage() {
+  BgSetter()
+
   return (
-    <div>HomePage</div>
+
+    <>
+    <div id='homepagepractice'>HomePage</div>
+
+<NewPlaylistBtn />
+
+</>
   )
 }
 
