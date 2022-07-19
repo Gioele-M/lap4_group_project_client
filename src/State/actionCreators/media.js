@@ -55,7 +55,7 @@ export const createNewPL = ({ playlistName,userEmail, token }) => {
         throw new Error(data.error)
       }
       console.log('* got user data -> ', data)
-      dispatch({ type: 'CREATE_PLAYLIST', payload: data })
+      dispatch({ type: 'CREATE_PLAYLIST', payload: data.data })
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })
       console.log('Error posting new playlist: ', err)

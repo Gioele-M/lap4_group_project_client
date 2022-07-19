@@ -61,7 +61,7 @@ export default function ModalLogin(props) {
           <button class="my-4 btn " id="btn-login"       
           onClick={() => 
           dispatch(createNewPL(
-            {playlistName: 'Toms Baking Playlist', 
+            {playlistName: 'Toms Baking Pdlaydslist', //banana
             userEmail:userdata.userEmail,
             token: userdata.token,
             // tags: ['cakes','muffins'],
