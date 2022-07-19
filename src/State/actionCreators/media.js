@@ -15,3 +15,24 @@ export const fetchMedia = () => {
     }
   }
 }
+
+export const patchMedia = (newData) => {
+  return async (dispatch) => {
+    try {
+      console.log('* Patching Media')
+      dispatch({ type: 'PATCHING_MEDIA' })
+
+      const data = await axios.patch(
+        'http://localhost:5000/playlist/patch',
+        newData
+      )
+
+      if (data.error) {
+        throw new Error(data.error)
+      }
+    } catch (err) {
+      dispatch({ type: 'SET_ERROR', payload: err })
+      console.log('Error patching media: ', err)
+    }
+  }
+}

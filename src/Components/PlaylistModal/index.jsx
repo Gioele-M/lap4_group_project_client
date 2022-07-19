@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import styles from './index.module.css'
 
 import VideoPlayer from '../VideoPlayer'
+import VideoPlayerCtrl from '../VideoPlayerCtrl'
 import Note from '../Note'
 
 
@@ -10,11 +11,17 @@ import Note from '../Note'
 function PlaylistModal({showModal, text, url}) {
 
   const noteData = useSelector(state => state.selection.selected)
-
+  console.log('OOOOOOOOO ', noteData)
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>
-      <VideoPlayer videoId={noteData.url.slice(-11)}/>
+      {/* <VideoPlayer videoId={noteData.url.slice(-11)}/> */}
+      <VideoPlayerCtrl 
+        videoId={noteData.url.slice(-11)} 
+        title={noteData.noteTitle}
+        startAt={noteData.start}
+        endAt={noteData.end}   
+      />
       <Note 
         text={noteData.text}
         url={noteData.url} 

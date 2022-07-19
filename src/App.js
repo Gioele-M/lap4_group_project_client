@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />

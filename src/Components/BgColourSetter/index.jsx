@@ -11,7 +11,11 @@ function BgSetter() {
     // let bgColour1 = bgColour.split(',')
     // let bgColour2 = bgColour1.replace("(","")
 
-    // console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
+
+    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
+    // const bgColour= useSelector((state) => state.media.data[0].playlistTheme)
+    const bgColour = 'rgb(125, 231, 5)'
+
     
     // console.log(bgColour)
 
