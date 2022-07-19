@@ -34,8 +34,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<SearchResultPage />} />
         {/* <Route path="/debug" element={<DebugComponent />} /> */}
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
-      <p>Footer</p>
+     
       <Footer />
     </div>
   )
