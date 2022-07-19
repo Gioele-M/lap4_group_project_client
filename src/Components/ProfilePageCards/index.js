@@ -2,9 +2,19 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card  from 'react-bootstrap/Card';
 import { Container, Row, Col }  from 'react-bootstrap';
+import { useSelector } from 'react-redux'
 
 
 function ProfilePageCards() {
+    console.log("********Igor")
+    const pName= useSelector((state) => state.media.data.data[0].playlistName)
+    const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
+    const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
+
+    // console.log({pName})
+
+
+
   return (
         <>
         
@@ -26,12 +36,17 @@ function ProfilePageCards() {
                 <Card.Body>
                     <Card.Title>Card Default Title</Card.Title>
                     <Card.Text>
-                        Content:
-                    - Number of chapters 
-                    - Average stars 
-                    - Playlist name 
-                    - Playlist owner 
-                    - Background colour 
+                {/* const pName= useSelector((state) => state.media.data[0].playlistTheme) */}
+                        <ul>
+                        <li> Number of chapters:</li>
+                        <li>Average stars:</li>
+                        <li>Playlist name:XXX{pName}</li>
+                        <li>Playlist owner: {pOwner}</li>
+                        <li>Background colour:{pTheme}</li>
+
+                     
+                        </ul>
+                  
                     </Card.Text>
                     {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>
