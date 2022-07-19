@@ -5,10 +5,10 @@ import {
   PlaylistPage,
   AboutPage,
   SearchResultPage,
+  NotFound
 } from './Pages'
 // import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
-import TrendingTopics from './Components/Carousel'
 
 import { Footer } from './layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <TrendingTopics />
+
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />
@@ -33,8 +33,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<SearchResultPage />} />
         {/* <Route path="/debug" element={<DebugComponent />} /> */}
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
-      <p>Footer</p>
+     
       <Footer />
     </div>
   )
