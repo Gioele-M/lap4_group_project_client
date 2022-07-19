@@ -3,28 +3,28 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 
 
-
+// (0,2,43)
 
 function BgSetter() {  
+    let bgColour= 'rgb(150,150,150)'
+    // let bgColour= 'rgb'+ useSelector((state) => state.media.data[0].playlistTheme)
+    // let bgColour1 = bgColour.split(',')
+    // let bgColour2 = bgColour1.replace("(","")
 
-    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
-    const bgColour= useSelector((state) => state.media.data[0].playlistTheme)
-
+    // console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
     
-
-    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
-    console.log("''''''''''''''''''''''''''''''''''''''''''''''''")
-    console.log(bgColour)
+    // console.log(bgColour)
 
 
 // get the rgb from the colourpicker (api)
-    const fakecolour = 'rgb(13, 113, 147)' //DARK
+    const fakecolour = 'rgb(123, 113, 147)' //DARK
     // const fakecolour = 'rgb(213, 193, 187)' //LIGHT
     // const fakecolour = 'rgb(250, 250, 250)' //White
     // const fakecolour = 'rgb(0, 0, 0)' //Black
     // const fakecolour = 'rgb(150, 50, 150)' //play with it
 
-    document.body.style.backgroundColor=fakecolour  
+    // document.body.style.backgroundColor=fakecolour  
+    document.body.style.backgroundColor=bgColour
     
 
     // check the RGB,dothe maths
