@@ -6,7 +6,7 @@ import {
   AboutPage,
   SearchResultPage,
 } from './Pages'
-// import { DebugComponent } from './Components'
+import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
 import TrendingTopics from './Components/Carousel'
 
@@ -25,14 +25,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <TrendingTopics/>
+      <TrendingTopics />
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/playlist" element={<PlaylistPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<SearchResultPage />} />
-        {/* <Route path="/debug" element={<DebugComponent />} /> */}
+        <Route path="/debug" element={<DebugComponent />} />
       </Routes>
       <p>Footer</p>
       <Footer />
