@@ -45,7 +45,7 @@ export const createNewPL = ({ playlistName,userEmail, token }) => {
   return async (dispatch) => {
     try {
       console.log('* Create new playlist')
-      dispatch({ type: 'FETCH_MEDIA' }) //MATTERO, we need help BANANAS!
+      dispatch({ type: 'CREATING_PLAYLIST' }) //MATTERO, we need help BANANAS!
       const data = await axios.post(`http://localhost:5000/playlist/new`, {
         playlistName,
         email: userEmail,
@@ -55,7 +55,7 @@ export const createNewPL = ({ playlistName,userEmail, token }) => {
         throw new Error(data.error)
       }
       console.log('* got user data -> ', data)
-      dispatch({ type: 'FETCH_MEDIA', payload: data })
+      dispatch({ type: 'CREATE_PLAYLIST', payload: data })
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })
       console.log('Error posting new playlist: ', err)

@@ -595,6 +595,13 @@ export const mediaReducer = (state = initState, action) => {
     case 'PATCHING_MEDIA':
       return { ...state, loading: true, error: false }
 
+      case 'CREATING_PLAYLIST':
+        return { ...state, loading: true, error: false }
+
+      case 'CREATE_PLAYLIST':
+        return { data: action.payload, loading: false, error: false }
+  
+      
     default:
       return state
   }
