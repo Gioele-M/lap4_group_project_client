@@ -7,9 +7,9 @@ import styles from './index.module.css'
 
 function PlaylistComponent({title}) {
   let notes = useSelector(state => state.media.data.data)
-  console.log('A A A ', useSelector(state => state.media.data))
-  console.log('* * *', notes[0])
-  console.log('= = =', typeof(notes) === typeof([1,2,3]))
+  // console.log('A A A ', useSelector(state => state.media.data))
+  // console.log('* * *', notes[0])
+  // console.log('= = =', typeof(notes) === typeof([1,2,3]))
 
   let loading = useSelector(state => state.media.loading)
 

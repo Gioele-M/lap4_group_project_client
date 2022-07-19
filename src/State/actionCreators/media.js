@@ -19,7 +19,7 @@ export const fetchMedia = () => {
 export const patchMedia = (newData) => {
   return async (dispatch) => {
     try {
-      console.log('* Patching Media')
+      console.log('* Patching Media -> ', newData)
       dispatch({ type: 'PATCHING_MEDIA' })
 
       const data = await axios.patch(

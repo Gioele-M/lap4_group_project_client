@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
 import { patchMedia } from '../../State/actionCreators/media'
@@ -7,24 +7,42 @@ import styles from './index.module.css'
 
 function Note(props) {
   const [noteText, setNoteText] = useState(props.text)
+  // const [noteChapterTitle, setNoteChapterTitle] = useState(props.noteTitle)
   const [link, setLink] = useState(props.url)
+  // const [start, setStart] = useState(props.start)
+  // const [end, setEnd] = useState(props.end)
+  
   console.log('--- ', props.chapterId)
   const dispatch = useDispatch('')
 
   const userData = useSelector(state => state.user.user)
   const mediaData = useSelector(state => state.media.data.data)
+  const [selected, setSelected] = useState(0)
 
-  console.log('--- USER ---\n', userData)
-  console.log('--- MEDIA --\n', mediaData)
+  // console.log('--- USER ---\n', userData)
+  // console.log('--- MEDIA --\n', mediaData)
 
   const handleSaveBtn = () => {
+    const chapters = mediaData[0].chapters
+    // console.log('AAA chapters ', chapters)
+
+    const updatedChapters = chapters.forEach(chap => {
+      if (chap.chapterId === props.chapterId) {
+        chap.text = noteText
+        // chap.chaptertitle = noteChapterTitle
+        // chap.start = noteStart
+        // chap.end = noteEnd
+        chap.video_url = link
+      }
+    })
+
     const data = {
       "userRequesting":userData.userEmail,
-      "playlistName": mediaData.playlistName,
-      "chapters": mediaData.chapters,
+      "playlistName": mediaData[0].playlistName,
+      "chapters": updatedChapters,
       "token": userData.token
       }
-
+      console.log('SAVING NOTE: ', noteText)
       dispatch(patchMedia(data))
     }
 
@@ -33,20 +51,25 @@ function Note(props) {
       
       className={styles.noteWrapper}>
         <textarea
+       
         data-testid="textArea" 
-          onChange={(e) => setNoteText(e.target.value)}
+          onChange={(e) => {
+            setNoteText(e.target.value)
+            console.log('ZZZZZ', noteText)
+            console.log('selected hardcoded', selected)
+          }}
           className={styles.noteText} value={noteText || ''}/>
         <div className={styles.controls}>
           <div 
           onClick={() => {
-            dispatch(setSelectedNote(props))
+            dispatch(setSelectedNote(props.key))
             props.onNoteClick()
           }
           }
           className={styles.thumbnail}>Pic</div>
           <button 
             className={styles.saveBtn}
-            onClick={() => handleSaveBtn}
+            onClick={() => handleSaveBtn()}
           >Save</button>
           <button className={styles.deleteBtn}>Delete</button>
           <input 
