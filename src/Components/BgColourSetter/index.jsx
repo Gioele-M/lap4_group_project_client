@@ -6,7 +6,9 @@ function BgSetter() {
 // get the rgb from the colourpicker (api)
     // const fakecolour = 'rgb(13, 113, 147)' //DARK
     // const fakecolour = 'rgb(213, 193, 187)' //LIGHT
-    const fakecolour = 'rgb(110, 120, 150)' //play with it
+    const fakecolour = 'rgb(250, 250, 250)' //White
+    // const fakecolour = 'rgb(0, 0, 0)' //Black
+    // const fakecolour = 'rgb(150, 50, 150)' //play with it
 
     document.body.style.backgroundColor=fakecolour  
     
