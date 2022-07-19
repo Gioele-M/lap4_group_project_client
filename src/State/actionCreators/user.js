@@ -25,6 +25,7 @@ export const loginUser = ({ email, password }) => {
 export const signupUser = ({ username, password, email }) => {
   return async (dispatch) => {
     try {
+      /*  */
       console.log('* Signing up user')
       dispatch({ type: 'REGISTERING_USER' })
       const data = await axios.post(`http://localhost:5000/user/signup`, {

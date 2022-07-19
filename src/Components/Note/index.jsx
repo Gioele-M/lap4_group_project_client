@@ -1,7 +1,7 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
-import { patchMedia } from '../../State/actionCreators/media'
+import { patchMedia, fetchMedia } from '../../State/actionCreators/media'
 
 import styles from './index.module.css'
 
@@ -24,27 +24,40 @@ function Note(props) {
 
   const handleSaveBtn = () => {
     const chapters = mediaData[0].chapters
-    // console.log('AAA chapters ', chapters)
-
-    const updatedChapters = chapters.forEach(chap => {
+  
+      chapters.forEach(chap => {
       if (chap.chapterId === props.chapterId) {
+        console.log('chapterId is: ', chap.chapterId)
+        console.log('link: ', chap.video_url)
         chap.text = noteText
         // chap.chaptertitle = noteChapterTitle
         // chap.start = noteStart
         // chap.end = noteEnd
         chap.video_url = link
+        
       }
+      
     })
+    console.log('UPDATED CHAPTERS -----------------\n', chapters)
 
     const data = {
       "userRequesting":userData.userEmail,
       "playlistName": mediaData[0].playlistName,
-      "chapters": updatedChapters,
+      "chapters": chapters,
       "token": userData.token
       }
       console.log('SAVING NOTE: ', noteText)
+
       dispatch(patchMedia(data))
     }
+    
+    useEffect(() => {
+      const fetchMediaData = async () => {
+        // fetch the actual data using fetchmedia
+        await dispatch(fetchMedia())
+      }
+      fetchMedia()
+  })
 
   return (
     <div 

@@ -26,6 +26,8 @@ export const patchMedia = (newData) => {
         'http://localhost:5000/playlist/patch',
         newData
       )
+      console.log('Patching Media -> : ', data)
+      dispatch({ type: 'PATCH_MEDIA', payload: data })
 
       if (data.error) {
         throw new Error(data.error)
