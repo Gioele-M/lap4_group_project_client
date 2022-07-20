@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
-import { patchMedia, deleteNote } from '../../State/actionCreators/media'
+import { patchMedia, deleteNote, fetchMedia } from '../../State/actionCreators/media'
 
 const playPic = require('../../images/utube.png')
 // import styles from './index.module.css'
@@ -71,20 +71,23 @@ function Note(props) {
         console.log('* token: ', token)
         console.log('* chapterId: ', props.chapterId)
         
-        const chapterIndex = chapters.indexOf(chap)
-        if(chapterIndex > -1){
-          chapters.splice(chapterIndex, 1)
-        }
+        // const chapterIndex = chapters.indexOf(chap)
+        // console.log('CHAPTER INDEX ********',chapterIndex)
+        // if(chapterIndex > -1){
+        //   chapters.splice(chapterIndex, 1)
+        // }
 
         const data = {
           userRequesting,
           playlistName,
-          chapters: chapters, //props.chapterId,
+          chapters: props.chapterId, //chapters, 
           token,
         }
         console.log('Deleting Data: ', data)
         // call the actionCreator for DELETE
         dispatch(deleteNote(data))
+        // window.reload()
+        // window.location.reload()
       }
       
     })

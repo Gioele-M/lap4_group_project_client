@@ -76,6 +76,7 @@ export const deleteNote = (newData) => {
 
       console.log('DELETE NOTE response data-> ', data)
       dispatch({ type: 'DELETE_NOTE', payload: data })
+      fetchMedia()
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })
       console.log('Error patching media: ', err)

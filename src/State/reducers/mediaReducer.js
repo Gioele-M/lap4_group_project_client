@@ -152,7 +152,7 @@ export const mediaReducer = (state = initState, action) => {
       return { ...state, loading: true, error: false }
 
     case 'DELETE_NOTE':
-      return { data: action.payload, loading: false, error: false }
+      return {...state, data:{data: [action.payload.data]}, loading: false, error: false }
 
       case 'CREATING_PLAYLIST':
         return { ...state, loading: true, error: false }
