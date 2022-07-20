@@ -1,5 +1,7 @@
 const initState = {
   selected: '',
+  startTime: 0,
+  endTime: 0,
 }
 
 export const selectionReducer = (state = initState, action) => {
@@ -8,7 +10,13 @@ export const selectionReducer = (state = initState, action) => {
       return state
 
     case 'SET_SELECTION':
-      return { selected: action.payload }
+      return { ...state, selected: action.payload }
+
+    case 'SET_START_TIME':
+      return { ...state, startTime: action.payload }
+
+    case 'SET_END_TIME':
+      return { ...state, endTime: action.payload }
 
     default:
       return state

@@ -14,6 +14,7 @@ function PlaylistComponent({title}) {
   console.log('= = =', typeof(notes) === typeof([1,2,3]))
 
   let loading = useSelector(state => state.media.loading)
+  console.log('LOADING: ', loading)
   let userData = useSelector(state => state.user)
 
   
@@ -21,9 +22,12 @@ function PlaylistComponent({title}) {
 
   const [fetchToggle, setFetchToggle] = useState(true)
 
+  const [canLoad, setCanLoad] = useState(false)
+
   useEffect(() => {
     const fetchData = async () => {
       await dispatch(fetchMedia())
+      setCanLoad(true)
     }
     fetchData()
   }, [])
@@ -101,7 +105,7 @@ function PlaylistComponent({title}) {
 
         
       
-        { loading === false && renderNotes }
+        {canLoad && renderNotes }
 
       
         <div className="row">
