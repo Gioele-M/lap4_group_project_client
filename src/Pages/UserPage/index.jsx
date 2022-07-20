@@ -2,6 +2,7 @@ import React from 'react'
 import ProfilePageCards2 from '../../Components/ProfilePageCards2';
 import NewPlaylistBtn from '../../Components/NewPlaylistBtn';
 import { useSelector } from 'react-redux'
+import { useState } from 'react';
 
 
 
@@ -13,11 +14,14 @@ function UserPage() {
 
 
   const [cardInfo, setCardInfo] = useState ([
-    { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-    { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-    { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
+    { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
+    { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
+    { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme}
+
     
-]);
+  ]);
+
+  console.log(cardInfo)
   return (
     <>
   {/* calling ProfilePageCards2 and fetching from reducer and injecting with props */}

@@ -8,7 +8,7 @@ import { useState } from 'react';
 // import "./styles.css";
 
 
-const  ProfilePageCard2 = (props) => {
+const  ProfilePageCards2 = ({data}) => {
     // const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
     // const pName= useSelector((state) => state.media.data.data[0].playlistName)
     // const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
@@ -17,7 +17,9 @@ const  ProfilePageCard2 = (props) => {
     
     // let data = { title: {props.pName}, owner: {props.pOwner}, stars: {props.pStars}, bgc:  {props.pTheme}}
 
-    let data = { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
+    console.log(data)
+    // let data = { title: {props.data.title}, owner: {props.data.owner}, stars: {props.data.stars}, bgc:  {props.data.bgc}}
+
     // const [cardInfo, setCardInfo] = useState ([
     //     { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
     //     // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
@@ -27,19 +29,19 @@ const  ProfilePageCard2 = (props) => {
 
     // function that render cards
 
-    const renderCard = (card, index) => {
+    const renderCard = () => {
         return (
             
                 <>
                  <Col lg={3} className="m-4" >
-                <Card style={{ width: '18rem', backgroundColor: 'rgb{pTheme}'  }} key={index}>
+                <Card style={{ width: '18rem', backgroundColor: 'rgb{pTheme}'  }} key={data.title}>
                 <Card.Body>
-                    <Card.Title>{props.pName}</Card.Title>
+                    <Card.Title>{data.title}</Card.Title>
                     <Card.Text>
                         <ul>
-                        <li>Average stars: {props.pStars}</li>
-                        <li>Playlist owner: {props.pOwner}</li>
-                        <li>Background colour: {props.pTheme}</li>
+                        <li>Average stars: {data.stars}</li>
+                        <li>Playlist owner: {data.owner}</li>
+                        <li>Background colour: {data.bgc}</li>
                         </ul>
                     </Card.Text>
                     <a href="/playlist" class="stretched-link"></a>
@@ -56,10 +58,10 @@ const  ProfilePageCard2 = (props) => {
     
             <Container>
             <Row>
-                {cardInfo.map(renderCard)}  
+                {renderCard()}  
             </Row>
             </Container>   
   );
 }
 
-export default ProfilePageCard2;
+export default ProfilePageCards2;
