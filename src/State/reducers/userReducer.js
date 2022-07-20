@@ -48,8 +48,6 @@ const user = {
   username: '',
 }
 
-
-
 // initialState
 
 const initState = {
@@ -83,6 +81,15 @@ export const userReducer = (state = initState, action) => {
 
     case 'SET_ERROR':
       return { ...state, loading: false, error: action.payload }
+
+    case 'SET_SELECTED_PLAYLIST':
+      const newUser = (state.user.lastSelection.selectedPlaylist =
+        action.payload)
+      return {
+        newUser,
+        loading: false,
+        error: false,
+      }
 
     default:
       return state

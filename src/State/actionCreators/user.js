@@ -47,3 +47,7 @@ export const signupUser = ({ username, password, email }) => {
 export const logoutUser = (data) => {
   return { type: 'LOGOUT_USER', payload: data }
 }
+
+export const setSelectedPlaylist = (playlistName) => {
+  return { type: 'SET_SELECTED_PLAYLIST', payload: playlistName }
+}
