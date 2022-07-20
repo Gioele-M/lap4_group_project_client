@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
 import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylist
-import ModalLogin from '../Modals_Signup_Login/ModalLogin';
+// import NewPlaylist from '../Modals_Signup_Login/NewPlaylist';
 import { signupUser } from "../../State/actionCreators/user";
 
 export default function ModalSignup(props) {
@@ -21,16 +21,52 @@ export default function ModalSignup(props) {
   function handleChangeUsername(event) {
     setUsername({value: event.target.value});
     console.log('username field:',username)
+
+    let user= document.getElementById('user')
+    let  UsernameTrimmed = user.value.trim()
+
+    console.log(UsernameTrimmed.length )
+    if (UsernameTrimmed.length  > 0 && UsernameTrimmed.length  < 3){
+      document.getElementById('usernameErrMsg').style.display='block'
+      document.getElementById('user').style.color='red'
+    }
+    else{
+      document.getElementById('usernameErrMsg').style.display='none'
+      document.getElementById('user').style.color='black'
+    }
   }
   
   function handleChangePassword(event) {
     setPassword({value: event.target.value});
     console.log('password field:',password)
+    
+    const p1= document.getElementById('pass1')
+    const p2=  document.getElementById('pass2')
+    if (p1.value === p2.value ){
+      console.log('they are the same')
+      document.getElementById('pass1').style.color='black'
+      document.getElementById('pass2').style.color='black'
+      document.getElementById('passErrMsg').style.display='none'
+    }
+    else{
+      console.log('they are NOT the same')
+      document.getElementById('pass1').style.color='red'
+      document.getElementById('pass2').style.color='red'
+      document.getElementById('passErrMsg').style.display= 'block';
+    }
   }
   
   function handleChangeEmail(event) {
     setEmail({value: event.target.value});
     console.log('email field:',email)
+
+    const emailField= document.getElementById('email')
+    if (emailField.value.length==0 || emailField.value.includes('@') && emailField.value.includes('.')  ){
+      document.getElementById('emailErrMsg').style.display='none'
+    }
+    else{
+      document.getElementById('emailErrMsg').style.display='block'
+    }
   }
 
 
@@ -45,10 +81,16 @@ export default function ModalSignup(props) {
         <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
           <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
           <p id='modal-intro'>Please enter you details:</p>
-            <input type="text" name="" class=" my-2 form-control" placeholder="User Name" onChange={handleChangeUsername}/>
-            <input type="text" name="" class="my-2 form-control" placeholder="Email" onChange={handleChangeEmail}/>
-            <input type="text" name="" class="my-2   form-control" placeholder="Password"/>
-            <input type="text" name="" class=" my-2 form-control" placeholder="Repeat Password" onChange={handleChangePassword}/>
+
+            <input type="text" maxlength='20' name="" class=" my-2 form-control" id='user' placeholder="User Name" onChange={handleChangeUsername}/>
+            <p class='modalErr' id='usernameErrMsg'>Meh, Try again</p>
+
+            <input type="email" name="" class="my-2 form-control" placeholder="Email" id='email' onChange={handleChangeEmail}/>
+            <p class='modalErr' id='emailErrMsg'>That doesn't look like an email!</p>
+
+            <input type="password" name="" class="my-2   form-control" id='pass1' placeholder="Password" onChange={handleChangePassword}/>
+            <input type="password" name="" class=" my-2 form-control" id='pass2' placeholder="Repeat Password" onChange={handleChangePassword}/>
+            <p class='modalErr' id='passErrMsg'>Passwords must match!</p>
 
 
 
@@ -70,7 +112,7 @@ export default function ModalSignup(props) {
              
               {/* <a id='already' onClick={() => setLoginModalShow(true)}  href='#'>Already have an account?</a> */}
 
-          {/* <ModalLogin  
+          {/* <NewPlaylist  
             show={loginModalShow}
             onHide={() => setLoginModalShow(false)}
           /> */}

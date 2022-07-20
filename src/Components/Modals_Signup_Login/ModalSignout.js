@@ -4,13 +4,27 @@ import Modal from "react-bootstrap/Modal";
 import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylist
 import { loginUser } from "../../State/actionCreators/user";
 import "./styles.css";
+import CloseButton from 'react-bootstrap/CloseButton';
 
-export default function ModalLogin(props) {
+export default function ModalSignout(props) {
   const dispatch = useDispatch()
+
+  // const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
   
-  
-  const [email, setEmail] = useState('Email:');
-  const [password, setPassword] = useState('Password:');
+  // const handleClose = () => setShow(false);
+
+  ///
+  // function closeSelf() {
+  //   return <ModalSignout disabled />;
+  // }
+
+
+  // const [email, setEmail] = useState('Email:');
+  // const [password, setPassword] = useState('Password:');
  
   
   // ////////////HANDLE CHANGES
@@ -19,15 +33,15 @@ export default function ModalLogin(props) {
 
 //THE RECORD VALUE IS ALWAYS ONE CHARACTER BEHIND THE REAL VALUE
 
-  function handleChangeEmail(event) {
-    setEmail({value: event.target.value});
-    console.log('email field:',email)
-  }
+  // function handleChangeEmail(event) {
+  //   setEmail({value: event.target.value});
+  //   console.log('email field:',email)
+  // }
 
-  function handleChangePassword(event) {
-    setPassword({value: event.target.value});
-    console.log('password field:',password)
-  }
+  // function handleChangePassword(event) {
+  //   setPassword({value: event.target.value});
+  //   console.log('password field:',password)
+  // }
 
 ////attempt2
 
@@ -79,11 +93,13 @@ export default function ModalLogin(props) {
 
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" >
+    // <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" onHide={handleClose} >
+
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff">
 
 
       <Modal.Header closeButton>
-        <Modal.Title id="modalTitle">Log in</Modal.Title>
+        <Modal.Title id="modalTitle">Sign Out</Modal.Title>
       </Modal.Header>
 
       
@@ -91,13 +107,13 @@ export default function ModalLogin(props) {
       <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
       <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
 
-      <p id='modal-intro'>Please enter you details:</p>
+      <p id='modal-intro'>Are you sure you want to sign out?</p>
         <div class="form  p-2 Modal-signuplogin" id="signupSection">
-
+{/* 
           ///ATTEMPT 1
           <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
           <input type="text" name="" class="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/>
-          
+           */}
                {/* ///ATTEMPT 2 */}
           {/* <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email}/>
           <input type="text" name="" class="my-3 form-control" id='passwordFormBit' placeholder={password}/> */}
@@ -114,19 +130,48 @@ export default function ModalLogin(props) {
             </button>
             <br/> */}
 
+
+
           <button class="my-4 btn " id="btn-login"
+          //  onClick={() => 
+
+            
+
+          //   dispatch(logoutUser(
+          //     {
+          //       //what data is needed for the logout?
+          //       user: {},
+          //       loading: false,
+          //       error: false,
+          //   }))}
+         >
+            Sign Out
+            </button>
+            <br/>
+
+
+          <button class="my-4 btn " id="btn-login"  data-dismiss="modalstuff">
+            Cancel
+            </button>
+            <br/>
+            {/* <DisabledExample /> */}
+            <Button variant="secondary" >ds</Button>
+            <CloseButton/>
+
+{/* 
+            <button class="my-4 btn " id="btn-login"
           onClick={() => 
             
             dispatch(loginUser(
               {email: email.value, 
               password: password.value
             }))}>
-            Log In
+            Cancel
             </button>
-            <br/>
+            <br/> */}
 
               {/* <a id='already'  onClick={handleClose}  href='#'>Already have an account?</a> */}
-              <a id='already'  href='#'>Don't have an account?</a>
+              {/* <a id='already'  href='#'>Don't have an account?</a> */}
 
 
 
