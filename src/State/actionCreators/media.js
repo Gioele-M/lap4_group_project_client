@@ -53,13 +53,22 @@ export const deleteNote = (newData) => {
       dispatch({ type: 'DELETING_NOTE' })
       console.log('newData-> ', newData)
 
-      const data = await axios.delete('http://localhost:5000/playlist/delete')
-
-      console.log('DELETE NOTE response data: ', data)
+      const data = await axios.delete(
+        'http://localhost:5000/playlist/delete',
+        { data: newData },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
 
       if (data.error) {
         throw new Error(data.error)
       }
+
+      console.log('DELETE NOTE response data-> ', data)
+      dispatch({ type: 'DELETE_NOTE', payload: data })
     } catch (err) {
       dispatch({ type: 'SET_ERROR', payload: err })
       console.log('Error patching media: ', err)

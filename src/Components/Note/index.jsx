@@ -58,13 +58,14 @@ function Note(props) {
       if (chap.chapterId === props.chapterId) {
         console.log('chapterId is: ', chap.chapterId)
         
-        // const userRequesting = 'matteo@gmail.com'
-        const userRequesting = userData.userEmail 
+        const userRequesting = 'matteo@gmail.com'
+        // const userRequesting = userData.userEmail 
         console.log('* userRequesting: ', userRequesting)
         const playlistName = mediaData[0].playlistName
         console.log('* playlistName: ', playlistName)
         const token = userData.token
         console.log('* token: ', token)
+        console.log('* chapterId: ', props.chapterId)
 
         const data = {
           userRequesting,
