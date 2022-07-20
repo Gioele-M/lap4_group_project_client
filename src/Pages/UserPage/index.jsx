@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 
 function UserPage() {
-  const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
+  const pStars= useSelector((state) => state.media.data.data[0].averageStars.currentRating) //BANANA
   const pName= useSelector((state) => state.media.data.data[0].playlistName)
   const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
   const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
