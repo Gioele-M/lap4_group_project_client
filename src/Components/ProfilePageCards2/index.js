@@ -35,6 +35,7 @@ const  ProffilePageCard2 = () => {
                         <li>Background colour: {pTheme}</li>
                         </ul>
                     </Card.Text>
+                    <a href="/playlist" class="stretched-link"></a>
                 </Card.Body>
                 {/* <Card.Footer className="text-muted">Last update: 2 days ago</Card.Footer> */}
                 </Card>
