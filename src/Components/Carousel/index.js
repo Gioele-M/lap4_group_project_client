@@ -6,6 +6,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ProfilePageCard2 from '../ProfilePageCards2';
+import { useState } from 'react';
+
 import "./styles.css";
 
 export default function TrendingTopics() {
@@ -44,13 +46,18 @@ export default function TrendingTopics() {
             className="mySwiper"
         >
             <SwiperSlide>
-                <img src={img1} alt="" />
+           
+            <ProfilePageCard2  />
+                
+           
             </SwiperSlide>
             <SwiperSlide>
-                <img src={img2} alt="" />
+                {/* <img src={img2} alt="" /> */}
+                <ProfilePageCard2  />
             </SwiperSlide>
             <SwiperSlide>
-                <img src={img3} alt="" />
+                {/* <img src={img3} alt="" /> */}
+                <ProfilePageCard2  />
             </SwiperSlide>
 
         </Swiper>

@@ -3,22 +3,23 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useSelector } from 'react-redux'
 import { Container, Row, Col }  from 'react-bootstrap';
+import { useState } from 'react';
 // import { Navigate } from 'react-router-dom';
 
 
 const  ProfilePageCard2 = () => {
-
     const pStars= useSelector((state) => state.media.data.data[1].averageStars[0])
     const pName= useSelector((state) => state.media.data.data[0].playlistName)
     const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
     const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
 
-    const cardInfo = [
+    
+    const [cardInfo, setCardInfo] = useState ([
         { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
         { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
         { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
-
-    ]
+        
+    ]);
     // function that render cards
 
     const renderCard = (card, index) => {
