@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 
 const  ProfilePageCard2 = () => {
-    const pStars= useSelector((state) => state.media.data.data[1].averageStars[0])
+    const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
     const pName= useSelector((state) => state.media.data.data[0].playlistName)
     const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
     const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
@@ -17,8 +17,8 @@ const  ProfilePageCard2 = () => {
     
     const [cardInfo, setCardInfo] = useState ([
         { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-        { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-        { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
+        // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
+        // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
         
     ]);
     // function that render cards
