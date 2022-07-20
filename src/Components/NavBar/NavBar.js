@@ -10,6 +10,12 @@ import ModalSignout from '../Modals_Signup_Login/ModalSignout';
 
 
 export default function NavBar() {
+    const loggedIn = useSelector(state => state.user.user.userEmail)
+  
+    console.log('*********************************************LOGGED IN', loggedIn)
+    
+    
+
     const logo = require('../../images/logo.png');
 
 
