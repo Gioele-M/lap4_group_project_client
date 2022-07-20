@@ -36,6 +36,7 @@ const  ProfilePageCards2 = ({data}) => {
         return (
             
                 <>
+                             
                  <Col lg={3} className="m-4" >
                 <Card style={{ width: '18rem', backgroundColor: 'rgb{data.bgc}'}} key={data.title}>
                 <Card.Body>
@@ -59,11 +60,14 @@ const  ProfilePageCards2 = ({data}) => {
 
   return (
     
-            <Container>
-            <Row>
-                {renderCard()}  
-            </Row>
-            </Container>   
+            // <Container>
+            // <Row>
+            <>
+            {renderCard()}  
+            
+            </>
+            // </Row>
+            // </Container>   
   );
 }
 

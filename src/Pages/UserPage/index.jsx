@@ -3,6 +3,7 @@ import ProfilePageCards2 from '../../Components/ProfilePageCards2';
 import NewPlaylistBtn from '../../Components/NewPlaylistBtn';
 import { useSelector } from 'react-redux'
 import { useState } from 'react';
+import { Container, Row, Col }  from 'react-bootstrap';
 
 
 
@@ -25,10 +26,16 @@ function UserPage() {
   return (
     <>
   {/* calling ProfilePageCards2 and fetching from reducer and injecting with props */}
+        <Container>
+            <Row>
+                 
+           <ProfilePageCards2 data={cardInfo[0]} />
+            <ProfilePageCards2 data={cardInfo[1]} />
+            <ProfilePageCards2 data={cardInfo[2]} />
+            
+            </Row>
+            </Container> 
 
-   <ProfilePageCards2 data={cardInfo[0]} />
-   <ProfilePageCards2 data={cardInfo[1]} />
-   <ProfilePageCards2 data={cardInfo[2]} />
     
    <NewPlaylistBtn />
     </>
