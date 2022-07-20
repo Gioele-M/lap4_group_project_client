@@ -28,7 +28,7 @@ const  ProffilePageCard2 = () => {
                  <Col lg={3} className="m-3" >
                 <Card style={{ width: '18rem' }} key={index}>
                 <Card.Body>
-                    <Card.Title>Card Title: {pName}</Card.Title>
+                    <Card.Title>{pName}</Card.Title>
                     <Card.Text>
                         <ul>
                         <li>Average stars: {pStars}</li>
