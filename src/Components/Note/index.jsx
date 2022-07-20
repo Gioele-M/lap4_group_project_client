@@ -37,10 +37,14 @@ function Note(props) {
         chap.chapterTitle = title
         
       }
+
+      props.refreshPage(false)
+
       
     })
 
     console.log('UPDATED CHAPTERS -----------------\n', chapters)
+    console.log('FUNCTION!!!!!!!!!!!!!!!!!!!!',props.refreshPage)
 
     const data = {
       // "userRequesting":userData.userEmail,
@@ -55,6 +59,7 @@ function Note(props) {
 
     // ASK GIO IF THIS ENDPOINT IS CORRECT: /playlist/delete
     const handleDeleteBtn = () => {
+
       // find the right chapter
       const chapters = mediaData[0].chapters
       // create the data
@@ -93,9 +98,13 @@ function Note(props) {
         //   dispatch(fetchMedia({playlistName:}))
         // }
       }
+
+
       
     })
-      
+    
+    setTimeout(props.refreshPage, 200, false)
+    
 
       // update the page
     }

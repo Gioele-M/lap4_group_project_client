@@ -113,6 +113,7 @@ const onUpdateClick = ()=>{
         url={note.video_url} 
         text={note.text}
         uuid={note.uuid}
+        refreshPage={setCanLoad}
         onNoteClick={() => setModalVisible(true)}
       />
     )
