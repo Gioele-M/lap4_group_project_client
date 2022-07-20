@@ -37,3 +37,26 @@
     color: #949494;
     text-align: left
 }
+
+#usernameErrMsg{
+    display: none;
+}
+
+#passErrMsg{
+    /* visibility: hidden; */
+    display: none;
+}
+
+#emailErrMsg{
+    display: none;
+}
+
+.modalErr{
+    font-size: small;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-weight: 200; */
+    color: #E92D2D;;
+    /* font-style: italic; */
+    font-size: small;
+    margin: -5px;
+}
