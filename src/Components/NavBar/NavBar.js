@@ -12,12 +12,7 @@ import ModalSignout from '../Modals_Signup_Login/ModalSignout';
 export default function NavBar() {
     const logo = require('../../images/logo.png');
 
-
     // const [checkLogInStatus, setCheckLogInStatus] = useState(false)
-
-    // let signinBtn = document.getElementById('btn-signout')
-
-    // signinBtn.style.display='none'
 
     ////////////////////////////////////////////
     //modal states

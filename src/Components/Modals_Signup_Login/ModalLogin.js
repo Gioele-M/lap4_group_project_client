@@ -29,53 +29,35 @@ export default function ModalLogin(props) {
     console.log('password field:',password)
   }
 
-////attempt2
-
-//IF THE POP IS OPEN ON RELOAD = GREAT
-
-  // document.getElementById('emailFormBit').addEventListener('change', function() {
-  //   console.log('You selected: ', this.value);
-  //   setEmail(this.value)
-  //   console.log('email is now: ', email);
-  // });
-
-  // document.getElementById('passwordFormBit').addEventListener('change', function() {
-  //   console.log('You selected: ', this.value);
-  //   setPassword(this.value)
-  //   console.log('password is now: ', password);
-  // });
-
-
-////attempt3
-
-  // function AttemptLogin() {       
-  //     console.log('Helllo Joe!')
-      // let practicebit = document.getElementById('passwordFormBit')
-      // console.log('sssssssss', practicebit.values)
-
-
-
-  //     dispatch(loginUser({email: email.value, password: password.value}))
-  //  }
-
-
-////attempt2
-
-//THE RECORD VALUE IS ALWAYS ONE CHARACTER BEHIND THE REAL VALUE
-
-// function handleChangeEmail(event) {
-//   document.getElementById('emailFormBit').addEventListener('change', function() {
-//     setEmail(this.value)
-//     console.log('email is now: ', email.value);
-//   });
-// }
-
-// function handleChangePassword(event) {
-//   document.getElementById('passwordFormBit').addEventListener('change', function() {
-//     setPassword(this.value)
-//     console.log('password is now: ', password)
-//   });
-// }
+  const handleLogin = useCallback(
+    () => sendPhoneNumber(phoneNumber)
+      .then(response => dispatch({
+        type: 'PHONE_NUMBER_SUBMISSION_SUCCESS',
+        response,
+      }))
+      .catch(error => dispatch({
+        type: 'PHONE_NUMBER_SUBMISSION_FAILURE',
+        error,
+      })),
+    [dispatch, phoneNumber],
+  );
+//   const DispatchFetch = () => {
+//     const { data, isRequesting, error } = useSelector(selector());
+//     if (!isRequesting && data) {
+//       const Comp = component;
+//       return <Comp data={data}></Comp>;
+//     } else if (error) {
+//       if (errorComponent) {
+//         const ErrorComp = errorComponent;
+//         return <ErrorComp error={error}></ErrorComp>;
+//   };
+//   return <DispatchFetch></DispatchFetch>;
+// };      }
+//       return <div>{error}</div>;
+//     }
+//     return <Spinner></Spinner>;
+          
+  dispatch(loginUser({email: email.value, password: password.value}))
 
 
   return (
@@ -86,33 +68,14 @@ export default function ModalLogin(props) {
         <Modal.Title id="modalTitle">Log in</Modal.Title>
       </Modal.Header>
 
-      
-
       <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
       <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
 
       <p id='modal-intro'>Please enter you details:</p>
         <div class="form  p-2 Modal-signuplogin" id="signupSection">
 
-          ///ATTEMPT 1
           <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
           <input type="text" name="" class="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/>
-          
-               {/* ///ATTEMPT 2 */}
-          {/* <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email}/>
-          <input type="text" name="" class="my-3 form-control" id='passwordFormBit' placeholder={password}/> */}
-          
-  {/* ///ATTEMPT 4 */}
-          {/* <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
-          <input type="text" name="" class="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/> */}
-          
-
-           {/* <button class="my-4 btn " id="btn-login"
-           onClick={AttemptLogin}
-           >
-             Log In
-            </button>
-            <br/> */}
 
           <button class="my-4 btn " id="btn-login"
           onClick={() => 
@@ -125,13 +88,7 @@ export default function ModalLogin(props) {
             </button>
             <br/>
 
-              {/* <a id='already'  onClick={handleClose}  href='#'>Already have an account?</a> */}
               <a id='already'  href='#'>Don't have an account?</a>
-
-
-
-          {/* onClick={() => setLoginModalShow(true)}  */}
-          {/* <button class="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
           
         </div>
       </div>
