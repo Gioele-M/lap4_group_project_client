@@ -6,6 +6,8 @@ import PlaylistModal from '../PlaylistModal'
 // import styles from './index.module.css'
 
 function PlaylistComponent({title}) {
+  const dispatch = useDispatch('')
+  // dispatch(fetchMedia())
   let notes = useSelector(state => state.media.data.data)
   console.log('A A A ', useSelector(state => state.media.data))
   console.log('* * *', notes[0])
@@ -14,17 +16,17 @@ function PlaylistComponent({title}) {
   let loading = useSelector(state => state.media.loading)
   let userData = useSelector(state => state.user)
 
-  const dispatch = useDispatch('')
+  
   const [modalVisible, setModalVisible] = useState(false)
 
   const [fetchToggle, setFetchToggle] = useState(true)
 
-  // useEffect(() => {
-  //   const asyncCall = async () => {
-  //     await dispatch(fetchMedia())
-  //   }
-  //   asyncCall()
-  // }, [fetchToggle])
+  useEffect(() => {
+    const fetchData = async () => {
+      await dispatch(fetchMedia())
+    }
+    fetchData()
+  }, [])
 
   const handleAddNoteBtn = () => {
     // get the last note ID and add 1
@@ -99,7 +101,7 @@ function PlaylistComponent({title}) {
 
         
       
-        {loading === false && renderNotes }
+        { loading === false && renderNotes }
 
       
         <div className="row">

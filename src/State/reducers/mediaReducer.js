@@ -79,7 +79,11 @@ const data = {
   ],
 }
 
-//  end hardcoded data
+// const data = {
+//   data: [],
+// }
+
+// //  end hardcoded data
 
 const initState = {
   data,
