@@ -114,14 +114,12 @@ export const mediaReducer = (state = initState, action) => {
     case 'PATCHING_MEDIA':
       return { ...state, loading: true, error: false }
 
-<<<<<<< HEAD
     case 'DELETING_NOTE':
       return { ...state, loading: true, error: false }
 
     case 'DELETE_NOTE':
       return { data: action.payload, loading: false, error: false }
 
-=======
       case 'CREATING_PLAYLIST':
         return { ...state, loading: true, error: false }
 
@@ -129,7 +127,6 @@ export const mediaReducer = (state = initState, action) => {
         return { data: action.payload, loading: false, error: false }
   
       
->>>>>>> tom2
     default:
       return state
   }
