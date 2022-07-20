@@ -89,7 +89,7 @@ function Note(props) {
     }
 
   return (
-    <div class="container">
+    <div className="container">
       <div className="row">
         <h3 className="col-12 mt-3"><kbd>
           <input 
@@ -145,7 +145,7 @@ function Note(props) {
               placeholder="video link" 
               value={link || ''}
             />
-            <div class="row">
+            <div className="row">
               <button 
                 className="col-6 btn btn-primary"
                 onClick={() => handleSaveBtn()}

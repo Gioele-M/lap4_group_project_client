@@ -88,33 +88,33 @@ export default function ModalLogin(props) {
 
       
 
-      <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
-      <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
+      <div className="tab-pane my-1  Modal-signuplogin" id="signupSection" >
+      <div className="form p-4  text-center Modal-signuplogin" id="modalstuff1">
 
       <p id='modal-intro'>Please enter you details:</p>
-        <div class="form  p-2 Modal-signuplogin" id="signupSection">
+        <div className="form  p-2 Modal-signuplogin" id="signupSection">
 
           ///ATTEMPT 1
-          <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
-          <input type="text" name="" class="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/>
+          <input type="text" name="" className="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
+          <input type="text" name="" className="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/>
           
                {/* ///ATTEMPT 2 */}
-          {/* <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email}/>
-          <input type="text" name="" class="my-3 form-control" id='passwordFormBit' placeholder={password}/> */}
+          {/* <input type="text" name="" className="my-1 form-control" id='emailFormBit' placeholder={email}/>
+          <input type="text" name="" className="my-3 form-control" id='passwordFormBit' placeholder={password}/> */}
           
   {/* ///ATTEMPT 4 */}
-          {/* <input type="text" name="" class="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
-          <input type="text" name="" class="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/> */}
+          {/* <input type="text" name="" className="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
+          <input type="text" name="" className="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/> */}
           
 
-           {/* <button class="my-4 btn " id="btn-login"
+           {/* <button className="my-4 btn " id="btn-login"
            onClick={AttemptLogin}
            >
              Log In
             </button>
             <br/> */}
 
-          <button class="my-4 btn " id="btn-login"
+          <button className="my-4 btn " id="btn-login"
           onClick={() => 
             
             dispatch(loginUser(
@@ -131,7 +131,7 @@ export default function ModalLogin(props) {
 
 
           {/* onClick={() => setLoginModalShow(true)}  */}
-          {/* <button class="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
+          {/* <button className="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
           
         </div>
       </div>

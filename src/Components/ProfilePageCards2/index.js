@@ -47,7 +47,7 @@ const  ProfilePageCards2 = ({data}) => {
                         <li>Background colour: {data.bgc}</li>
                         </ul>
                     </Card.Text>
-                    <a href="#" class="stretched-link" onClick={thisPage}></a>
+                    <a href="#" className="stretched-link" onClick={thisPage}></a>
                 </Card.Body>
                 {/* <Card.Footer className="text-muted">Last update: 2 days ago</Card.Footer> */}
                 </Card>

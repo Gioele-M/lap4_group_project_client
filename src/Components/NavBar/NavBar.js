@@ -51,7 +51,7 @@ export default function NavBar() {
         loginbtnTog.style.display='inline'
         signupbtnTog.style.display='inline'
         signoutbtnTog.style.display='none'
-        setUsersname = ''
+        setUsersname('')
       }
       else {
         
@@ -59,8 +59,8 @@ export default function NavBar() {
         // console.log('you are:',usersname)
         loginbtnTog.style.display='none'
         signupbtnTog.style.display='none'
-        signoutbtnTog.style.display='inline'
-        setUsersname = 'Tomhughes19'//DELETE THIS WHEN CONNECTED
+        signoutbtnTog.style.display='inline' 
+        setUsersname('Tomhughes19')//DELETE THIS WHEN CONNECTED BANANA
       }    
     }
 
@@ -82,59 +82,59 @@ export default function NavBar() {
 
     return (
     <>
-    <nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
+    <nav className="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
 
 {/* LOGO */}
     <NavLink to="/">
-      <img class="navbar-brand navbar-logo" href="#" src={logo} alt="Write and Watch Logo" />
+      <img className="navbar-brand navbar-logo" href="#" src={logo} alt="Write and Watch Logo" />
     </NavLink>
        
 
 {/* align right */}
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon">is there anything here?    </span>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon">is there anything here?    </span>
   </button>
 
 
 {/* TEXT LINKS  /////////////////// */}
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02 ">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 " id=' font1'>
-      <li class="nav-item active">
-          <NavLink id='no-decos' to="/">
-            <a class="nav-link " href="#" id=' font1'>Home</a>
+  <div className="collapse navbar-collapse" id="navbarTogglerDemo02 ">
+    <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " id=' font1'>
+      <li className="nav-item active">
+          <NavLink id='no-decos' className="nav-link text-black" to="/">
+            Home
           </NavLink>
       </li>
-      <li class="nav-item ">
-        <NavLink id='no-decos' to="/about">
-          <a class="nav-link" href="#">About</a>
+      <li className="nav-item ">
+        <NavLink id='no-decos' to="/about" className="nav-link text-black">
+        About
         </NavLink>
       </li>
-      <li class="nav-item">
-        <NavLink id='no-decos' to="/user">
-          <a class="nav-link" href="#">Profile</a>
+      <li className="nav-item">
+        <NavLink id='no-decos' to="/user" className="nav-link text-black">
+          Profile
         </NavLink>
       </li>
-      <li class="nav-item">
-        <NavLink id='no-decos' to="/playlist">
-          <a class="nav-link" href="#">Playlists</a>
+      <li className="nav-item">
+        <NavLink id='no-decos' to="/playlist" className="nav-link text-black">
+          Playlist
         </NavLink>
       </li>
 
 {/* SEARCH  /////////////////// */}
     </ul>
-    <form class="form-row px-2 ms-auto align-middle ">
-      <input class="form-row me-1 align-middle" id='placeholder' type="search" placeholder="Look for something:" />
+    <form className="form-row px-2 ms-auto align-middle ">
+      <input className="form-row me-1 align-middle" id='placeholder' type="search" placeholder="Look for something:" />
       <NavLink to="/search">
-        <button class="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
+        <button className="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
       </NavLink>
 
 
 
 {/* login sign up /////// */}
 
-      <btn class="ourbtns " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</btn>
-      <btn class="ourbtns " onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</btn>
-      <btn class="ourbtns" onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</btn>
+      <Button className="ourbtns " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
+      <Button className="ourbtns " onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</Button>
+      <Button className="ourbtns " onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button>
       {/* <NavLink  to="/"> */}
       {/* <a  href="#">Tom</a> */}
       {/* </NavLink> */}

@@ -8,14 +8,14 @@ const Footer = () => {
     return (
           <footer> 
             <span id="footer">
-                <div class="card text-center">
-                {/* <div class="card-body">       
+                <div className="card text-center">
+                {/* <div className="card-body">       
                 </div> */}
-                    {/* <p class="card-text">Social link icons to be added here
+                    {/* <p className="card-text">Social link icons to be added here
                     </p> */}
-                     {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-            <div class="card-footer text-muted">
-            <img class="navbar-brand navbar-logo" href="#" src={logo} alt="Write and Watch Logo" />
+                     {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+            <div className="card-footer text-muted">
+            <img className="navbar-brand navbar-logo" href="#" src={logo} alt="Write and Watch Logo" />
             © 2022 Copyright: Write and Watch Academy 
             </div>
             </div> 

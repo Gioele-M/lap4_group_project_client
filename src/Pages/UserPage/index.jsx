@@ -7,6 +7,11 @@ import { useState } from 'react';
 
 
 function UserPage() {
+  // Dispatch request based on user
+  // Get user playlists 
+  // render the playlists
+
+
   const pStars= useSelector((state) => state.media.data.data[0].averageStars.currentRating) //BANANA
   const pName= useSelector((state) => state.media.data.data[0].playlistName)
   const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)

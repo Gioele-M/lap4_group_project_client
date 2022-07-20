@@ -64,22 +64,22 @@ export default function NewPlaylist(props) {
       <Modal.Header closeButton>
         <Modal.Title id="modalTitle">Create A Playlist</Modal.Title>
       </Modal.Header>
-      <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
-        <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
+      <div className="tab-pane my-1  Modal-signuplogin" id="signupSection" >
+        <div className="form p-4  text-center Modal-signuplogin" id="modalstuff1">
           {/* <p id='modal-intro'>Please enter you details:</p> */}
-            <div class="form  p-2 Modal-signuplogin" id="signupSection">
+            <div className="form  p-2 Modal-signuplogin" id="signupSection">
 
-          <input type="text" name="" class="my-1 form-control" placeholder={playlistName}    />
+          <input type="text" name="" className="my-1 form-control" placeholder={playlistName}    />
 
-          {/* <input type="checkbox" name="" class="my-3 form-control" placeholder="Public"/> */}
+          {/* <input type="checkbox" name="" className="my-3 form-control" placeholder="Public"/> */}
           {/* <label for="colourPicker"> Pick a background colour:</label><br/> */}
 
 
-          <input ref={colourRef} type="color" class="my-3 form-control colourPicker"  id='MyColourPicker' 
+          <input ref={colourRef} type="color" className="my-3 form-control colourPicker"  id='MyColourPicker' 
           onChange={handleChange} />
 
         {/* matteos attempt with red */}
-          {/* <input ref={colourRef} type="color" class="my-3 form-control colourPicker"  id='MyColourPicker' 
+          {/* <input ref={colourRef} type="color" className="my-3 form-control colourPicker"  id='MyColourPicker' 
           onClick={() => setColourPicker1(colourRef.value)} placeholder="Colour"/> */}
 
 
@@ -88,7 +88,7 @@ export default function NewPlaylist(props) {
           <label for="privateCheck"> Private</label><br/>
 
 
-          <button class="my-4 btn " id="btn-login"       
+          <button className="my-4 btn " id="btn-login"       
           onClick={() => 
           dispatch(createNewPL(
             {playlistName: playlistName.value, //banana
@@ -112,7 +112,7 @@ media.data.data[0].playlistName
 
 
           {/* onClick={() => setLoginModalShow(true)}  */}
-          {/* <button class="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
+          {/* <button className="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
           
         </div>
       </div>

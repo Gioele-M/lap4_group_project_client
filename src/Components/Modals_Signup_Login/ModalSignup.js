@@ -77,24 +77,24 @@ export default function ModalSignup(props) {
         <Modal.Title id="modalTitle">Sign Up</Modal.Title>
       </Modal.Header>
       
-        {/* <div class="tab-pane Modal-signuplogin" id="signupSection" > */}
-        <div class="tab-pane my-1  Modal-signuplogin" id="signupSection" >
-          <div class="form p-4  text-center Modal-signuplogin" id="modalstuff1">
+        {/* <div className="tab-pane Modal-signuplogin" id="signupSection" > */}
+        <div className="tab-pane my-1  Modal-signuplogin" id="signupSection" >
+          <div className="form p-4  text-center Modal-signuplogin" id="modalstuff1">
           <p id='modal-intro'>Please enter you details:</p>
 
-            <input type="text" maxlength='20' name="" class=" my-2 form-control" id='user' placeholder="User Name" onChange={handleChangeUsername}/>
-            <p class='modalErr' id='usernameErrMsg'>Meh, Try again</p>
+            <input type="text" maxlength='20' name="" className=" my-2 form-control" id='user' placeholder="User Name" onChange={handleChangeUsername}/>
+            <p className='modalErr' id='usernameErrMsg'>Meh, Try again</p>
 
-            <input type="email" name="" class="my-2 form-control" placeholder="Email" id='email' onChange={handleChangeEmail}/>
-            <p class='modalErr' id='emailErrMsg'>That doesn't look like an email!</p>
+            <input type="email" name="" className="my-2 form-control" placeholder="Email" id='email' onChange={handleChangeEmail}/>
+            <p className='modalErr' id='emailErrMsg'>That doesn't look like an email!</p>
 
-            <input type="password" name="" class="my-2   form-control" id='pass1' placeholder="Password" onChange={handleChangePassword}/>
-            <input type="password" name="" class=" my-2 form-control" id='pass2' placeholder="Repeat Password" onChange={handleChangePassword}/>
-            <p class='modalErr' id='passErrMsg'>Passwords must match!</p>
+            <input type="password" name="" className="my-2   form-control" id='pass1' placeholder="Password" onChange={handleChangePassword}/>
+            <input type="password" name="" className=" my-2 form-control" id='pass2' placeholder="Repeat Password" onChange={handleChangePassword}/>
+            <p className='modalErr' id='passErrMsg'>Passwords must match!</p>
 
 
 
-            <button class="my-4 btn" id="btn-login" 
+            <button className="my-4 btn" id="btn-login" 
             onClick={() => 
             dispatch(signupUser(
               {username: username.value,

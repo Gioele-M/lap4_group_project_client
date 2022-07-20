@@ -35,7 +35,7 @@ function PlaylistModal({showModal, text, url}) {
         noteTitle={noteData.noteTitle}
         chapterId={noteData.chapterId}
       />
-      <button onClick={() => showModal(false)} class={styles.deleteBtn}>X</button>
+      <button onClick={() => showModal(false)} className={styles.deleteBtn}>X</button>
     </div>
     </div>
     
