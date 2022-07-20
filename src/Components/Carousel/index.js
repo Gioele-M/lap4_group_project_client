@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import ProfilePageCard2 from '../ProfilePageCards2';
 import "./styles.css";
 
 export default function TrendingTopics() {

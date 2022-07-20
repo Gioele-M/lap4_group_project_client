@@ -6,7 +6,7 @@ import { Container, Row, Col }  from 'react-bootstrap';
 // import { Navigate } from 'react-router-dom';
 
 
-const  ProffilePageCard2 = () => {
+const  ProfilePageCard2 = () => {
 
     const pStars= useSelector((state) => state.media.data.data[1].averageStars[0])
     const pName= useSelector((state) => state.media.data.data[0].playlistName)
@@ -25,7 +25,7 @@ const  ProffilePageCard2 = () => {
         return (
             
                 <>
-                 <Col lg={3} className="m-3" >
+                 <Col lg={3} className="m-4" >
                 <Card style={{ width: '18rem' }} key={index}>
                 <Card.Body>
                     <Card.Title>{pName}</Card.Title>
@@ -56,4 +56,4 @@ const  ProffilePageCard2 = () => {
   );
 }
 
-export default ProffilePageCard2;
+export default ProfilePageCard2;
