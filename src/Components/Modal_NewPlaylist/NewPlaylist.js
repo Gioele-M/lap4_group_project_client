@@ -4,9 +4,10 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
 import { createNewPL } from "../../State/actionCreators/media";
+import hexRGB from "../hex-rgb";
 
 
-export default function ModalLogin(props) {
+export default function NewPlaylist(props) {
   
   const dispatch = useDispatch()
 
@@ -34,10 +35,28 @@ export default function ModalLogin(props) {
     
     const [playlistName, setPlaylistName] = useState('Playlist Name:');
 
-    function handleChange(event) {
-      setPlaylistName({value: event.target.value});
-      console.log('new update:',playlistName)
+
+    // function handleChange(event) {
+    //   setPlaylistName(event.target.value);
+    //   console.log('new update:',playlistName)
+    // }
+
+    let [colourChoice, setColourChoice] = useState('(0,0,0)')
+
+    function handleChange() {
+      let selectedColour = document.getElementById('MyColourPicker')
+      // setPlaylistName(event.target.value);
+      console.log('selected colour:', selectedColour.value)
+      console.log('selected colour converted:',hexRGB(selectedColour.value))
+      const selectedRGB = hexRGB(selectedColour.value)
+      console.log(selectedRGB)
+      // setColourChoice=selectedColour
+      setColourChoice = hexRGB(selectedColour.value)
+
+      console.log('3333333', colourChoice)
+      console.log('3333333', colourChoice.type)
     }
+
 
 
   return (
@@ -50,15 +69,21 @@ export default function ModalLogin(props) {
           {/* <p id='modal-intro'>Please enter you details:</p> */}
             <div class="form  p-2 Modal-signuplogin" id="signupSection">
 
-
-          <input type="text" name="" class="my-1 form-control" placeholder={playlistName}  onChange={handleChange}  />
-
-
+          <input type="text" name="" class="my-1 form-control" placeholder={playlistName}    />
 
           {/* <input type="checkbox" name="" class="my-3 form-control" placeholder="Public"/> */}
           {/* <label for="colourPicker"> Pick a background colour:</label><br/> */}
+
+
           <input ref={colourRef} type="color" class="my-3 form-control colourPicker"  id='MyColourPicker' 
-          onClick={() => setColourPicker1(colourRef.value)} placeholder="Colour"/>
+          onChange={handleChange} />
+
+        {/* matteos attempt with red */}
+          {/* <input ref={colourRef} type="color" class="my-3 form-control colourPicker"  id='MyColourPicker' 
+          onClick={() => setColourPicker1(colourRef.value)} placeholder="Colour"/> */}
+
+
+
           <input type="checkbox" id="privateCheck" name="privateCheck" value="private"></input>
           <label for="privateCheck"> Private</label><br/>
 
@@ -69,6 +94,7 @@ export default function ModalLogin(props) {
             {playlistName: playlistName.value, //banana
             userEmail:userdata.userEmail,
             token: userdata.token,
+            playlistTheme: {colourChoice}  //banana - trying this
           }))}
       >
         Lets Go! 
