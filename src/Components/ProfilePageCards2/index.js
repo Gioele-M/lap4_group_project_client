@@ -8,19 +8,23 @@ import { useState } from 'react';
 // import "./styles.css";
 
 
-const  ProfilePageCard2 = () => {
-    const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
-    const pName= useSelector((state) => state.media.data.data[0].playlistName)
-    const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
-    const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
+const  ProfilePageCard2 = (props) => {
+    // const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
+    // const pName= useSelector((state) => state.media.data.data[0].playlistName)
+    // const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
+    // const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
 
     
-    const [cardInfo, setCardInfo] = useState ([
-        { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-        { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-        // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
+    // let data = { title: {props.pName}, owner: {props.pOwner}, stars: {props.pStars}, bgc:  {props.pTheme}}
+
+    let data = { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
+    // const [cardInfo, setCardInfo] = useState ([
+    //     { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
+    //     // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
+    //     // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
         
-    ]);
+    // ]);
+
     // function that render cards
 
     const renderCard = (card, index) => {
@@ -30,12 +34,12 @@ const  ProfilePageCard2 = () => {
                  <Col lg={3} className="m-4" >
                 <Card style={{ width: '18rem', backgroundColor: 'rgb{pTheme}'  }} key={index}>
                 <Card.Body>
-                    <Card.Title>{pName}</Card.Title>
+                    <Card.Title>{props.pName}</Card.Title>
                     <Card.Text>
                         <ul>
-                        <li>Average stars: {pStars}</li>
-                        <li>Playlist owner: {pOwner}</li>
-                        <li>Background colour: {pTheme}</li>
+                        <li>Average stars: {props.pStars}</li>
+                        <li>Playlist owner: {props.pOwner}</li>
+                        <li>Background colour: {props.pTheme}</li>
                         </ul>
                     </Card.Text>
                     <a href="/playlist" class="stretched-link"></a>
