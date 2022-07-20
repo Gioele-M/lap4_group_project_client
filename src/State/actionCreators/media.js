@@ -1,17 +1,17 @@
 import axios from 'axios'
 
 
-export const fetchMedia = () => {
-  const hardcodedData = {
-    playlistName: 'playlistX',
-  }
+export const fetchMedia = (request = {playlistName: 'playlistX'}) => {
+  // const hardcodedData = {
+  //   playlistName: 'playlistX',
+  // }
   return async (dispatch) => {
     try {
       console.log('* Fetching Media')
       dispatch({ type: 'FETCHING_MEDIA' })
       const data = await axios.post(
         `http://localhost:5000/playlist/search`,
-        hardcodedData
+        request
       )
 
       if (data.error) {
