@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useSelector } from 'react-redux'
 import { Container, Row, Col }  from 'react-bootstrap';
+// import { Redirect } from 'react-router-dom';
 
 
 const  ProffilePageCard2 = () => {
