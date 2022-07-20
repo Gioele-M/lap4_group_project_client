@@ -9,13 +9,13 @@ function PlaylistComponent({title}) {
   const dispatch = useDispatch('')
   // dispatch(fetchMedia())
   let notes = useSelector(state => state.media.data.data)
-  console.log('A A A ', useSelector(state => state.media.data))
-  console.log('* * *', notes)
-  console.log('= = =', typeof(notes) === typeof([1,2,3]))
+  // console.log('A A A ', useSelector(state => state.media.data))
+  // console.log('* * *', notes)
+  // console.log('= = =', typeof(notes) === typeof([1,2,3]))
 
   let loading = useSelector(state => state.media.loading)
 
-  console.log('********************', loading)
+  // console.log('********************', loading)
 
 
   let userData = useSelector(state => state.user)
@@ -45,13 +45,13 @@ function PlaylistComponent({title}) {
     // create the data for an empty note
     const userRequesting = 'matteo@gmail.com'
     // const userRequesting = userData.user.userEmail
-    console.log('* userRequesting', userRequesting)
+    // console.log('* userRequesting', userRequesting)
     const playlistName = notes[0].playlistName
-    console.log('* playlistName: ', playlistName)
+    // console.log('* playlistName: ', playlistName)
     const chapters = notes[0]
-    console.log('* chapters: ', chapters.chapters)
+    // console.log('* chapters: ', chapters.chapters)
     const token = userData.user.token
-    console.log('* token: ', token)
+    // console.log('* token: ', token)
     const newNote = {
       userRequesting,
       playlistName,
@@ -66,7 +66,7 @@ function PlaylistComponent({title}) {
       }
     }
     // save the empty note in the DB (reducer) using the PATCH endpoint
-    console.log('************** newNote: ', newNote)
+    console.log('NOTE - Before Dispatch: ', newNote)
     dispatch(patchMedia(newNote))
     setTimeout(() => {
       setFetchToggle(!fetchToggle)
@@ -77,8 +77,9 @@ function PlaylistComponent({title}) {
   }
 
   const renderNotes =  
-    notes[0]['chapters'].map((note, idx) => {
+    useSelector(state => state.media.data.data)[0]['chapters'].map((note, idx) => {
     // console.log('KEY ', note.chapterId)
+    // console.log('note uuid is **** ', note.uuid)
     // console.log(note.chapterTitle)
     // console.log(note.start)
     // console.log(note.end)
@@ -88,6 +89,7 @@ function PlaylistComponent({title}) {
     return (
       <Note
         key={idx}
+        uuid={note.uuid}
         chapterId={note.chapterId} 
         noteTitle={note.chapterTitle} 
         start={note.start} 
