@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import "./styles.css";
 import { useSelector } from 'react-redux'  
 import { NavLink } from 'react-router-dom';
@@ -14,6 +14,11 @@ export default function NavBar() {
   
     console.log('*********************************************LOGGED IN', loggedIn)
     
+
+    // useEffect(()=>{
+    //   window.location.reload(false)
+
+    // }, [])
     
 
     const logo = require('../../images/logo.png');
@@ -37,7 +42,7 @@ export default function NavBar() {
     //To toggle loging/ log out btns
     ////////////////////////////////////////////
 
-    const [loggedinChecker, setLoggedinChecker] = useState(false); //BANANA
+    const [loggedinChecker, setLoggedinChecker] = useState(loggedIn); //BANANA
 
     // const [user, setUser] = useState('Tom');
 
@@ -52,7 +57,7 @@ export default function NavBar() {
       let signoutbtnTog = document.getElementById('btn-signout')
       
       
-      if (loggedinChecker === false){
+      if (loggedIn == false){
         console.log('NOT logged in')
         loginbtnTog.style.display='inline'
         signupbtnTog.style.display='inline'

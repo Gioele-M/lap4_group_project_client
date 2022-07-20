@@ -78,6 +78,10 @@ export default function ModalLogin(props) {
 // }
 
 
+  const [, updateState] = React.useState();
+  const forceUpdate = React.useCallback(() => updateState({}), []);
+
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" >
 
@@ -115,12 +119,16 @@ export default function ModalLogin(props) {
             <br/> */}
 
           <button className="my-4 btn " id="btn-login"
-          onClick={() => 
+          onClick={() => {
             
             dispatch(loginUser(
               {email: email.value, 
               password: password.value
-            }))}>
+            }))
+            forceUpdate()
+          }
+          
+            }>
             Log In
             </button>
             <br/>

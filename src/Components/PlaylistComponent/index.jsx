@@ -125,7 +125,7 @@ const onUpdateClick = ()=>{
       <div className="container d-flex flex-column justify-content-start">
        
         <button className="btn btn-primary mt-2 mb-2" onClick={()=>dispatch(fetchMedia({playlistName: playlistName}))}>UPDATE</button>
-        <h1 className="mt-4 mb-2 text-light bg-dark">{title || 'Your Playlist'}</h1>
+        <h1 className="mt-4 mb-2 text-light bg-dark">{playlistName || 'Your Playlist'}</h1>
 
         
       

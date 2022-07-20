@@ -27,6 +27,34 @@ export const fetchMedia = (request) => {
   }
 }
 
+
+export const fetchTrending = () => {
+  // const hardcodedData = {
+  //   playlistName: 'playlistX',
+  // }
+  return async (dispatch) => {
+    try {
+      console.log('* Trending Playlist Media')
+      dispatch({ type: 'FETCHING_TRENDING' })
+      const data = await axios.get(
+        `http://localhost:5000/playlist/trending`)
+
+      if (data.error) {
+        throw new Error(data.error)
+      }
+
+      console.log('Got Media data -> ', data)
+      dispatch({ type: 'FETCH_TRENDING', payload: data })
+    } catch (err) {
+      dispatch({ type: 'SET_ERROR', payload: err })
+      console.log('Error fetching Media: ', err)
+    }
+  }
+}
+
+
+
+
 export const patchMedia = (newData) => {
   return async (dispatch) => {
     try {

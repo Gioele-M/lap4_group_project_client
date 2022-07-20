@@ -103,7 +103,7 @@ function Note(props) {
       
     })
     
-    setTimeout(props.refreshPage, 200, false)
+    setTimeout(props.refreshPage, 500, false)
     
 
       // update the page

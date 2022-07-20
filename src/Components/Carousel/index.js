@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux'
 import "./styles.css";
 
 export default function TrendingTopics() {
-
+    const playlists = useSelector((state) => state.media.data.data)
     // const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
     // const pName= useSelector((state) => state.media.data.data[0].playlistName)
     // const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
@@ -33,6 +33,24 @@ export default function TrendingTopics() {
         // on click function whe clicked it will s
       ]);
     
+      console.log('!!!!!!!!!!!!!!!!!!!!!!!PLAYLISTS',playlists)
+
+      const render_cards = playlists.map((playlist, idx)=>{
+        const data = { title: playlist.playlistName, owner: playlist.playlistOwner, stars: playlist.averageStars.currentRating, bgc:  playlist.playlistTheme}
+
+
+        return(
+            <SwiperSlide>
+           
+            <ProfilePageCards2 data={data} />
+                
+           
+            </SwiperSlide>
+        )
+
+      })
+
+
 
     return(
         <div className="container-fluid">
@@ -62,42 +80,15 @@ export default function TrendingTopics() {
             pagination={{ clickable: true }}
             className="mySwiper"
         >
-            <SwiperSlide>
+            {/* <SwiperSlide>
            
             <ProfilePageCards2 data={cardInfo[0]} />
                 
            
-            </SwiperSlide>
-            <SwiperSlide>
-                {/* <img src={img2} alt="" /> */}
-                {/* <ProfilePageCards2  /> */}
-                <ProfilePageCards2 data={cardInfo[1]} />
+            </SwiperSlide> */}
 
-            </SwiperSlide>
-            <SwiperSlide>
-                {/* <img src={img3} alt="" /> */}
-                {/* <ProfilePageCards2  /> */}
-                <ProfilePageCards2 data={cardInfo[2]} />
+            {render_cards}
 
-            </SwiperSlide>
-            <SwiperSlide>
-                {/* <img src={img3} alt="" /> */}
-                {/* <ProfilePageCards2  /> */}
-                <ProfilePageCards2 data={cardInfo[2]} />
-
-            </SwiperSlide>
-            <SwiperSlide>
-                {/* <img src={img3} alt="" /> */}
-                {/* <ProfilePageCards2  /> */}
-                <ProfilePageCards2 data={cardInfo[2]} />
-
-            </SwiperSlide>
-            <SwiperSlide>
-                {/* <img src={img3} alt="" /> */}
-                {/* <ProfilePageCards2  /> */}
-                <ProfilePageCards2 data={cardInfo[2]} />
-
-            </SwiperSlide>
 
         </Swiper>
     </div>
