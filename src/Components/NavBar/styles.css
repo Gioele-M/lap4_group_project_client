@@ -33,19 +33,22 @@
     text-decoration: none;
 }
 
-#btn-login{
-    background-color: #E92D2D;
-    color: white;
-    border-style: none;
-    border-radius: 10px ;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-style: italic;
-    font-weight: 800;
-    text-decoration: none;
+.ourbtns{
+    background-color: #E92D2D ;
+    color: white ;
+    border-style: none ;
+    border-radius: 11px ;
+    height: 30px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'Montserrat Alternates', sans-serif ;
+    font-style: italic ;
+    font-weight: 500 ;
+    text-decoration: none ;
 }
 
 
-#btn-login:hover{
+.ourbtns:hover{
     background-color: rgb(177, 17, 49);
     color: white;
 }
