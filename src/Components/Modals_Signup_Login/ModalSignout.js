@@ -4,11 +4,25 @@ import Modal from "react-bootstrap/Modal";
 import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylist
 import { loginUser } from "../../State/actionCreators/user";
 import "./styles.css";
+import CloseButton from 'react-bootstrap/CloseButton';
 
 export default function ModalSignout(props) {
   const dispatch = useDispatch()
+
+  // const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
   
-  
+  // const handleClose = () => setShow(false);
+
+  ///
+  // function closeSelf() {
+  //   return <ModalSignout disabled />;
+  // }
+
+
   // const [email, setEmail] = useState('Email:');
   // const [password, setPassword] = useState('Password:');
  
@@ -79,7 +93,9 @@ export default function ModalSignout(props) {
 
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" >
+    // <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" onHide={handleClose} >
+
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff">
 
 
       <Modal.Header closeButton>
@@ -113,22 +129,34 @@ export default function ModalSignout(props) {
              Log In
             </button>
             <br/> */}
+
+
+
           <button class="my-4 btn " id="btn-login"
-           onClick={() => 
-            dispatch(loginUser(
-              {email: email.value, 
-              password: password.value
-            }))}
+          //  onClick={() => 
+
+            
+
+          //   dispatch(logoutUser(
+          //     {
+          //       //what data is needed for the logout?
+          //       user: {},
+          //       loading: false,
+          //       error: false,
+          //   }))}
          >
             Sign Out
             </button>
             <br/>
 
 
-          <button class="my-4 btn " id="btn-login">
+          <button class="my-4 btn " id="btn-login"  data-dismiss="modalstuff">
             Cancel
             </button>
             <br/>
+            {/* <DisabledExample /> */}
+            <Button variant="secondary" >ds</Button>
+            <CloseButton/>
 
 {/* 
             <button class="my-4 btn " id="btn-login"
