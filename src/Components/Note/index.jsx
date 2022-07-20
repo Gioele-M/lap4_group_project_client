@@ -44,7 +44,7 @@ function Note(props) {
 
     const data = {
       // "userRequesting":userData.userEmail,
-      userRequesting: 'matteo@gmail.com',
+      userRequesting: userData.userEmail,
       "playlistName": mediaData[0].playlistName,
       "chapters": chapters[props.chapterId - 1],
       "token": userData.token
@@ -59,10 +59,11 @@ function Note(props) {
       const chapters = mediaData[0].chapters
       // create the data
       chapters.forEach(chap => {
-      if (chap.chapterId === props.chapterId) {
+      if (chap.uuid === props.uuid) {
         console.log('chapterId is: ', chap.chapterId)
         
-        const userRequesting = 'matteo@gmail.com'
+
+        const userRequesting = userData.userEmail
         // const userRequesting = userData.userEmail 
         console.log('* userRequesting: ', userRequesting)
         const playlistName = mediaData[0].playlistName
@@ -88,6 +89,9 @@ function Note(props) {
         dispatch(deleteNote(data))
         // window.reload()
         // window.location.reload()
+        // const x = ()=>{
+        //   dispatch(fetchMedia({playlistName:}))
+        // }
       }
       
     })

@@ -20,7 +20,8 @@ function PlaylistComponent({title}) {
 
   let userData = useSelector(state => state.user)
 
-  
+  let playlistName = useSelector(state => state.selection.selected)
+
 
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -28,13 +29,28 @@ function PlaylistComponent({title}) {
 
   const [canLoad, setCanLoad] = useState(false)
 
+
+  function useForceUpdate(){
+    // dispatch(fetchMedia({playlistName: playlistName}))
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue(value => value + 1); // update state to force render
+    // An function that increment 👆🏻 the previous state like here 
+    // is better than directly setting `value + 1`
+}
+
+const onUpdateClick = ()=>{
+  // dispatch(fetchMedia({playlistName: playlistName}))
+}
+
+
   useEffect(() => {
-    const fetchData = async () => {
-      await dispatch(fetchMedia())
+    const fetchData = () => {
+      // Get playlist name and pass it to fetchmedia 
+      dispatch(fetchMedia({playlistName: playlistName}))
       setCanLoad(true)
     }
     fetchData()
-  }, [])
+  }, [dispatch, canLoad])
 
   const handleAddNoteBtn = () => {
     // get the last note ID and add 1
@@ -43,7 +59,7 @@ function PlaylistComponent({title}) {
     const newNoteChapterId = notes[0].chapters[notes[0].chapters.length-1].chapterId + 1
 
     // create the data for an empty note
-    const userRequesting = 'matteo@gmail.com'
+    const userRequesting = userData.user.userEmail
     // const userRequesting = userData.user.userEmail
     console.log('* userRequesting', userRequesting)
     const playlistName = notes[0].playlistName
@@ -71,7 +87,9 @@ function PlaylistComponent({title}) {
     setTimeout(() => {
       setFetchToggle(!fetchToggle)
     }, 1000)
-    
+
+
+    setCanLoad(false)
     
     // refresh the page
   }
@@ -94,6 +112,7 @@ function PlaylistComponent({title}) {
         end={note.end} 
         url={note.video_url} 
         text={note.text}
+        uuid={note.uuid}
         onNoteClick={() => setModalVisible(true)}
       />
     )
@@ -104,12 +123,12 @@ function PlaylistComponent({title}) {
     <div className="container">
       <div className="container d-flex flex-column justify-content-start">
        
-        <button className="btn btn-primary mt-2 mb-2" onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
+        <button className="btn btn-primary mt-2 mb-2" onClick={()=>dispatch(fetchMedia({playlistName: playlistName}))}>UPDATE</button>
         <h1 className="mt-4 mb-2 text-light bg-dark">{title || 'Your Playlist'}</h1>
 
         
       
-        {canLoad && renderNotes }
+        { canLoad && renderNotes }
 
       
         <div className="row">

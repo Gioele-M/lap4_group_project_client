@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export const fetchMedia = (request = {playlistName: 'playlistX'}) => {
+export const fetchMedia = (request) => {
   // const hardcodedData = {
   //   playlistName: 'playlistX',
   // }
