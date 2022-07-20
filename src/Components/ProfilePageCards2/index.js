@@ -27,7 +27,7 @@ const  ProfilePageCard2 = () => {
             
                 <>
                  <Col lg={3} className="m-4" >
-                <Card style={{ width: '18rem' }} key={index}>
+                <Card style={{ width: '18rem', backgroundColor: 'rgb{pTheme}'  }} key={index}>
                 <Card.Body>
                     <Card.Title>{pName}</Card.Title>
                     <Card.Text>
