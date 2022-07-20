@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState,  } from 'react'
 import "./styles.css";
 import { useSelector } from 'react-redux'  
 import { NavLink } from 'react-router-dom';
@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import ModalSignup from '../Modals_Signup_Login/ModalSignup';
 import ModalLogin from '../Modals_Signup_Login/ModalLogin';
 import ModalSignout from '../Modals_Signup_Login/ModalSignout';
+import searchIcon from'../../images/searchIcon.png';
+
 
 
 export default function NavBar() {
@@ -129,18 +131,18 @@ export default function NavBar() {
 {/* SEARCH  /////////////////// */}
     </ul>
     <form className="form-row px-2 ms-auto align-middle ">
-      <input className="form-row me-1 align-middle" id='placeholder' type="search" placeholder="Look for something:" />
+      <input className="form-row me-1 align-middle" id='searchBox' type="search" placeholder="Look for something:" />
       <NavLink to="/search">
-        <button className="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
+        <img id='searchIcon' src={searchIcon}alt="fireSpot"/>
       </NavLink>
-
+      {/* style={nbStyle.logo}  */}
 
 
 {/* login sign up /////// */}
 
-      <Button className="ourbtns " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
-      <Button className="ourbtns " onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</Button>
-      <Button className="ourbtns " onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button>
       {/* <NavLink  to="/"> */}
       {/* <a  href="#">Tom</a> */}
       {/* </NavLink> */}

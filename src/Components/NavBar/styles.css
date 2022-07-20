@@ -22,7 +22,9 @@
 }
 
 #btn-search{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-image: url('../../images/searchIcon.png');
+    background-size: 0%;
     color: #E92D2D;
     border-style: solid;
     border-radius: 10px ;
@@ -33,7 +35,12 @@
     text-decoration: none;
 }
 
-.ourbtns{
+#searchIcon{
+width: 25px;
+margin-right: 20px;
+}
+
+/* #ourbtns{
     background-color: #E92D2D ;
     color: white ;
     border-style: none ;
@@ -45,30 +52,71 @@
     font-style: italic ;
     font-weight: 500 ;
     text-decoration: none ;
+} */
+
+#btn-signup{
+    color: white;
+    background-color: #E92D2D;
+    border-style: solid;
+    border-radius: 10px ;
+    border-color: #E92D2D;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 8px;
 }
 
+#btn-login{
+    background-color: rgb(255, 255, 255);
+    color: #E92D2D;
+    border-style: solid;
+    border-radius: 10px ;
+    border-color: #E92D2D;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+}
 
-.ourbtns:hover{
+#btn-signout{
+    background-color: rgb(255, 255, 255);
+    color: #E92D2D;
+    border-style: solid;
+    border-radius: 10px ;
+    border-color: #E92D2D;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* 
+#ourbtns:hover{
     background-color: rgb(177, 17, 49);
     color: white;
-}
+} */
     
-#placeholder{
+#searchBox{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: smaller;
+    border-radius: 10px ;
+    border-style: solid;
+    border-color: #E92D2D;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: none;
+    height: 30px;
+    padding-left: 4px;
+}
+
+/* 
+#already{
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 200;
     font-size: smaller;
     border-radius: 10px ;
     border-color: #E92D2D;
     font-style: italic;
-    /* font-weight: 600; */
-    /* text-decoration: none; */
-}
-
-#already{
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 200;
-    font-size: smaller;
-    border-radius: 10px ;
-    /* border-color: #E92D2D; */
-    font-style: italic;
-}
+ }  */
