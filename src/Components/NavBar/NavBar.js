@@ -100,7 +100,7 @@ export default function NavBar() {
 
 {/* align right */}
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon">is there anything here?    </span>
+    <span className="navbar-toggler-icon"></span>
   </button>
 
 
@@ -108,7 +108,7 @@ export default function NavBar() {
   <div className="collapse navbar-collapse" id="navbarTogglerDemo02 ">
     <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " id=' font1'>
       <li className="nav-item active">
-          <NavLink id='no-decos' className="nav-link text-black" to="/">
+          <NavLink id='no-decos' className="nav-link active text-black" to="/">
             Home
           </NavLink>
       </li>
