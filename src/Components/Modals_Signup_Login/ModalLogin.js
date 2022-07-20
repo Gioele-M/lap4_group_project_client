@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylis
 import { loginUser } from "../../State/actionCreators/user";
 import "./styles.css";
 
-export default function NewPlaylist(props) {
+export default function ModalLogin(props) {
   const dispatch = useDispatch()
   
   

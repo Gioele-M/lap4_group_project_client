@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.css";
 import { useSelector, useDispatch } from 'react-redux'  //BananaCreateNewPlaylist
-import ModalLogin from '../Modals_Signup_Login/ModalLogin';
+// import NewPlaylist from '../Modals_Signup_Login/NewPlaylist';
 import { signupUser } from "../../State/actionCreators/user";
 
 export default function ModalSignup(props) {
@@ -112,7 +112,7 @@ export default function ModalSignup(props) {
              
               {/* <a id='already' onClick={() => setLoginModalShow(true)}  href='#'>Already have an account?</a> */}
 
-          {/* <ModalLogin  
+          {/* <NewPlaylist  
             show={loginModalShow}
             onHide={() => setLoginModalShow(false)}
           /> */}
