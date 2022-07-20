@@ -14,10 +14,10 @@ import "./styles.css";
 
 export default function TrendingTopics() {
 
-    const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
-    const pName= useSelector((state) => state.media.data.data[0].playlistName)
-    const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
-    const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
+    // const pStars= useSelector((state) => state.media.data.data[1].averageStars.currentRating)
+    // const pName= useSelector((state) => state.media.data.data[0].playlistName)
+    // const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
+    // const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
   
 
     const soonImg = require('../../images/soon.png');
@@ -26,13 +26,13 @@ export default function TrendingTopics() {
     const img3 = require('../../images/3.jpg');
 
     const [cardInfo, setCardInfo] = useState ([
-        
-        { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
-        { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
-        { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme}
+        { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"},
+        { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"},
+        { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"}
         // Pass value with 1, 2,, 3
         // on click function whe clicked it will s
       ]);
+    
 
     return(
         <div className="container-fluid">

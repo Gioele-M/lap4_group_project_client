@@ -31,7 +31,7 @@ export default function NavBar() {
     //To toggle loging/ log out btns
     ////////////////////////////////////////////
 
-    const [loggedinChecker, setLoggedinChecker] = useState(true);
+    const [loggedinChecker, setLoggedinChecker] = useState(false); //BANANA
 
     // const [user, setUser] = useState('Tom');
 
