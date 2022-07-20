@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useSelector } from 'react-redux'
 import { Container, Row, Col }  from 'react-bootstrap';
-// import { Redirect } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 
 
 const  ProffilePageCard2 = () => {
@@ -25,8 +25,8 @@ const  ProffilePageCard2 = () => {
         return (
             
                 <>
-                 <Col lg={3} className="m-3" >
-                <Card style={{ width: '18rem' }}>
+                 <Col lg={3} className="m-3" bg={pTheme} >
+                <Card style={{ width: '18rem' }} key={index}>
                 <Card.Body>
                     <Card.Title>Card Title: {pName}</Card.Title>
                     <Card.Text>
