@@ -42,7 +42,7 @@ function Note(props) {
       // "userRequesting":userData.userEmail,
       userRequesting: 'matteo@gmail.com',
       "playlistName": mediaData[0].playlistName,
-      "chapters": chapters,
+      "chapters": chapters[props.chapterId - 1],
       "token": userData.token
       }
       console.log('SAVING NOTE: ', noteText)

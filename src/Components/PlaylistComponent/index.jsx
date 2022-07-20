@@ -47,7 +47,7 @@ function PlaylistComponent({title}) {
       playlistName,
       token,
       chapters: {
-        chapterId: newNoteChapterId,
+        chapterId: parseInt(newNoteChapterId),
         chapterTitle: '',
         start: '0',
         end: '0',
@@ -56,7 +56,7 @@ function PlaylistComponent({title}) {
       }
     }
     // save the empty note in the DB (reducer) using the PATCH endpoint
-    console.log('* newNote: ', newNote)
+    console.log('************** newNote: ', newNote)
     dispatch(patchMedia(newNote))
     setTimeout(() => {
       setFetchToggle(!fetchToggle)

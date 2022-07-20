@@ -43,3 +43,7 @@ export const signupUser = ({ username, password, email }) => {
     }
   }
 }
+
+export const logoutUser = (data) => {
+  return { type: 'LOGOUT_USER', payload: data }
+}
