@@ -12,6 +12,12 @@ function PlaylistModal({showModal, text, url}) {
   const noteData = useSelector(state => state.selection.selected)
   console.log('OOOOOOOOO ', noteData)
   const timedUrl = noteData.url + `?start=${noteData.start}&end=${noteData.end}`
+
+
+
+
+
+  
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>

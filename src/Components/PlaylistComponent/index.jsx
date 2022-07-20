@@ -10,13 +10,16 @@ function PlaylistComponent({title}) {
   // dispatch(fetchMedia())
   let notes = useSelector(state => state.media.data.data)
   console.log('A A A ', useSelector(state => state.media.data))
-  console.log('* * *', notes[0])
+  console.log('* * *', notes)
   console.log('= = =', typeof(notes) === typeof([1,2,3]))
 
   let loading = useSelector(state => state.media.loading)
+  console.log('********************', loading)
+  
   let userData = useSelector(state => state.user)
 
   
+
   const [modalVisible, setModalVisible] = useState(false)
 
   const [fetchToggle, setFetchToggle] = useState(true)
