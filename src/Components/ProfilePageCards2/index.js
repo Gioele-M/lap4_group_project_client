@@ -17,7 +17,7 @@ const  ProfilePageCard2 = () => {
     
     const [cardInfo, setCardInfo] = useState ([
         { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
-        // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
+        { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}},
         // { title: {pName}, owner: {pOwner}, stars: {pStars}, bgc:  {pTheme}}
         
     ]);
