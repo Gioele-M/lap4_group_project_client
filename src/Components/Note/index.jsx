@@ -8,6 +8,7 @@ const playPic = require('../../images/utube.png')
 
 function Note(props) {
   const [noteText, setNoteText] = useState(props.text)
+  const [title, setTitle] = useState(props.noteTitle)
   const [link, setLink] = useState(props.url)
   console.log('--- ', props.chapterId)
   const dispatch = useDispatch('')
@@ -21,16 +22,19 @@ function Note(props) {
 
   const handleSaveBtn = () => {
     const chapters = mediaData[0].chapters
+    console.log('title:', title)
 
     chapters.forEach(chap => {
       if (chap.chapterId === props.chapterId) {
         console.log('chapterId is: ', chap.chapterId)
         console.log('link: ', chap.video_url)
+
         chap.text = noteText
         // chap.chaptertitle = noteChapterTitle
         // chap.start = noteStart
         // chap.end = noteEnd
         chap.video_url = link
+        chap.chapterTitle = title
         
       }
       
@@ -87,8 +91,29 @@ function Note(props) {
   return (
     <div class="container">
       <div className="row">
-        <h3 className="col-12 mt-3"><kbd>{props.noteTitle}</kbd></h3>
+        <h3 className="col-12 mt-3"><kbd>
+          <input 
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Note title"
+          />
+          
+          
+          </kbd></h3>
+
+          {/* <input 
+              data-testid="linkurl"
+              onChange={(e) => setLink(e.target.value)}
+              className="col-12" 
+              type="text" 
+              placeholder="video link" 
+              value={link || ''}
+            /> */}
+
+
         <textarea
+
 
           className="input col-10 lead text-justify"
           data-testid="textArea" 

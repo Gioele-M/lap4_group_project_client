@@ -1,28 +1,54 @@
 // hardcoded data
 
+// const user = {
+//   achievement: ['badgeOne', 'badgeTwo'],
+//   favourites: ['playlistNameOne', 'playlistNameTwo'],
+//   hashedPassword: 'rememberNotToSendPwBack',
+//   lastSelection: {
+//     selectedNote: 'chapter1',
+//     selectedPlaylist: 'playlistNameWOWOW',
+//   },
+//   previousTokens: ['tokenOne', 'tokenTwo'],
+//   recentNotes: [
+//     {
+//       selectedNote: 'chapter2',
+//       selectedPlaylist: 'playlistNameYAYAYY',
+//     },
+//     {
+//       selectedNote: 'chapter3',
+//       selectedPlaylist: 'playlistNameWhoohoo',
+//     },
+//   ],
+//   token: 'just_token_string',
+//   userEmail: 'john@gmail.com',
+//   username: 'John Smith',
+// }
+
 const user = {
-  achievement: ['badgeOne', 'badgeTwo'],
-  favourites: ['playlistNameOne', 'playlistNameTwo'],
-  hashedPassword: 'rememberNotToSendPwBack',
+  achievement: [],
+  favourites: [],
+  hashedPassword: '',
   lastSelection: {
-    selectedNote: 'chapter1',
-    selectedPlaylist: 'playlistNameWOWOW',
+    selectedNote: '',
+    selectedPlaylist: '',
   },
-  previousTokens: ['tokenOne', 'tokenTwo'],
+  previousTokens: [],
   recentNotes: [
     {
-      selectedNote: 'chapter2',
-      selectedPlaylist: 'playlistNameYAYAYY',
+      selectedNote: '',
+      selectedPlaylist: '',
     },
     {
-      selectedNote: 'chapter3',
-      selectedPlaylist: 'playlistNameWhoohoo',
+      selectedNote: '',
+      selectedPlaylist: '',
     },
   ],
-  token: 'just_token_string',
-  userEmail: 'john@gmail.com',
-  username: 'John Smith',
+  token: '',
+  userEmail: '',
+  username: '',
 }
+
+
 
 // initialState
 
