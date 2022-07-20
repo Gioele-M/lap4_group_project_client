@@ -2,22 +2,23 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  background-color: white;
     
 }
 
 .modalContainer {
   width: 70%;
-  height: 70%;
+  height: 50%;
   margin-top: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   top: 0px;
   left: 0px;
@@ -33,7 +34,7 @@
   width: 70px;
   height: 50px;
   border: none;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 

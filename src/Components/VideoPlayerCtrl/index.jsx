@@ -27,6 +27,11 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
     setCalcHeight(window.innerWidth * 16 / 9)
   }, [])
 
+  const roundDown = (num) => {
+    // const myNum = 256.234567
+    return String(num.toFixed(2))
+  }
+
   return (
     <div data-testid={'videoWrapper'} className="">
       <YouTube
@@ -53,16 +58,16 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
         onClick={() => {
          setStart(now)
         }}
-        >Start
+        ><h4>Start</h4>
       </button>
-      <p className="col-3" data-testid='startLabel'>Start: {String(start)}</p>
+      <p className="col-3" data-testid='startLabel'><h5> {roundDown(start)}</h5></p>
 
       <button
         className="col-3 btn btn-primary"
         onClick={() => setEnd(now)}
-        >End
+        ><h4>End</h4>
       </button>
-      <p className="col-3" data-testid='endLabel'>End: {String(end)}</p>
+      <p className="col-3" data-testid='endLabel'><h5> {roundDown(end)}</h5></p>
 
     </div>
     

@@ -88,6 +88,7 @@ function Note(props) {
       <div className="row">
         <h3 className="col-12 mt-3"><kbd>{props.noteTitle}</kbd></h3>
         <textarea
+
           className="input col-10 lead text-justify"
           data-testid="textArea" 
           onChange={(e) => {

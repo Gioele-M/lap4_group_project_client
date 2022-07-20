@@ -91,32 +91,31 @@ function PlaylistComponent({title}) {
   
   
   return (
-    <div className="container ">
-      <div className="container">
-        <h1>{title || 'Your Playlist'}</h1>
+    <div className="container">
+      <div className="container d-flex flex-column justify-content-start">
+       
+        <button className="btn btn-primary mt-2 mb-2" onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
+        <h1 className="mt-4 mb-2 text-light bg-dark">{title || 'Your Playlist'}</h1>
 
-      <button className="btn btn-primary" onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
+        
       
-      {loading === false && renderNotes }
-
-      
-      
-      <button 
-        className="btn btn-primary"
-        onClick={() => handleAddNoteBtn()}
-      >+</button>
+        {loading === false && renderNotes }
 
       
+        <div className="row">
+          <button 
+            className="btn btn-primary col-12"
+            onClick={() => handleAddNoteBtn()}
+          >
+            <h3>+</h3>
+          </button>
+        </div>
 
-      {modalVisible && <PlaylistModal 
-        showModal={setModalVisible}
-      />}
+        {modalVisible && <PlaylistModal showModal={setModalVisible} />}
       
-      
-
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
       </div>
       
     </div>
