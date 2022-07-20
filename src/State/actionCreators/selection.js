@@ -3,5 +3,13 @@ export const setSelectedNote = (data) => {
 }
 
 export const getSelectedNote = (index) => {
-  return { type: 'GET_SELECTION', paylosd: index }
+  return { type: 'GET_SELECTION', payload: index }
+}
+
+export const setStartTime = (data) => {
+  return { type: 'SET_START_TIME', payload: data }
+}
+
+export const setEndTime = (data) => {
+  return { type: 'SET_END_TIME', payload: data }
 }
