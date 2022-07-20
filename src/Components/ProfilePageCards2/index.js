@@ -30,6 +30,9 @@ const  ProfilePageCards2 = ({data}) => {
     // function that render cards
 
     const renderCard = () => {
+        const thisPage = () => {
+            console.log(data.title)
+        }
         return (
             
                 <>
@@ -44,7 +47,7 @@ const  ProfilePageCards2 = ({data}) => {
                         <li>Background colour: {data.bgc}</li>
                         </ul>
                     </Card.Text>
-                    <a href="/playlist" class="stretched-link"></a>
+                    <a href="#" class="stretched-link" onClick={thisPage}></a>
                 </Card.Body>
                 {/* <Card.Footer className="text-muted">Last update: 2 days ago</Card.Footer> */}
                 </Card>

@@ -17,8 +17,8 @@ function UserPage() {
     { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
     { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme},
     { title: pName, owner: pOwner, stars: pStars, bgc:  pTheme}
-
-    
+    // Pass value with 1, 2,, 3
+    // on click function whe clicked it will s
   ]);
 
   console.log(cardInfo)
