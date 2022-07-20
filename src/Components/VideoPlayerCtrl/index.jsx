@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import YouTube, { YouTubeProps } from 'react-youtube'
+import { useDispatch } from 'react-redux'
+import { setStartTime, setEndTime } from '../../State/actionCreators/selection'
 
 // import styles from './index.module.css'
 
@@ -11,6 +13,8 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
   const [end, setEnd] = useState(endAt || '0')
   const [calcWidth, setCalcWidth] = useState(800)
   const [calcHeight, setCalcHeight] = useState(500)
+
+  const dispatch = useDispatch('')
 
   const opts = {
     width: calcWidth,
@@ -68,7 +72,8 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
       <button
         className="col-3 btn btn-primary"
         onClick={() => {
-         setStart(now)
+          setStart(now)
+          dispatch(setStartTime(now))
         }}
         ><h4>From</h4>
       </button>
@@ -76,7 +81,10 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
 
       <button
         className="col-3 btn btn-primary"
-        onClick={() => setEnd(now)}
+        onClick={() => {
+          setEnd(now)
+          dispatch(setEndTime(now))
+        }}
         ><h4>To</h4>
       </button>
       <p className="col-3" data-testid='endLabel'><h5> {convertHMS(end)}</h5></p>

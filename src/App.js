@@ -5,9 +5,9 @@ import {
   PlaylistPage,
   AboutPage,
   SearchResultPage,
-  NotFound
+  NotFound,
 } from './Pages'
-// import { DebugComponent } from './Components'
+import { DebugComponent } from './Components'
 import NavBar from './Components/NavBar/NavBar'
 
 import { Footer } from './layout'
@@ -32,11 +32,10 @@ function App() {
         <Route path="/playlist" element={<PlaylistPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<SearchResultPage />} />
-        {/* <Route path="/debug" element={<DebugComponent />} /> */}
+        <Route path="/debug" element={<DebugComponent />} />
         <Route path="*" element={<NotFound />} />
-
       </Routes>
-     
+
       <Footer />
     </div>
   )
