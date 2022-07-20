@@ -3,7 +3,9 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 
 
-// (0,2,43)
+
+
+
 
 function BgSetter() {  
     let bgColour= 'rgb(150,150,150)'
