@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { loginUser, signupUser } from '../../State/actionCreators/user'
+import { loginUser, signupUser, setSelectedPlaylist } from '../../State/actionCreators/user'
 import { fetchMedia } from '../../State/actionCreators/media'
 import { fetchVideos } from '../../State/actionCreators/utube'
 import { scrollElement } from '../../utils/utils'
@@ -13,6 +13,7 @@ const scrollNote = document.querySelector('#scrollNote')
 function DebugComponent() {
   const myUserState = useSelector((state) => state.user)
   const myMediaState = useSelector((state) => state.media)
+  
   console.log('***\n', myUserState)
   console.log('===\n', myMediaState)
   
@@ -22,6 +23,15 @@ function DebugComponent() {
   
   return (
     <>
+      <div
+      onClick={() => {
+        dispatch(setSelectedPlaylist('UPDATED_PLAYLIST_NAME'))
+        console.log('* UPDATED USER: ', myUserState)
+      }}
+      className={styles.debugElement} >SET PLAYLIST
+      </div>
+
+      
       <div
       onClick={() => dispatch(loginUser({email: 'mark@email.com', password: 'markpw'}))}
       className={styles.debugElement} >LOGIN

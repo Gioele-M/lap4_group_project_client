@@ -83,10 +83,16 @@ export const userReducer = (state = initState, action) => {
       return { ...state, loading: false, error: action.payload }
 
     case 'SET_SELECTED_PLAYLIST':
-      const newUser = (state.user.lastSelection.selectedPlaylist =
-        action.payload)
       return {
-        newUser,
+        ...state,
+        ...state.user,
+        user: {
+          ...state.user.lastSelection,
+          lastSelection: {
+            selectedPlaylist: action.payload,
+            selectedNote: state.user.lastSelection.selectedNote,
+          },
+        },
         loading: false,
         error: false,
       }
