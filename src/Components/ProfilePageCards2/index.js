@@ -1,11 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Container, Row, Col }  from 'react-bootstrap';
 import { useState } from 'react';
+import { setSelectedNote } from '../../State/actionCreators/selection';
+import { useNavigate } from 'react-router-dom';
 // import { Navigate } from 'react-router-dom';
 // import "./styles.css";
+
 
 
 const  ProfilePageCards2 = ({data}) => {
@@ -29,9 +32,21 @@ const  ProfilePageCards2 = ({data}) => {
 
     // function that render cards
 
+
+    const dispatch = useDispatch()
+
+    
+    const navigate = useNavigate()
+
+
+
+
+
     const renderCard = () => {
         const thisPage = () => {
+            dispatch(setSelectedNote(data.title))
             console.log(data.title)
+            navigate('/playlist')
         }
         return (
             
