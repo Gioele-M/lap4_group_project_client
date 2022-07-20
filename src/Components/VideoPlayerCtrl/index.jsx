@@ -27,10 +27,22 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
     setCalcHeight(window.innerWidth * 16 / 9)
   }, [])
 
-  const roundDown = (num) => {
-    // const myNum = 256.234567
-    return String(num.toFixed(2))
-  }
+  // const roundDown = (num) => {
+  //   // const myNum = 256.234567
+  //   return String(num.toFixed(2))
+  // }
+
+  function convertHMS(value) {
+    const sec = parseInt(value, 10); // convert value to number if it's string
+    let hours   = Math.floor(sec / 3600); // get hours
+    let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+    let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
+    // add 0 if value < 10; Example: 2 => 02
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds; // Return is HH : MM : SS
+}
 
   return (
     <div data-testid={'videoWrapper'} className="">
@@ -58,16 +70,16 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
         onClick={() => {
          setStart(now)
         }}
-        ><h4>Start</h4>
+        ><h4>From</h4>
       </button>
-      <p className="col-3" data-testid='startLabel'><h5> {roundDown(start)}</h5></p>
+      <p className="col-3" data-testid='startLabel'><h5> {convertHMS(start)}</h5></p>
 
       <button
         className="col-3 btn btn-primary"
         onClick={() => setEnd(now)}
-        ><h4>End</h4>
+        ><h4>To</h4>
       </button>
-      <p className="col-3" data-testid='endLabel'><h5> {roundDown(end)}</h5></p>
+      <p className="col-3" data-testid='endLabel'><h5> {convertHMS(end)}</h5></p>
 
     </div>
     
