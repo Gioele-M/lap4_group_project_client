@@ -70,11 +70,16 @@ function Note(props) {
         const token = userData.token
         console.log('* token: ', token)
         console.log('* chapterId: ', props.chapterId)
+        
+        const chapterIndex = chapters.indexOf(chap)
+        if(chapterIndex > -1){
+          chapters.splice(chapterIndex, 1)
+        }
 
         const data = {
           userRequesting,
           playlistName,
-          chapters: props.chapterId,
+          chapters: chapters, //props.chapterId,
           token,
         }
         console.log('Deleting Data: ', data)
