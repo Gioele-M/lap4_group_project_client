@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { Container, Row, Col }  from 'react-bootstrap';
 import { useState } from 'react';
 // import { Navigate } from 'react-router-dom';
-// import "./styles.css";
+import "./style.css";
 
 
 const  ProfilePageCards2 = ({data}) => {
