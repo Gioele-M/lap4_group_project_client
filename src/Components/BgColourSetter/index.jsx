@@ -10,7 +10,7 @@ import {useSelector} from 'react-redux'
 function BgSetter() {  
     // rgb(250, 217, 161)
     // rgb(243, 120, 120)
-    let bgColour= 'rgb(250, 217, 161)'
+    let bgColour= 'rgb(240, 237, 231)'
     // let bgColour= 'rgb(243, 120, 120)'
     // let bgColour= 'rgb(123, 223, 223)'
     // let bgColour= 'rgb'+ useSelector((state) => state.media.data[0].playlistTheme)

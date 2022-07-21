@@ -13,7 +13,7 @@ export default function ModalLogin(props) {
   const [password, setPassword] = useState('Password:');
  
   
-  // ////////////HANDLE CHANGES
+//////////////HANDLE CHANGES
 
 ////attempt1 CLASH WITH ATTEMPT 4
 
@@ -77,13 +77,26 @@ export default function ModalLogin(props) {
 //   });
 // }
 
+function handleChangeEmail(event) {
+  setEmail({value: event.target.value});
+  console.log('email field:',email)
+
+  const emailField= document.getElementById('email')
+  if (emailField.value.length==0 || emailField.value.includes('@') && emailField.value.includes('.')  ){
+    document.getElementById('emailErrMsg').style.display='none'
+  }
+  else{
+    document.getElementById('emailErrMsg').style.display='block'
+  }
+}
+
 
   const [, updateState] = React.useState();
   const forceUpdate = React.useCallback(() => updateState({}), []);
 
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered  id="modalstuff" >
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" class="modal" centered  id="modalstuff" >
 
 
       <Modal.Header closeButton>
@@ -98,9 +111,10 @@ export default function ModalLogin(props) {
       <p id='modal-intro'>Please enter you details:</p>
         <div className="form  p-2 Modal-signuplogin" id="signupSection">
 
-          ///ATTEMPT 1
-          <input type="text" name="" className="my-1 form-control" id='emailFormBit' placeholder={email} onChange={handleChangeEmail}/>
-          <input type="text" name="" className="my-3 form-control" id='passwordFormBit'  placeholder={password} onChange={handleChangePassword}/>
+          <input type="email" name="" className="my-1 form-control" id='email' placeholder='Email' onChange={handleChangeEmail}/>
+
+          <p className='modalErr' id='emailErrMsg'>That doesn't look like an email!</p>
+          <input type="password" name="" className="my-3 form-control" id='passwordFormBit'  placeholder='Password' onChange={handleChangePassword}/>
           
                {/* ///ATTEMPT 2 */}
           {/* <input type="text" name="" className="my-1 form-control" id='emailFormBit' placeholder={email}/>
@@ -126,6 +140,8 @@ export default function ModalLogin(props) {
               password: password.value
             }))
             forceUpdate()
+            document.dispatchEvent(new KeyboardEvent('keydown', {'keyCode': 27}))
+            console.log('THIS WAS PRESSED')
           }
           
             }>
