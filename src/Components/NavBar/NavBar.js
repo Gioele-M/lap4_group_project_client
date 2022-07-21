@@ -1,21 +1,22 @@
 import React, { Component, useEffect, useState } from 'react'
 import "./styles.css";
-import { useSelector } from 'react-redux'  
-import { NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'  
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 // import NewPlaylist from '../Modals_Signup_Login/NewPlaylist';
 import ModalSignup from '../Modals_Signup_Login/ModalSignup';
 import ModalLogin from '../Modals_Signup_Login/ModalLogin';
 import ModalSignout from '../Modals_Signup_Login/ModalSignout';
 import searchIcon from'../../images/searchIcon.png';
-
-
+import { setSearchTerm } from '../../State/actionCreators/selection';
+import { fetchMedia } from '../../State/actionCreators/media';
 
 export default function NavBar() {
     const loggedIn = useSelector(state => state.user.user.userEmail)
   
     console.log('*********************************************LOGGED IN', loggedIn)
-    
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     // useEffect(()=>{
     //   window.location.reload(false)
@@ -89,7 +90,15 @@ export default function NavBar() {
 
 ////////////////////////////////////////////
 
+    const handleSearch = (e) => {
+      e.preventDefault()
+      let searchValue = e.target.parentNode.parentNode.firstChild.value
+      console.log(e.target.parentNode.parentNode.firstChild.value)
+      dispatch(setSearchTerm(searchValue))
+      dispatch(fetchMedia({playlistName: searchValue}))
+      navigate('/search')
 
+    }
 
 
 
@@ -138,7 +147,7 @@ export default function NavBar() {
     </ul>
     <form className="form-row px-2 ms-auto align-middle ">
       <input className="form-row me-1 align-middle" id='searchBox' type="search" placeholder="Look for something:" />
-      <NavLink to="/search">
+      <NavLink onClick={handleSearch} to="/search">
         <img id='searchIcon' src={searchIcon}alt="fireSpot"/>
       </NavLink>
       {/* style={nbStyle.logo}  */}

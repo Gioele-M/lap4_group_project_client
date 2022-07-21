@@ -25,6 +25,9 @@ function PlaylistComponent({title}) {
 
   let playlistName = useSelector(state => state.selection.selected)
 
+  let playlistData = useSelector(state => state.media.data.data[0])
+
+  let playlistNameFromData = playlistData.playlistName
 
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -53,6 +56,8 @@ const onUpdateClick = ()=>{
       setCanLoad(true)
     }
     fetchData()
+
+
   }, [dispatch, canLoad])
 
   const handleAddNoteBtn = () => {
@@ -96,7 +101,8 @@ const onUpdateClick = ()=>{
     
     // refresh the page
   }
-
+  
+  console.log('EDITING ACEESSSSSSSSSSSS', userData.user.userEmail, playlistData.playlistOwner, userData.user.userEmail == playlistData.playlistOwner)
   const renderNotes =  
     notes[0]['chapters'].map((note, idx) => {
     // console.log('KEY ', note.chapterId)
@@ -116,11 +122,14 @@ const onUpdateClick = ()=>{
         url={note.video_url} 
         text={note.text}
         uuid={note.uuid}
+        showEdit={true}
         refreshPage={setCanLoad}
         onNoteClick={() => setModalVisible(true)}
       />
     )
   }) 
+
+  console.log(playlistName)
   
   
   return (
@@ -130,8 +139,8 @@ const onUpdateClick = ()=>{
       <div className="container d-flex flex-column justify-content-start"  >
        
        <div id='title-updateBTN-container'>
-        <h1 id='PlaylistTitle'>{playlistName || 'Your Playlist'}</h1>
-        <Button className="btn btn-sm  btn-outline-success me-1 align-middle" id='btn-update' onClick={()=> dispatch(fetchMedia({playlistName: playlistName}))}>UPDATE</Button>
+        <h1 id='PlaylistTitle'>{playlistNameFromData || 'Your Playlist'}</h1>
+        {/* <Button className="btn btn-sm  btn-outline-success me-1 align-middle" id='btn-update' onClick={()=> dispatch(fetchMedia({playlistName: playlistName}))}>UPDATE</Button> */}
         </div>
         
       
