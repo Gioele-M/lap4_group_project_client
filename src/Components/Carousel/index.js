@@ -53,7 +53,7 @@ export default function TrendingTopics() {
 
 
     return(
-        <div className="container-fluid">
+        <div className="container-fluid pt-3">
     <div className='container'>
         <div className="title_wrapper">
             {/* <div className="soonimg">
