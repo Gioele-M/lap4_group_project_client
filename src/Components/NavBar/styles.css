@@ -6,6 +6,11 @@
     margin-bottom: 0%;
 }
 
+#main-navbar{
+background-color: whitesmoke;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
 #no-decos{
     font-family: 'Montserrat Alternates', sans-serif;
     font-style: italic;
@@ -55,7 +60,7 @@ margin-right: 20px;
     border-color: #E92D2D;
     font-family: 'Montserrat Alternates', sans-serif;
     font-style: italic;
-    font-weight: 6D00;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -100,3 +105,9 @@ margin-right: 20px;
     border-color: #E92D2D;
     font-style: italic;
  }  */
+
+ #title-updateBTN-container{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+ }
