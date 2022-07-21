@@ -10,8 +10,10 @@ import hexRGB from "../hex-rgb";
 export default function NewPlaylist(props) {
   
   const dispatch = useDispatch()
-
   const userdata = useSelector(state => state.user.user)
+
+  const [playlistName, SetPlaylistName] = useState('Blank User:');
+  const [email, setEmail] = useState('Blank Email');
   
   
   ///////////ignore the followingblock///////
@@ -32,31 +34,34 @@ export default function NewPlaylist(props) {
     ///////////////////////////////////////////
     ///////////////////////////////////////////
     
+
     
-    const [playlistName, setPlaylistName] = useState('Playlist Name:');
-
-
-    // function handleChange(event) {
-    //   setPlaylistName(event.target.value);
-    //   console.log('new update:',playlistName)
-    // }
-
     let [colourChoice, setColourChoice] = useState('(0,0,0)')
+    
+        // function handleChangePlaylistName(event) {
+        //   setPlaylistName(event.target.value);
+        //   console.log('new update:',playlistName)
+        // }
 
-    function handleChange() {
+    function handleChangeColourPicker() {
       let selectedColour = document.getElementById('MyColourPicker')
       // setPlaylistName(event.target.value);
       console.log('selected colour:', selectedColour.value)
       console.log('selected colour converted:',hexRGB(selectedColour.value))
       const selectedRGB = hexRGB(selectedColour.value)
-      console.log(selectedRGB)
-      // setColourChoice=selectedColour
       setColourChoice = hexRGB(selectedColour.value)
-
       console.log('3333333', colourChoice)
-      console.log('3333333', colourChoice.type)
     }
 
+    function handleChangeEmail(event) {
+      setEmail({value: event.target.value});
+      console.log('email field:',email)
+    }
+  
+    // function handleChangePassword(event) {
+    //   setPassword({value: event.target.value});
+    //   console.log('password field:',password)
+    // }
 
 
   return (
@@ -69,14 +74,14 @@ export default function NewPlaylist(props) {
           {/* <p id='modal-intro'>Please enter you details:</p> */}
             <div className="form  p-2 Modal-signuplogin" id="signupSection">
 
-          <input type="text" name="" className="my-1 form-control" placeholder={playlistName}    />
-
+          <input type="text" name="" className="my-1 form-control" placeholder={playlistName}  />
+          {/* onChange={handleChangePlaylistName}   */}
           {/* <input type="checkbox" name="" className="my-3 form-control" placeholder="Public"/> */}
           {/* <label for="colourPicker"> Pick a background colour:</label><br/> */}
 
 
           <input ref={colourRef} type="color" className="my-3 form-control colourPicker"  id='MyColourPicker' 
-          onChange={handleChange} />
+          onChange={handleChangeColourPicker} />
 
         {/* matteos attempt with red */}
           {/* <input ref={colourRef} type="color" className="my-3 form-control colourPicker"  id='MyColourPicker' 
@@ -94,25 +99,11 @@ export default function NewPlaylist(props) {
             {playlistName: playlistName.value, //banana
             userEmail:userdata.userEmail,
             token: userdata.token,
-            playlistTheme: {colourChoice}  //banana - trying this
+            // playlistTheme: {colourChoice}  //banana - trying this
           }))}
       >
         Lets Go! 
         </button>
-
-{/* location of playlistName:
-media.data.data[0].playlistName
- */}
-
-
-
-
-
-
-
-
-          {/* onClick={() => setLoginModalShow(true)}  */}
-          {/* <button className="btn btn-dark btn-block" onClick={handleClose}>Signup</button> */}
           
         </div>
       </div>
