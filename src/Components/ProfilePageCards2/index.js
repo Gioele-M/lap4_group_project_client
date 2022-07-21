@@ -57,9 +57,9 @@ const  ProfilePageCards2 = ({data}) => {
                     <div className="card-header text-center">{data.title}</div>
                     <div className="card-body">
                     {/* <h5 className="card-title">{data.title}</h5> */}
-                    <p className="card-text">
+                    <p className="card-text text-center">
                     {data.owner}</p>
-                    <p>{data.bgc}</p>
+                    {/* <p>{data.bgc}</p> */}
                     </div>
                     <div className="card-footer">
                     <a href="#" class="stretched-link" onClick={thisPage}></a>
