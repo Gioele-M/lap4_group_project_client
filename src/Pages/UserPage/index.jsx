@@ -4,6 +4,7 @@ import NewPlaylistBtn from '../../Components/NewPlaylistBtn';
 import { useSelector, useDispatch} from 'react-redux'
 import { useState, useEffect } from 'react';
 import { fetchMedia } from '../../State/actionCreators/media';
+import { Container, Row, Col }  from 'react-bootstrap';
 
 
 
@@ -62,14 +63,16 @@ function UserPage() {
   // console.log(cardInfo)
   return (
     <>
-  {/* calling ProfilePageCards2 and fetching from reducer and injecting with props */}
-    {mapPlaylists()}
-   {/* <ProfilePageCards2 data={cardInfo[0]} />
-   <ProfilePageCards2 data={cardInfo[1]} />
-   <ProfilePageCards2 data={cardInfo[2]} /> */}
+    <div className='container randomX'>
+        <div className='row'>
+            {mapPlaylists()}
+        </div>
+      </div> 
+
     
    <NewPlaylistBtn />
-    </>
+
+   </>
   )
   }
 export default UserPage

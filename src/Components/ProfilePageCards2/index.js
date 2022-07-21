@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { setSelectedNote } from '../../State/actionCreators/selection';
 import { useNavigate } from 'react-router-dom';
 // import { Navigate } from 'react-router-dom';
-// import "./styles.css";
+import "./style.css";
 
 
 
@@ -51,8 +51,22 @@ const  ProfilePageCards2 = ({data}) => {
         return (
             
                 <>
+                             
                  <Col lg={3} className="m-4" >
-                <Card style={{ width: '18rem', backgroundColor: 'rgb{data.bgc}'}} key={data.title}>
+                 <div className="card" style={{width: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
+                    <div className="card-header text-center">{data.title}</div>
+                    <div className="card-body">
+                    {/* <h5 className="card-title">{data.title}</h5> */}
+                    <p className="card-text">
+                    {data.owner}</p>
+                    <p>{data.bgc}</p>
+                    </div>
+                    <div className="card-footer">
+                    <a href="#" class="stretched-link" onClick={thisPage}></a>
+                    <small className="text-muted">Rating: {data.stars}</small>
+                    </div>
+                    </div>
+                {/* <Card style={{ width: '18rem', backgroundColor: 'rgb{data.bgc}'}} key={data.title}>
                 <Card.Body>
                     <Card.Title>{data.title}</Card.Title>
                     <Card.Text>
@@ -65,7 +79,8 @@ const  ProfilePageCards2 = ({data}) => {
                     <a href="#" className="stretched-link" onClick={thisPage}></a>
                 </Card.Body>
                 {/* <Card.Footer className="text-muted">Last update: 2 days ago</Card.Footer> */}
-                </Card>
+                {/* </Card> */}
+                
                 </Col>
                 </>
           
@@ -74,11 +89,14 @@ const  ProfilePageCards2 = ({data}) => {
 
   return (
     
-            <Container>
-            <Row>
-                {renderCard()}  
-            </Row>
-            </Container>   
+            // <Container>
+            // <Row>
+            <>
+            {renderCard()}  
+            
+            </>
+            // </Row>
+            // </Container>   
   );
 }
 
