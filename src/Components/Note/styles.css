@@ -206,3 +206,31 @@
 #Thumbnail{
   padding: 0%;
 }
+
+#btn-delete {
+  color: white;
+  background-color: #E92D2D;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #E92D2D;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  text-decoration: none;
+  margin-right: 8px;
+  width: fit-content;
+}
+
+#btn-save {
+  background-color: rgb(255, 255, 255);
+  color: #E92D2D;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #E92D2D;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+
+}
