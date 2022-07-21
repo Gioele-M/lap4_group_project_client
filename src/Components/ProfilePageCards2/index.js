@@ -62,11 +62,12 @@ const  ProfilePageCards2 = ({data}) => {
                     {/* <Card.Img src="../src/images/logo.png" alt="Card image" /> */}
                     <img className="navbar-brand navbar-logo igor" href="#" src={logo} alt="Write and Watch Logo"/>
                     <div className="card-img-overlay">
-                        <h2 className="card-title text-center">{data.title}</h2>
+                        <h1 className="card-title text-center">{data.title}</h1>
                         <br></br>
                         <p className="card-text text-center"><br></br>{data.owner}</p>
                         <a href="#" class="stretched-link" onClick={thisPage}></a>
-                        <p className="card-text text-center text-muted">Rating stars: {data.stars}</p>
+                        <br></br>
+                        <p className="card-text text-center ">Rating stars: {data.stars}</p>
 
                     
                       

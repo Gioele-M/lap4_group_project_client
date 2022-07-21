@@ -122,13 +122,11 @@ function Note(props) {
           placeholder="Note Title:"
           />
 
-          <input 
-          id='NoteTag'
-          type="text"
+          <input id='NoteTag' type="text"
           // value={title}
           // onChange={(e) => setTitle(e.target.value)}
-          placeholder="tag 1:"
-          />
+placeholder="tag 1:"/>
+
                     <input 
           id='NoteTag'
           type="text"

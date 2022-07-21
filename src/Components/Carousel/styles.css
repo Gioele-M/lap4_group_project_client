@@ -135,8 +135,11 @@
     /* width: 50%; */
     align-items: center;
     padding: 10px;
+    /* font-weight: 300; */
     
     /* color: aqua; */
+    
+   
   }
   
   @media (max-width: 768px) {

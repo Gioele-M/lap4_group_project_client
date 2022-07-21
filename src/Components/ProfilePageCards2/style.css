@@ -14,6 +14,32 @@ box-shadow: 0 0 4em 0px rgba(0, 0, 0, 0.4);
 }
 
 .igor {
-  opacity: 0.2;
+  opacity: 0.13;
 }
 
+h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300;
+  font-size: 150%;
+
+   /* font-style: italic; */
+  /* font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: smaller;
+    border-radius: 10px ;
+    border-style: solid;
+    border-color: #E92D2D;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: none;
+    height: 30px;
+    padding-left: 4px; */
+}
+
+p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300;
+   font-style: italic;
+   font-size: 150%;
+
+}
