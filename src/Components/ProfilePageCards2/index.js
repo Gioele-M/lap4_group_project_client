@@ -53,7 +53,7 @@ const  ProfilePageCards2 = ({data}) => {
                 <>
                              
                  <Col lg={3} className="m-4" >
-                 <div className="card" style={{width: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
+                 <div className="card" style={{width: '18rem', height: '20rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
                     <div className="card-header text-center">{data.title}</div>
                     <div className="card-body">
                     {/* <h5 className="card-title">{data.title}</h5> */}
