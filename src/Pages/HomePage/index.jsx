@@ -5,6 +5,7 @@ import NewPlaylistBtn from '../../Components/NewPlaylistBtn';
 
 import "./styles.css";
 import BgSetter from '../../Components/BgColourSetter/index'
+import HowTo from '../../Components/HowTo';
 
 
 function HomePage() {
@@ -12,10 +13,12 @@ function HomePage() {
 
   return (
     <>
-    <TrendingTopics/>
-    <div id='homepagepractice'>HomePage</div>
 
+    <TrendingTopics/>
+   
+    {/* <div id='homepagepractice'>HomePage</div> */}
     <NewPlaylistBtn />
+    <HowTo/>
     </>
 
   )
