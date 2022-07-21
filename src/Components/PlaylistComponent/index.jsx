@@ -107,7 +107,7 @@ function PlaylistComponent({title}) {
 
 
     <div className="container" id='mainNoteContainer'>
-      <div className="container d-flex flex-column justify-content-start"  >
+      <div className="container d-flex flex-column justify-content-start "  >
        
        <div id='title-updateBTN-container'>
         <h1 id='PlaylistTitle'>{title || 'Your Playlist'}</h1>
@@ -122,7 +122,8 @@ function PlaylistComponent({title}) {
         {/* <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button> */}
 
           <button 
-            className="btn btn-primary col-12"
+            className="btn btn-primary"
+            id='addNoteBtn'
             onClick={() => handleAddNoteBtn()}
           >
             <h3>+</h3>

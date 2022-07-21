@@ -123,11 +123,11 @@ export default function NavBar() {
           Profile
         </NavLink>
       </li>
-      {/* <li className="nav-item">
+      <li className="nav-item">
         <NavLink id='no-decos' to="/playlist" className="nav-link text-black">
           Playlist
         </NavLink>
-      </li> */}
+      </li>
 
 {/* SEARCH  /////////////////// */}
     </ul>

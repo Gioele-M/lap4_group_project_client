@@ -159,12 +159,14 @@
   /* border-color: #656565; */
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 50px;
-  margin-left: 60%;
+  /* margin-top: 50px; */
+  /* margin-left: 60%; */
     position: absolute;
+    right: 30px;
+    bottom: 80px;
     
 }
 
@@ -193,8 +195,50 @@
 #youtubeThumbnail-Btns-container{
   /* background-color: yellowgreen; */
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+#youtubeThumbnail-Btns-container2{
+  /* background-color: yellowgreen; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #Thumbnail{
   padding: 0%;
+}
+
+#btn-delete{
+  color: white;
+  background-color: #E92D2D;
+  border-style: solid;
+  border-radius: 10px ;
+  border-color: #E92D2D;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  text-decoration: none;
+  margin-right: 8px;
+  width: fit-content;
+}
+
+#btn-save{
+  background-color: rgb(255, 255, 255);
+  color: #E92D2D;
+  border-style: solid;
+  border-radius: 10px ;
+  border-color: #E92D2D;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+
 }

@@ -172,7 +172,7 @@ function Note(props) {
           value={noteText || ''}
         />
         <div className="col-2" id='youtubeThumbnail-Btns-container'>
-          <div className="">
+          <div className="" id='youtubeThumbnail-Btns-container2'>
             <img 
             id='Thumbnail'
               alt="red video player logo"
@@ -195,16 +195,20 @@ function Note(props) {
             />
             <div className="row">
               <button 
+                className="col-6 btn btn-danger"
+                id="btn-delete"
+                width='20px'
+                onClick={() => handleDeleteBtn()}
+                >Delete
+              </button>
+              
+              <button 
+                id="btn-save"
                 className="col-6 btn btn-primary"
                 onClick={() => handleSaveBtn()}
                 >Save
               </button>
 
-              <button 
-                className="col-6 btn btn-danger"
-                onClick={() => handleDeleteBtn()}
-                >Delete
-              </button>
             </div>
           </div>
         </div>
