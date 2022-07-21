@@ -62,9 +62,16 @@ export default function TrendingTopics() {
             <div className="title_ ">
                <h1>Welcome to Write & Watch Academy</h1>
             </div>
+        </div>
+        <div className="title_wrapper">
+            
+            <div className="title_2 ">
+               <h1>Trending</h1>
+            </div>
+            
+            
            
         </div>
-       
         <Swiper
             modules={[Navigation, Pagination, EffectCoverflow]}
             navigation={true}

@@ -38,7 +38,7 @@
   }
   .swiper {
     width: 960px;
-    margin-top: 100px;
+    margin-top: 30px;
   }
   
   .container-fluid {
@@ -141,6 +141,19 @@
     
    
   }
+  .title_wrapper .title_2 {
+    color: #fff;
+    text-align: left;
+    font-size: small;
+    font-family: 'Montserrat Alternates', sans-serif;
+   
+  
+    align-items: center;
+    padding: 2px;
+   
+    
+   
+  }
   
   @media (max-width: 768px) {
     .title_wrapper .title_ {
@@ -155,7 +168,7 @@
 
   .swiper-pagination {
     position: relative;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   
   .swiper-pagination-fraction {
