@@ -23,18 +23,22 @@ function UserPage() {
   ]);
 
   console.log(cardInfo)
+  // const[searchTerm, setSearchTerm] = useState('')
+
   return (
     <>
   {/* calling ProfilePageCards2 and fetching from reducer and injecting with props */}
-        <Container>
-            <Row>
+            <div className='container randomX'>
+            <div className='row'>
+            {/* <input type="text" placeholder="Filter by title..." onChange={event =>{setSearchTerm(event.target.value)}} /> */}
+
                  
            <ProfilePageCards2 data={cardInfo[0]} />
             <ProfilePageCards2 data={cardInfo[1]} />
             <ProfilePageCards2 data={cardInfo[2]} />
             
-            </Row>
-            </Container> 
+            </div>
+            </div>  
 
     
    <NewPlaylistBtn />
