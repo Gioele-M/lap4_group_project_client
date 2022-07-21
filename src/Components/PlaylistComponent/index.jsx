@@ -135,7 +135,7 @@ const onUpdateClick = ()=>{
   return (
 
 
-    <div className="container" id='mainNoteContainer'>
+    <div className="container" >
       <div className="container d-flex flex-column justify-content-start"  >
        
        <div id='title-updateBTN-container'>

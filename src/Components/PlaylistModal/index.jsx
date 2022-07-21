@@ -20,7 +20,9 @@ function PlaylistModal({showModal, text, url}) {
   
   return (
     <div className={styles.modalBackground}>
+      
       <div className={styles.modalContainer}>
+        
       <VideoPlayerCtrl 
         videoId={noteData.url.slice(-11)} 
         title={noteData.noteTitle}
