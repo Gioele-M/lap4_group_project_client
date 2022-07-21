@@ -9,7 +9,23 @@ export default function NewPlaylistBtn() {
   return (
 
 
-<>
+    <>
+
+<div class="d-flex justify-content-center">
+    <Button className="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>ADD NEW PLAYLIST+</Button>
+</div>
+<NewPlaylist show={signupModalShow}
+    onHide={() => setSignupModalShow(false)}/>
+  </> 
+  
+
+
+
+
+  )
+}
+
+
 {/*
 <div class="d-flex justify-content-center">
     <Button className="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>ADD NEW PLAYLIST+</Button>
@@ -18,21 +34,3 @@ export default function NewPlaylistBtn() {
     onHide={() => setSignupModalShow(false)}/>
   </>  
 */}
-
-    <>
-      <Button
-        className="btn btn-sm  btn-outline-success me-1 align-middle "
-        onClick={() => setSignupModalShow(true)}
-        id="btn-new-playlist"
-      >
-        ADD NEW PLAYLIST+
-      </Button>
-
-      <NewPlaylist
-        show={signupModalShow}
-        onHide={() => setSignupModalShow(false)}
-      />
-    </>
-
-  )
-}
