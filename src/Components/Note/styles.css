@@ -23,14 +23,7 @@
 
 }
 
-.controls {
-  background-color: pink;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4fr 1fr 1fr;
-  gap: 5px;
-}
 
 .thumbnail {
 
@@ -62,8 +55,7 @@
 .link {
   border: none;
   border-radius: 10px;
-  grid-column: 1/3;
-  grid-row: 2/3;
+  
 }
 
 /* seals */
@@ -215,11 +207,11 @@
   padding: 0%;
 }
 
-#btn-delete{
+#btn-delete {
   color: white;
   background-color: #E92D2D;
   border-style: solid;
-  border-radius: 10px ;
+  border-radius: 10px;
   border-color: #E92D2D;
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: italic;
@@ -229,11 +221,11 @@
   width: fit-content;
 }
 
-#btn-save{
+#btn-save {
   background-color: rgb(255, 255, 255);
   color: #E92D2D;
   border-style: solid;
-  border-radius: 10px ;
+  border-radius: 10px;
   border-color: #E92D2D;
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: italic;

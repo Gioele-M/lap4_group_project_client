@@ -14,6 +14,11 @@
 #ourheader{
 /* color: white; */
 font-family: 'Montserrat Alternates', sans-serif;
+font-size: 1.3rem;
+}
+
+#ourheader ul li {
+  margin-bottom: 20px;
 }
 
 #txtspliter{

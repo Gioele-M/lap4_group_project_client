@@ -27,7 +27,7 @@ function VideoPlayerCtrl({videoId, title, startAt, endAt, width=800, height=480,
   };
 
   useEffect(() => {
-    setCalcWidth(window.innerWidth  * 58 / 100)
+    setCalcWidth(window.innerWidth  * 68.5 / 100)
     setCalcHeight(window.innerWidth * 16 / 9)
   }, [])
 

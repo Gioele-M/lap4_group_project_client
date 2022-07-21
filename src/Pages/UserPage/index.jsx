@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { fetchMedia } from '../../State/actionCreators/media';
 import { Container, Row, Col }  from 'react-bootstrap';
 
-
+import './styles.css'
 
 function UserPage() {
 
@@ -43,17 +43,16 @@ function UserPage() {
 
 
   return (
-    <>
-    <div className='container randomX'>
-        <div className='row'>
-            {mapPlaylists()}
-        </div>
-      </div> 
-
+    <div className="userpage-wrapper">
     
-   <NewPlaylistBtn />
+      <div className='container randomX'>
+        <div className='row'>
+          {mapPlaylists()}
+        </div>
+      </div>
 
-   </>
+      <NewPlaylistBtn />
+   </div>
   )
   }
 export default UserPage

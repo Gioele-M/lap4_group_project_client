@@ -1,0 +1,13 @@
+#btn-new-playlist {
+  margin-top: 20px;
+  /* margin-left:70%; */
+  background-color: rgb(255, 255, 255);
+  color: #E92D2D;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #E92D2D;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
