@@ -29,3 +29,4 @@ describe('Note Component', () => {
     expect(link.value.trim()).toBe('www.test.com')
   })
 })
+
