@@ -16,7 +16,7 @@ function AboutModal() {
       {/* <Button variant="primary" className='position: absolute;' onClick={handleShow}>
         ?
       </Button> */}
-      <button type="button" class="btn btn-primary btn-lg btn2" onClick={handleShow}>?</button>
+      <button type="button" class="btn  btn-lg btn2 btn-primary" onClick={handleShow}>?</button>
 
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
