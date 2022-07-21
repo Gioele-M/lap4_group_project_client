@@ -40,6 +40,7 @@ const  ProfilePageCards2 = ({data}) => {
 
 
 
+    const logo = require('../../images/watermark.png')
 
 
     const renderCard = () => {
@@ -55,36 +56,24 @@ const  ProfilePageCards2 = ({data}) => {
                              
                  <Col lg={3} className="m-4" >
 
-                 {/* <div className="card" style={{width: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}> */}
+                 <div  className="card bg-dark text-white" style={{width: '18rem', height: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
+
+                    {/* <img src="..." class="card-img" alt="..."> */}
+                    {/* <Card.Img src="../src/images/logo.png" alt="Card image" /> */}
+                    <img className="navbar-brand navbar-logo igor" href="#" src={logo} alt="Write and Watch Logo"/>
+                    <div className="card-img-overlay">
+                        <h2 className="card-title text-center">{data.title}</h2>
+                        <br></br>
+                        <p className="card-text text-center"><br></br>{data.owner}</p>
+                        <a href="#" class="stretched-link" onClick={thisPage}></a>
+                        <p className="card-text text-center text-muted">Rating stars: {data.stars}</p>
+
+                    
+                      
 
 
-                 <div className="card" style={{width: '18rem', height: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
-                    <div className="card-header text-center">{data.title}</div>
-                    <div className="card-body">
-                    {/* <h5 className="card-title">{data.title}</h5> */}
-                    <p className="card-text" text-center>
-                    {data.owner}</p>
-                    {/* <p>{data.bgc}</p> */}
-                    </div>
-                    <div className="card-footer">
-                    <a href="#" class="stretched-link" onClick={thisPage}></a>
-                    <small className="text-muted">Rating: {data.stars}</small>
                     </div>
                     </div>
-                {/* <Card style={{ width: '18rem', backgroundColor: 'rgb{data.bgc}'}} key={data.title}>
-                <Card.Body>
-                    <Card.Title>{data.title}</Card.Title>
-                    <Card.Text>
-                        <ul>
-                        <li>Average stars: {data.stars}</li>
-                        <li>Playlist owner: {data.owner}</li>
-                        <li>Background colour: {data.bgc}</li>
-                        </ul>
-                    </Card.Text>
-                    <a href="#" className="stretched-link" onClick={thisPage}></a>
-                </Card.Body>
-                {/* <Card.Footer className="text-muted">Last update: 2 days ago</Card.Footer> */}
-                {/* </Card> */}
                 
                 </Col>
                 </>
