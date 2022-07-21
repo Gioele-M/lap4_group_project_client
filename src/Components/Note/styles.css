@@ -151,12 +151,14 @@
   /* border-color: #656565; */
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 50px;
-  margin-left: 60%;
+  /* margin-top: 50px; */
+  /* margin-left: 60%; */
     position: absolute;
+    right: 30px;
+    bottom: 80px;
     
 }
 
@@ -185,6 +187,20 @@
 #youtubeThumbnail-Btns-container{
   /* background-color: yellowgreen; */
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+#youtubeThumbnail-Btns-container2{
+  /* background-color: yellowgreen; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #Thumbnail{
