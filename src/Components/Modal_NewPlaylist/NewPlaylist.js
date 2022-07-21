@@ -93,8 +93,8 @@ export default function NewPlaylist(props) {
           dispatch(createNewPL(
             {playlistName: playlistName.value, //banana
             userEmail:userdata.userEmail,
-            token: userdata.token,
-            playlistTheme: {colourChoice}  //banana - trying this
+            token: userdata.token//, 
+            // playlistTheme: {colourChoice}  //banana - trying this
           }))}
       >
         Lets Go! 
