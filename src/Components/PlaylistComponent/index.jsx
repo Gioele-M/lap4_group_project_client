@@ -3,7 +3,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchMedia, patchMedia } from '../../State/actionCreators/media'
 import Note from '../Note'
 import PlaylistModal from '../PlaylistModal'
-// import styles from './index.module.css'
+import styles from './index.module.css'
+import './styles.css'
+import Button from 'react-bootstrap/Button';
+
 
 function PlaylistComponent({title}) {
   const dispatch = useDispatch('')
@@ -101,18 +104,23 @@ function PlaylistComponent({title}) {
   
   
   return (
-    <div className="container">
-      <div className="container d-flex flex-column justify-content-start">
-       
-        <button className="btn btn-primary mt-2 mb-2" onClick={()=> dispatch(fetchMedia())}>UPDATE</button>
-        <h1 className="mt-4 mb-2 text-light bg-dark">{title || 'Your Playlist'}</h1>
 
+
+    <div className="container" id='mainNoteContainer'>
+      <div className="container d-flex flex-column justify-content-start"  >
+       
+       <div id='title-updateBTN-container'>
+        <h1 id='PlaylistTitle'>{title || 'Your Playlist'}</h1>
+        <Button className="btn btn-sm  btn-outline-success me-1 align-middle" id='btn-update' onClick={()=> dispatch(fetchMedia())}>UPDATE</Button>
+        </div>
         
       
         {canLoad && renderNotes }
 
       
-        <div className="row">
+        <div className="row" id='mainNoteContainer'>
+        {/* <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button> */}
+
           <button 
             className="btn btn-primary col-12"
             onClick={() => handleAddNoteBtn()}
