@@ -14,7 +14,10 @@ export const setEndTime = (data) => {
   return { type: 'SET_END_TIME', payload: data }
 }
 
-
 export const setSearchTerm = (data) => {
   return { type: 'SET_SELECTED_SEARCH', payload: data }
+}
+
+export const setSelectedPlaylist = (title) => {
+  return { type: 'SET_SELECTION', payload: title }
 }

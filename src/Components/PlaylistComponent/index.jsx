@@ -23,7 +23,7 @@ function PlaylistComponent({title}) {
 
   let userData = useSelector(state => state.user)
 
-  let playlistName = useSelector(state => state.selection.selected)
+  let playlistName = useSelector(state => state.selection.selectedPlaylist)
 
   let playlistData = useSelector(state => state.media.data.data[0])
 

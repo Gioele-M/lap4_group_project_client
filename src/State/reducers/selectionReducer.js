@@ -3,6 +3,7 @@ const initState = {
   startTime: 0,
   endTime: 0,
   selectedSearch: '',
+  selectedplaylist: '',
 }
 
 export const selectionReducer = (state = initState, action) => {
@@ -20,7 +21,10 @@ export const selectionReducer = (state = initState, action) => {
       return { ...state, endTime: action.payload }
 
     case 'SET_SELECTED_SEARCH':
-      return {... state, selectedSearch: action.payload}
+      return { ...state, selectedSearch: action.payload }
+
+    case 'SET_SELECTED_PLAYLIST':
+      return { ...state, selectedPlaylist: action.payload }
 
     default:
       return state
