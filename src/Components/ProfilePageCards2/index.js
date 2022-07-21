@@ -54,13 +54,17 @@ const  ProfilePageCards2 = ({data}) => {
                 <>
                              
                  <Col lg={3} className="m-4" >
+
+                 {/* <div className="card" style={{width: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}> */}
+
+
                  <div className="card" style={{width: '18rem', height: '18rem', backgroundColor: 'rgb{data.bgc}'}}  key={data.title}>
                     <div className="card-header text-center">{data.title}</div>
                     <div className="card-body">
                     {/* <h5 className="card-title">{data.title}</h5> */}
-                    <p className="card-text">
+                    <p className="card-text" text-center>
                     {data.owner}</p>
-                    <p>{data.bgc}</p>
+                    {/* <p>{data.bgc}</p> */}
                     </div>
                     <div className="card-footer">
                     <a href="#" class="stretched-link" onClick={thisPage}></a>

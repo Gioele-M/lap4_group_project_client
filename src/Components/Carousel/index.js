@@ -56,11 +56,11 @@ export default function TrendingTopics() {
         <div className="container-fluid">
     <div className='container'>
         <div className="title_wrapper">
-            <div className="soonimg">
+            {/* <div className="soonimg">
                 <img src={soonImg} alt="coming soon image" />
-            </div>
-            <div className="title_">
-                <span>Coming Soon</span>Swiper Slider
+            </div> */}
+            <div className="title_ ">
+               <h1>Welcome to Write & Watch Academy</h1>
             </div>
         </div>
         <Swiper
