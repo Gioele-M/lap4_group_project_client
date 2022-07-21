@@ -23,9 +23,11 @@ function PlaylistComponent({title}) {
 
   let userData = useSelector(state => state.user)
 
+  let playlistName = useSelector(state => state.selection.selected)
+
   let playlistData = useSelector(state => state.media.data.data[0])
 
-  let playlistName = playlistData.playlistName
+  let playlistNameFromData = playlistData.playlistName
 
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -137,7 +139,7 @@ const onUpdateClick = ()=>{
       <div className="container d-flex flex-column justify-content-start"  >
        
        <div id='title-updateBTN-container'>
-        <h1 id='PlaylistTitle'>{playlistName || 'Your Playlist'}</h1>
+        <h1 id='PlaylistTitle'>{playlistNameFromData || 'Your Playlist'}</h1>
         {/* <Button className="btn btn-sm  btn-outline-success me-1 align-middle" id='btn-update' onClick={()=> dispatch(fetchMedia({playlistName: playlistName}))}>UPDATE</Button> */}
         </div>
         
