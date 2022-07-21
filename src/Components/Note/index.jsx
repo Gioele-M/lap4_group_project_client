@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedNote } from '../../State/actionCreators/selection'
 import { patchMedia, deleteNote, fetchMedia } from '../../State/actionCreators/media'
+import './styles.css'
 
 const playPic = require('../../images/utube.png')
 // import styles from './index.module.css'
@@ -111,17 +112,57 @@ function Note(props) {
 
   return (
     <div className="container">
-      <div className="row">
-        <h3 className="col-12 mt-3"><kbd>
-          <input 
+      <div className="row"id='NoteBody'>
+        <h3 className="col-12 mt-1" id='NoteTitleSpan'>
+          <kbd id='NoteTitleBorder'>
+          <input id='NoteTitle'
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Note title"
+          placeholder="Note Title:"
           />
+
+          <input 
+          id='NoteTag'
+          type="text"
+          // value={title}
+          // onChange={(e) => setTitle(e.target.value)}
+          placeholder="tag 1:"
+          />
+                    <input 
+          id='NoteTag'
+          type="text"
+          // value={title}
+          // onChange={(e) => setTitle(e.target.value)}
+          placeholder="tag 2:"
+          />
+                    <input 
+          id='NoteTag'
+          type="text"
+          // value={title}
+          // onChange={(e) => setTitle(e.target.value)}
+          placeholder="tag 3:"
+          />
+                              <input 
+          id='NoteTag'
+          type="text"
+          // value={title}
+          // onChange={(e) => setTitle(e.target.value)}
+          placeholder="tag 4:"
+          />
+          {/* <input 
+          id='NoteTag'
+          type="text"
+          // value={title}
+          // onChange={(e) => setTitle(e.target.value)}
+          placeholder="tag 5:"
+          /> */}
           
           
-          </kbd></h3>
+          
+          
+          </kbd>
+          </h3>
 
           {/* <input 
               data-testid="linkurl"
@@ -133,8 +174,8 @@ function Note(props) {
             /> */}
 
 
-        <textarea
-
+        <textarea 
+          id='NoteArea'
 
           className="input col-10 lead text-justify"
           data-testid="textArea" 
@@ -146,9 +187,10 @@ function Note(props) {
           }}
           value={noteText || ''}
         />
-        <div className="col-2">
+        <div className="col-2" id='youtubeThumbnail-Btns-container'>
           <div className="">
             <img 
+            id='Thumbnail'
               alt="red video player logo"
               onClick={() => {
                 dispatch(setSelectedNote(props))
@@ -160,8 +202,9 @@ function Note(props) {
             
             <input 
               data-testid="linkurl"
+              id='youtubeInput'
               onChange={(e) => setLink(e.target.value)}
-              className="col-12" 
+              
               type="text" 
               placeholder="video link" 
               value={link || ''}

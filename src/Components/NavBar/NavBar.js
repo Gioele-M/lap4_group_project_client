@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import ModalSignup from '../Modals_Signup_Login/ModalSignup';
 import ModalLogin from '../Modals_Signup_Login/ModalLogin';
 import ModalSignout from '../Modals_Signup_Login/ModalSignout';
+import searchIcon from'../../images/searchIcon.png';
+
 
 
 export default function NavBar() {
@@ -93,7 +95,8 @@ export default function NavBar() {
 
     return (
     <>
-    <nav className="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
+    <nav className="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0" id='main-navbar'>
+    {/* <div className="container-fluid" > */}
 
 {/* LOGO */}
     <NavLink to="/">
@@ -103,7 +106,7 @@ export default function NavBar() {
 
 {/* align right */}
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon">is there anything here?    </span>
+    <span className="navbar-toggler-icon"></span>
   </button>
 
 
@@ -111,7 +114,7 @@ export default function NavBar() {
   <div className="collapse navbar-collapse" id="navbarTogglerDemo02 ">
     <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " id=' font1'>
       <li className="nav-item active">
-          <NavLink id='no-decos' className="nav-link text-black" to="/">
+          <NavLink id='no-decos' className="nav-link active text-black" to="/">
             Home
           </NavLink>
       </li>
@@ -125,27 +128,27 @@ export default function NavBar() {
           Profile
         </NavLink>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <NavLink id='no-decos' to="/playlist" className="nav-link text-black">
           Playlist
         </NavLink>
-      </li>
+      </li> */}
 
 {/* SEARCH  /////////////////// */}
     </ul>
     <form className="form-row px-2 ms-auto align-middle ">
-      <input className="form-row me-1 align-middle" id='placeholder' type="search" placeholder="Look for something:" />
+      <input className="form-row me-1 align-middle" id='searchBox' type="search" placeholder="Look for something:" />
       <NavLink to="/search">
-        <button className="btn btn-sm  btn-outline-success me-1 align-middle " id='btn-search' type="submit">Search</button>
+        <img id='searchIcon' src={searchIcon}alt="fireSpot"/>
       </NavLink>
-
+      {/* style={nbStyle.logo}  */}
 
 
 {/* login sign up /////// */}
 
-      <Button className="ourbtns " onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
-      <Button className="ourbtns " onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</Button>
-      <Button className="ourbtns " onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setLoginModalShow(true)} id='btn-login'>Log in</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignupModalShow(true)} id='btn-signup'>Sign up</Button>
+      <Button className="btn btn-sm  btn-outline-success me-1 align-middle" onClick={() => setSignoutModalShow(true)} id='btn-signout'>Sign Out</Button>
       {/* <NavLink  to="/"> */}
       {/* <a  href="#">Tom</a> */}
       {/* </NavLink> */}
@@ -176,7 +179,8 @@ export default function NavBar() {
   /> */}
 
 
-  </div>
+  </div> 
+   {/* </div> */}
 </nav> 
 </>
   )

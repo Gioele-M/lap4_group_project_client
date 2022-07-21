@@ -7,6 +7,8 @@ import "./styles.css";
 import BgSetter from '../../Components/BgColourSetter/index'
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTrending } from '../../State/actionCreators/media';
+import HowTo from '../../Components/HowTo';
+
 
 function HomePage() {
 
@@ -26,10 +28,12 @@ function HomePage() {
 
   return (
     <>
-    <TrendingTopics/>
-    <div id='homepagepractice'>HomePage</div>
 
+    <TrendingTopics/>
+   
+    {/* <div id='homepagepractice'>HomePage</div> */}
     <NewPlaylistBtn />
+    <HowTo/>
     </>
 
   )
