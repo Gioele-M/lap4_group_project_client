@@ -1,15 +1,15 @@
     {
-        "chapterTitle": "HTML tags",
-        "start": "20.24",
+        "chapterTitle": "Space - Mars",
+        "start": "00.25",
         "end": "25.40",
-        "text": "What are some basic HTML (HyperText Markup Language) tags and how do you start writing HTML",
-        "video_url": "https://www.youtube.com/watch?v=qz0aGYrrlhU"
+        "text": "Scientists and engineers involved in the ExoMars 2020 program discuss the latest on the search for life on Mars.",
+        "video_url": "https://www.youtube.com/watch?v=GHm8VKhI6i4"
     }
 
     {
         "chapterTitle": "What is CSS",
         "start": "00.25",
-        "end": "01.15",
+        "end": "4.40",
         "text": "HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.",
         "video_url": "https://www.youtube.com/watch?v=1PnVor36_40"
     }
@@ -23,11 +23,11 @@
     }
 
     {
-        "chapterTitle": "Remote APIs",
-        "start": "12.55",
-        "end": "17.03",
-        "text": "What is the benefit of using Remote APIs",
-        "video_url": "https://www.youtube.com/watch?v=GZvSYJDk-us"
+        "chapterTitle": "Learn French",
+        "start": "00.25",
+        "end": "15.08",
+        "text": "If I wanted to introduce myself in French, what would I say? ",
+        "video_url": "https://www.youtube.com/watch?v=9JZ5hgRJac4"
     }
 
       {
@@ -39,10 +39,10 @@
     }
 
      {
-        "chapterTitle": "React",
-        "start": "00.57",
-        "end": "02.43",
-        "text": "What are the essentials that you need to know to start a react app?",
+        "chapterTitle": "Quick Easy Recipes - Mozzarella Sticks",
+        "start": "03.08",
+        "end": "03.30",
+        "text": "Recipe for mozarella sticks if I need a quick and easy snack",
         "video_url": "https://www.youtube.com/watch?v=hQAHSlTtcmY"
     }
 
@@ -55,11 +55,11 @@
     }
 
              {
-        "chapterTitle": "Python Lists",
-        "start": "17.40",
-        "end": "24.14",
-        "text": "Lists are used to store multiple items in a single variable.Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.Lists are created using square brackets",
-        "video_url": "https://www.youtube.com/watch?v=JJmcL1N2KQs&t=861s"
+        "chapterTitle": "Best Games in 2019",
+        "start": "07.00",
+        "end": "07.38",
+        "text": "For research purposes, these searches are found by using data from multiple sites and they might be a little off from actual values. Definitely interesting to see the results",
+        "video_url": "https://www.youtube.com/watch?v=rU19OFZ0vz4"
     }
 
              {
@@ -71,9 +71,9 @@
     }
 
           {
-        "chapterTitle": "Flask vs Django",
-        "start": "00.00",
-        "end": "01.30",
-        "text": "Django, on the one hand, is a full-stack web framework, whereas Flask is a light-weight, extensible framework. If you want to dig more into coding and learn core concepts, Flask helps you understand how each component from the back-end works to get a simple web application up and running",
-        "video_url": "https://www.youtube.com/watch?v=3vfum74ggHE"
+        "chapterTitle": "Love this Fendi Fashion Show Collection",
+        "start": "01.10",
+        "end": "01.48",
+        "text": "This is the #FendiCouture Autumn Winter 2022 collection, very inspiring! Love it! ",
+        "video_url": "https://www.youtube.com/watch?v=jijn7a2ZHFE"
     }
