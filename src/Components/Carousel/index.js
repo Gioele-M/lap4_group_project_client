@@ -53,16 +53,18 @@ export default function TrendingTopics() {
 
 
     return(
-        <div className="container-fluid">
+        <div className="container-fluid pt-3">
     <div className='container'>
         <div className="title_wrapper">
-            <div className="soonimg">
+            {/* <div className="soonimg">
                 <img src={soonImg} alt="coming soon image" />
+            </div> */}
+            <div className="title_ ">
+               <h1>Welcome to Write & Watch Academy</h1>
             </div>
-            <div className="title_">
-                <span>Coming Soon</span>Swiper Slider
-            </div>
+           
         </div>
+       
         <Swiper
             modules={[Navigation, Pagination, EffectCoverflow]}
             navigation={true}

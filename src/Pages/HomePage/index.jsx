@@ -32,7 +32,7 @@ function HomePage() {
     <TrendingTopics/>
    
     {/* <div id='homepagepractice'>HomePage</div> */}
-    <NewPlaylistBtn />
+    {/* <NewPlaylistBtn /> */}
     <HowTo/>
     </>
 
