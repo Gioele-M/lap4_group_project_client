@@ -160,3 +160,8 @@
     height: 5px;
     border-radius: 5px;
   }
+
+  :root {
+    --swiper-theme-color: #E92D2D;
+    --swiper-navigation-size: 55px;
+}
