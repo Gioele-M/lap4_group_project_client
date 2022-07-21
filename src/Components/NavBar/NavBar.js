@@ -90,7 +90,8 @@ export default function NavBar() {
 
     return (
     <>
-    <nav className="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0">
+    <nav className="navbar navbar-custom navbar-expand-lg navbar-light bg-light pt-0 pb-0" id='main-navbar'>
+    {/* <div className="container-fluid" > */}
 
 {/* LOGO */}
     <NavLink to="/">
@@ -173,7 +174,8 @@ export default function NavBar() {
   /> */}
 
 
-  </div>
+  </div> 
+   {/* </div> */}
 </nav> 
 </>
   )
