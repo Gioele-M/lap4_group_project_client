@@ -33,7 +33,7 @@ function UserPage() {
   const mapPlaylists = ()=>{
     return userPlaylists.map((pl, idx)=>{
         let playlistCardData = { title: pl.playlistName, owner: pl.playlistOwner, stars: pl.averageStars.currentRating, bgc:  pl.playlistTheme}
-
+        
         return <ProfilePageCards2 data={playlistCardData} key={idx} />
 
 

@@ -9,7 +9,7 @@ import Note from '../Note'
 
 function PlaylistModal({showModal, text, url}) {
 
-  const noteData = useSelector(state => state.selection.selected)
+  const noteData = useSelector(state => state.selection.selectedPlaylist)
   console.log('OOOOOOOOO ', noteData)
   const timedUrl = noteData.url + `?start=${noteData.start}&end=${noteData.end}`
 

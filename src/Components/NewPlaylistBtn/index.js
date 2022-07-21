@@ -8,18 +8,30 @@ export default function NewPlaylistBtn() {
 
   return (
     <>
-      <Button
-        className="btn btn-sm  btn-outline-success me-1 align-middle "
-        onClick={() => setSignupModalShow(true)}
-        id="btn-new-playlist"
-      >
-        ADD NEW PLAYLIST+
-      </Button>
-
+      <div class="d-flex justify-content-center">
+        <Button
+          className="btn btn-sm  btn-outline-success me-1 align-middle "
+          onClick={() => setSignupModalShow(true)}
+          id="btn-login"
+        >
+          ADD NEW PLAYLIST+
+        </Button>
+      </div>
       <NewPlaylist
         show={signupModalShow}
         onHide={() => setSignupModalShow(false)}
       />
     </>
   )
+}
+
+{
+  /*
+<div class="d-flex justify-content-center">
+    <Button className="btn btn-sm  btn-outline-success me-1 align-middle " onClick={() => setSignupModalShow(true)} id='btn-login'>ADD NEW PLAYLIST+</Button>
+</div>
+<NewPlaylist show={signupModalShow}
+    onHide={() => setSignupModalShow(false)}/>
+  </>  
+*/
 }
