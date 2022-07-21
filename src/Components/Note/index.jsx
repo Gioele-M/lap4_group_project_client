@@ -122,39 +122,6 @@ function Note(props) {
           placeholder="Note Title:"
           />
 
-          <input id='NoteTag' type="text"
-          // value={title}
-          // onChange={(e) => setTitle(e.target.value)}
-placeholder="tag 1:"/>
-
-                    <input 
-          id='NoteTag'
-          type="text"
-          // value={title}
-          // onChange={(e) => setTitle(e.target.value)}
-          placeholder="tag 2:"
-          />
-                    <input 
-          id='NoteTag'
-          type="text"
-          // value={title}
-          // onChange={(e) => setTitle(e.target.value)}
-          placeholder="tag 3:"
-          />
-                              <input 
-          id='NoteTag'
-          type="text"
-          // value={title}
-          // onChange={(e) => setTitle(e.target.value)}
-          placeholder="tag 4:"
-          />
-          {/* <input 
-          id='NoteTag'
-          type="text"
-          // value={title}
-          // onChange={(e) => setTitle(e.target.value)}
-          placeholder="tag 5:"
-          /> */}
           
           
           
@@ -224,7 +191,7 @@ placeholder="tag 1:"/>
                 onClick={() => handleSaveBtn()}
                 >Save
               </button>
-
+              {/* <div className="row"id='NoteBody'> */}
             </div>
               }
           </div>
