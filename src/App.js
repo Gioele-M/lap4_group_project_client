@@ -12,6 +12,7 @@ import NavBar from './Components/NavBar/NavBar'
 
 import { Footer } from './layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './index.css'
 {
   /* <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */

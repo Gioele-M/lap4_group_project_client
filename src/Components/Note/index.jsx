@@ -136,6 +136,33 @@ function Note(props) {
       <div className="row"id='NoteBody'>
 
 
+        <h3 className="col-12 mt-1" id='NoteTitleSpan'>
+          <kbd id='NoteTitleBorder'>
+          <input id='NoteTitle'
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Note Title:"
+          />
+
+          
+          
+          
+          
+          </kbd>
+          </h3>
+
+          {/* <input 
+              data-testid="linkurl"
+              onChange={(e) => setLink(e.target.value)}
+              className="col-12" 
+              type="text" 
+              placeholder="video link" 
+              value={link || ''}
+            /> */}
+
+
+
         <textarea 
           id='NoteArea'
 
@@ -188,7 +215,7 @@ function Note(props) {
                 onClick={() => handleSaveBtn()}
                 >Save
               </button>
-
+              {/* <div className="row"id='NoteBody'> */}
             </div>
               }
           </div>
