@@ -44,6 +44,7 @@ const  ProfilePageCards2 = ({data}) => {
 
     const renderCard = () => {
         const thisPage = () => {
+            //dispatch is actually for playlist
             dispatch(setSelectedNote(data.title))
             console.log(data.title)
             navigate('/playlist')

@@ -209,7 +209,9 @@ function Note(props) {
               placeholder="video link" 
               value={link || ''}
             />
-            <div className="row">
+
+            {props.showEdit &&
+              <div className="row">
               <button 
                 className="col-6 btn btn-primary"
                 onClick={() => handleSaveBtn()}
@@ -222,6 +224,7 @@ function Note(props) {
                 >Delete
               </button>
             </div>
+              }
           </div>
         </div>
       </div>    
