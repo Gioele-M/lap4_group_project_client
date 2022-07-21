@@ -9,17 +9,9 @@ import { Container, Row, Col }  from 'react-bootstrap';
 
 
 function UserPage() {
-  // Dispatch request based on user
-  // Get user playlists 
-  // render the playlists
+
   const dispatch = useDispatch()
 
-  // const pStars= useSelector((state) => state.media.data.data[0].averageStars.currentRating) //BANANA
-  // const pName= useSelector((state) => state.media.data.data[0].playlistName)
-  // const pOwner= useSelector((state) => state.media.data.data[0].playlistOwner)
-  // const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
-
-  // GET user email and send fetch request with it
   const userEmail = useSelector((state)=> state.user.user.userEmail)
 
   console.log('USER EMAIL ->>>>>>>>', userEmail)
@@ -50,17 +42,6 @@ function UserPage() {
   }
 
 
-
-
-  // const [cardInfo, setCardInfo] = useState ([
-  //   { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"},
-  //   { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"},
-  //   { title: "pName", owner: "pOwner", stars: "pStars", bgc:  "pTheme"}
-  //   // Pass value with 1, 2,, 3
-  //   // on click function whe clicked it will s
-  // ]);
-
-  // console.log(cardInfo)
   return (
     <>
     <div className='container randomX'>

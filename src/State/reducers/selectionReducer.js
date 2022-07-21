@@ -2,6 +2,7 @@ const initState = {
   selected: '',
   startTime: 0,
   endTime: 0,
+  selectedSearch: '',
 }
 
 export const selectionReducer = (state = initState, action) => {
@@ -17,6 +18,9 @@ export const selectionReducer = (state = initState, action) => {
 
     case 'SET_END_TIME':
       return { ...state, endTime: action.payload }
+
+    case 'SET_SELECTED_SEARCH':
+      return {... state, selectedSearch: action.payload}
 
     default:
       return state
