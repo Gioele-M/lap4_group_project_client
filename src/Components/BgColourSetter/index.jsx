@@ -8,7 +8,7 @@ import {useSelector} from 'react-redux'
 
 
 function BgSetter() {  
-    let bgColour= 'rgb(150,150,150)'
+    let bgColour= 'rgb(123, 223, 223)'
     // let bgColour= 'rgb'+ useSelector((state) => state.media.data[0].playlistTheme)
     // let bgColour1 = bgColour.split(',')
     // let bgColour2 = bgColour1.replace("(","")
