@@ -111,9 +111,32 @@ function Note(props) {
     }
 
   return (
+    <>
+  <div id='popuptitle'>
+
+
+    <h3 className="col-12 mt-1" id='NoteTitleSpan'>
+
+    <kbd id='NoteTitleBorder'>
+
+    <input id='NoteTitle'
+    type="text"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+    placeholder="Note Title:"
+    />
+
+    </kbd>
+    </h3>
+  </div>
+
+
+
     <div className="container">
       <div className="row"id='NoteBody'>
-        <h3 className="col-12 mt-1" id='NoteTitleSpan'>
+
+
+        {/* <h3 className="col-12 mt-1" id='NoteTitleSpan'>
           <kbd id='NoteTitleBorder'>
           <input id='NoteTitle'
           type="text"
@@ -127,7 +150,7 @@ function Note(props) {
           
           
           </kbd>
-          </h3>
+          </h3> */}
 
           {/* <input 
               data-testid="linkurl"
@@ -137,6 +160,7 @@ function Note(props) {
               placeholder="video link" 
               value={link || ''}
             /> */}
+
 
 
         <textarea 
@@ -198,6 +222,7 @@ function Note(props) {
         </div>
       </div>    
     </div>
+    </>
   )
 }
 
