@@ -136,7 +136,7 @@ function Note(props) {
       <div className="row"id='NoteBody'>
 
 
-        <h3 className="col-12 mt-1" id='NoteTitleSpan'>
+        {/* <h3 className="col-12 mt-1" id='NoteTitleSpan'>
           <kbd id='NoteTitleBorder'>
           <input id='NoteTitle'
           type="text"
@@ -150,7 +150,7 @@ function Note(props) {
           
           
           </kbd>
-          </h3>
+          </h3> */}
 
           {/* <input 
               data-testid="linkurl"
