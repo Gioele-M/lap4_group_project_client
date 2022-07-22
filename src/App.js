@@ -23,21 +23,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    // <div className="App">
+    //   <NavBar />
 
-      <Routes>
-        <Route path="/" exact element={<HomePage />} />
-        <Route path="/user" element={<UserPage />} />
-        <Route path="/playlist" element={<PlaylistPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/search" element={<SearchResultPage />} />
-        <Route path="/debug" element={<DebugComponent />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+    //   <Routes>
+    //     <Route path="/" exact element={<HomePage />} />
+    //     <Route path="/user" element={<UserPage />} />
+    //     <Route path="/playlist" element={<PlaylistPage />} />
+    //     <Route path="/about" element={<AboutPage />} />
+    //     <Route path="/search" element={<SearchResultPage />} />
+    //     <Route path="/debug" element={<DebugComponent />} />
+    //     <Route path="*" element={<NotFound />} />
+    //   </Routes>
 
-      <Footer />
-    </div>
+    //   <Footer />
+    // </div>
+    <h1>Apologies, <br/> We're currently migrating to React Native. <br/> Please check back soon!</h1>
   )
 }
 
