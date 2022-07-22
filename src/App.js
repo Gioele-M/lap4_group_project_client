@@ -23,8 +23,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    // <div className="App">
-    //   <NavBar />
+    <div className="App">
+      <h1>Apologies, <br/> We're currently migrating to React Native. <br/> Please check back soon!</h1>
+    {/* //   <NavBar />
 
     //   <Routes>
     //     <Route path="/" exact element={<HomePage />} />
@@ -36,9 +37,8 @@ function App() {
     //     <Route path="*" element={<NotFound />} />
     //   </Routes>
 
-    //   <Footer />
-    // </div>
-    <h1>Apologies, <br/> We're currently migrating to React Native. <br/> Please check back soon!</h1>
+    //   <Footer /> */}
+     </div>
   )
 }
 
