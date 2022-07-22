@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 400px;
+  /* background-color: bisque; */
+  
+}
+
+
+.addNoteBtn {
+  
+  border: none;
+  border-radius: 100%;
+  padding: 5px;
+  height: 70px;
+  width: 70px;
+  background-color: green;
+  color: white;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px
+}
+
+#mainNoteContainer{
+  /* background-color: yellowgreen; */
+  /* border-radius: 50%; */
+}
+
+/* banana */
+.row{
+  background-color: rgba(218, 213, 212,0.8);
+  border-radius: 45px 0px 10px 10px; 
+  padding: 10px;
+}

@@ -1,0 +1,200 @@
+.title {
+  font-size: 2rem;
+}
+
+
+.noteWrapper {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 200px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.noteText {
+
+  font-size: 1.3rem;
+  ;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+
+}
+
+.controls {
+  background-color: pink;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
+  gap: 5px;
+}
+
+.thumbnail {
+
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background-color: yellow;
+}
+
+.saveBtn,
+.deleteBtn {
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.saveBtn {
+  background-color: green;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.deleteBtn {
+  background-color: red;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.link {
+  border: none;
+  border-radius: 10px;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+/* seals */
+#NoteBody{ 
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* seals */
+ /*dont style this  */
+#NoteTitleSpan{ 
+  /* background-color: rgb(92, 132, 167); */
+}
+
+/* seals */
+#NoteTitleBorder{ 
+  background-color: rgba(40, 75, 106,0);
+}
+
+/* seals */
+#NoteTitle{ 
+  color:  #474747;
+  background-color: white;
+  border-style: solid;
+  /* color: #3f3d3d; */
+  border-color: rgba(0, 0, 0, 0.2);
+  padding-left: 25px;
+  border-radius: 29px 0px 0px 0px;
+ margin-left: -9px;
+ margin-top: 3px;
+ font-family: 'Montserrat Alternates', sans-serif;
+ font-style: italic;
+ font-weight: 600;
+  height:40px;
+  margin-bottom: 8px;
+}
+
+#NoteTag{ 
+  color:  #9e9e9e;
+  background-color: white;
+  border-style: solid;
+  /* color: #3f3d3d; */
+  border-color: rgba(0, 0, 0, 0.2);
+  padding-left: 5px;
+  
+  /* border-radius: 29px 0px 0px 0px; */
+ margin-left: 10px;
+ margin-top: -45px;
+ text-align: center;
+ font-family: 'Montserrat Alternates', sans-serif;
+ /* font-style: italic; */
+ font-weight: 400;
+  height:40px;
+  width: 150px;
+  margin-bottom: 8px;
+  /* font-size: medium; */
+}
+
+
+#NoteArea{
+  /* background-color: violet; */
+  margin-left: 10px;
+  width: 1000px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  margin-bottom:10px;
+  border-radius: 0px 0px 0px 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* font-style: italic; */
+  font-weight: 400;
+  color:  #474747;
+  
+}
+
+#PlaylistTitle{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color:  #474747;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* position: absolute; */
+
+}
+
+#btn-update{
+  background-color: rgb(255, 255, 255);
+  height: 30px;
+  color: #656565;
+  border-style: none;
+  border-radius: 10px ;
+  /* border-color: #656565; */
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 50px;
+  margin-left: 60%;
+    position: absolute;
+    
+}
+
+#btn-update:hover{
+  background-color: #8e8e8e;
+  color: white;
+}
+
+
+#youtubeInput{
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* font-weight: 200; */
+  font-size: smaller;
+  border-radius: 10px ;
+  border-style: solid;
+  border-color: #E92D2D;
+  /* font-style: italic; */
+  font-weight: 700;
+  text-decoration: none;
+  height: 30px;
+  width: auto;
+  padding-left: 4px;
+  margin-right: 10px;
+}
+
+#youtubeThumbnail-Btns-container{
+  /* background-color: yellowgreen; */
+  margin: auto;
+}
+
+#Thumbnail{
+  padding: 0%;
+}

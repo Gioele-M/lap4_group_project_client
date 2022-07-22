@@ -1,0 +1,79 @@
+    {
+        "chapterTitle": "Space - Mars",
+        "start": "00.25",
+        "end": "25.40",
+        "text": "Scientists and engineers involved in the ExoMars 2020 program discuss the latest on the search for life on Mars.",
+        "video_url": "https://www.youtube.com/watch?v=GHm8VKhI6i4"
+    }
+
+    {
+        "chapterTitle": "What is CSS",
+        "start": "00.25",
+        "end": "4.40",
+        "text": "HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.",
+        "video_url": "https://www.youtube.com/watch?v=1PnVor36_40"
+    }
+
+    {
+        "chapterTitle": "Javascript Summary",
+        "start": "00.00",
+        "end": "02.35",
+        "text": "JavaScript is the the programming language that built the web. Learn how it evolved into a powerful tool for building websites, servers with Node.js, mobile apps, desktop software, and more.",
+        "video_url": "https://www.youtube.com/watch?v=DHjqpvDnNGE"
+    }
+
+    {
+        "chapterTitle": "Learn French",
+        "start": "00.25",
+        "end": "15.08",
+        "text": "If I wanted to introduce myself in French, what would I say? ",
+        "video_url": "https://www.youtube.com/watch?v=9JZ5hgRJac4"
+    }
+
+      {
+        "chapterTitle": "Software Testing",
+        "start": "03.29",
+        "end": "06.00",
+        "text": "Software testing is defined as an activity to check whether the actual results match the expected results and to ensure that the software system is defect free.",
+        "video_url": "https://www.youtube.com/watch?v=sO8eGL6SFsA"
+    }
+
+     {
+        "chapterTitle": "Quick Easy Recipes - Mozzarella Sticks",
+        "start": "03.08",
+        "end": "03.30",
+        "text": "Recipe for mozarella sticks if I need a quick and easy snack",
+        "video_url": "https://www.youtube.com/watch?v=hQAHSlTtcmY"
+    }
+
+         {
+        "chapterTitle": "Redux",
+        "start": "00.17",
+        "end": "00.25",
+        "text": "Redux is a pattern and library that helps developers implement complex state management requirements at scale",
+        "video_url": "https://www.youtube.com/watch?v=_shA5Xwe8_4"
+    }
+
+             {
+        "chapterTitle": "Best Games in 2019",
+        "start": "07.00",
+        "end": "07.38",
+        "text": "For research purposes, these searches are found by using data from multiple sites and they might be a little off from actual values. Definitely interesting to see the results",
+        "video_url": "https://www.youtube.com/watch?v=rU19OFZ0vz4"
+    }
+
+             {
+        "chapterTitle": "How do I use a Docker Container",
+        "start": "7.12",
+        "end": "08.51",
+        "text": "Docker website with info on docker containers:https://www.docker.com/resources/what-container/",
+        "video_url": "https://www.youtube.com/watch?v=gAkwW2tuIqE"
+    }
+
+          {
+        "chapterTitle": "Love this Fendi Fashion Show Collection",
+        "start": "01.10",
+        "end": "01.48",
+        "text": "This is the #FendiCouture Autumn Winter 2022 collection, very inspiring! Love it! ",
+        "video_url": "https://www.youtube.com/watch?v=jijn7a2ZHFE"
+    }

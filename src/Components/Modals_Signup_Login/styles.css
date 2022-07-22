@@ -1,0 +1,62 @@
+/* .Modal-signuplogin{
+    background-color: yellowgreen;
+    height: 50%;
+    width: 30%;
+} */
+
+/* .modal-content{
+    background-color: violet;
+} */
+
+/* #modalstuff{
+    background-color: tomato;
+} */
+#modalstuff1{
+    /* background-color: rgb(71, 114, 255); */
+}
+
+#modalTitle{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: #E92D2D;
+}
+
+#already{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: smaller;
+    border-radius: 10px ;
+    /* border-color: #E92D2D; */
+    font-style: italic;
+}
+
+#modal-intro{
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-style: italic; */
+    color: #949494;
+    text-align: left
+}
+
+#usernameErrMsg{
+    display: none;
+}
+
+#passErrMsg{
+    /* visibility: hidden; */
+    display: none;
+}
+
+#emailErrMsg{
+    display: none;
+}
+
+.modalErr{
+    font-size: small;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* font-weight: 200; */
+    color: #E92D2D;;
+    /* font-style: italic; */
+    font-size: small;
+    margin: -5px;
+}
