@@ -167,7 +167,7 @@ export default function NavBar() {
               className="form-row me-1 align-middle"
               id="searchBox"
               type="search"
-              placeholder="Look for something:"
+              placeholder="Look for something"
             />
             <NavLink onClick={handleSearch} to="/search">
               <img id="searchIcon" src={searchIcon} alt="fireSpot" />
