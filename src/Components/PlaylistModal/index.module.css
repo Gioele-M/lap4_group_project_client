@@ -15,7 +15,7 @@
 .modalContainer {
   width: 70%;
   height: 50%;
-  margin-top: 10%;
+  /* margin-top: 10; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,12 +35,13 @@
   height: 50px;
   border: none;
   border-radius: 10px;
-  align-self: center;
+  align-self: flex-start;
   margin: 20px;
   font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 #mainNoteContainer {

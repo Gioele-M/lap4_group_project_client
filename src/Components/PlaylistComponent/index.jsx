@@ -23,11 +23,13 @@ function PlaylistComponent({title}) {
 
   let userData = useSelector(state => state.user)
 
-  let playlistName = useSelector(state => state.selection.selectedPlaylist)
+  let playlistName = useSelector(state => state.selection.selected)
 
   let playlistData = useSelector(state => state.media.data.data[0])
 
   let playlistNameFromData = playlistData.playlistName
+  // let playlistNameFromData = useSelector(state => state.selection.selectedPlaylist)
+
 
   const [modalVisible, setModalVisible] = useState(false)
 

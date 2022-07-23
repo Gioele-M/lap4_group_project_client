@@ -9,7 +9,7 @@ import Note from '../Note'
 
 function PlaylistModal({showModal, text, url}) {
 
-  const noteData = useSelector(state => state.selection.selectedPlaylist)
+  const noteData = useSelector(state => state.selection.selected)
   console.log('OOOOOOOOO ', noteData)
   const timedUrl = noteData.url + `?start=${noteData.start}&end=${noteData.end}`
 
@@ -22,7 +22,7 @@ function PlaylistModal({showModal, text, url}) {
     <div className={styles.modalBackground}>
       
       <div className={styles.modalContainer}>
-        
+        <button onClick={() => showModal(false)} className={styles.deleteBtn}>X</button>
       <VideoPlayerCtrl 
         videoId={noteData.url.slice(-11)} 
         title={noteData.noteTitle}
@@ -37,7 +37,7 @@ function PlaylistModal({showModal, text, url}) {
         noteTitle={noteData.noteTitle}
         chapterId={noteData.chapterId}
       />
-      <button onClick={() => showModal(false)} className={styles.deleteBtn}>X</button>
+      
     </div>
     </div>
     

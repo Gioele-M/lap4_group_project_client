@@ -16,8 +16,8 @@ const ProfilePageCards2 = ({ data }) => {
   // const pTheme= useSelector((state) => state.media.data.data[0].playlistTheme)
 
   // let data = { title: {props.pName}, owner: {props.pOwner}, stars: {props.pStars}, bgc:  {props.pTheme}}
-
-  console.log(data)
+  console.log('*******************')
+  console.log('DATA for the playlist from profilecards2: ', data)
   // let data = { title: {props.data.title}, owner: {props.data.owner}, stars: {props.data.stars}, bgc:  {props.data.bgc}}
 
   // const [cardInfo, setCardInfo] = useState ([
@@ -33,6 +33,12 @@ const ProfilePageCards2 = ({ data }) => {
   const navigate = useNavigate()
 
   const logo = require('../../images/watermark.png')
+
+  // DEBUG
+  const sel = useSelector((state) => state.selection.selected)
+  console.log('==================== * * * * SEL', sel)
+
+  // END DEBUG
 
   const renderCard = () => {
     const thisPage = () => {
