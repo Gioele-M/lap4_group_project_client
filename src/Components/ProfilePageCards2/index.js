@@ -34,12 +34,6 @@ const ProfilePageCards2 = ({ data }) => {
 
   const logo = require('../../images/watermark.png')
 
-  // DEBUG
-  const sel = useSelector((state) => state.selection.selected)
-  console.log('==================== * * * * SEL', sel)
-
-  // END DEBUG
-
   const renderCard = () => {
     const thisPage = () => {
       //dispatch is actually for playlist

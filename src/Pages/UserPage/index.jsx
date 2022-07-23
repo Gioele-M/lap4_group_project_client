@@ -29,7 +29,7 @@ function UserPage() {
 
   console.log('USER PLAYLISTS!!!!! ->>>>>>>>', userPlaylists)
   
-
+ 
   const mapPlaylists = ()=>{
     return userPlaylists.map((pl, idx)=>{
         let playlistCardData = { title: pl.playlistName, owner: pl.playlistOwner, stars: pl.averageStars.currentRating, bgc:  pl.playlistTheme}
